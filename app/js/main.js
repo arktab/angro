@@ -38,16 +38,16 @@ AOS.init({
             }
 
         });
-        $(window).scroll(function() {
-            $(".menu").addClass("menu--opacity");
-            $(".bg").addClass("menu--opacity");
-            setTimeout(function() {
-                setTimeout(function() {
-                    $(".menu").addClass("menu--none");
-                    $(".bg").addClass("menu--none");
-                }, 200);
-                $(".sidebar").addClass("blend");
-            }, 200);
-        });
+        // $(window).scroll(function() {
+        //     $(".menu").addClass("menu--opacity");
+        //     $(".bg").addClass("menu--opacity");
+        //     setTimeout(function() {
+        //         setTimeout(function() {
+        //             $(".menu").addClass("menu--none");
+        //             $(".bg").addClass("menu--none");
+        //         }, 200);
+        //         $(".sidebar").addClass("blend");
+        //     }, 200);
+        // });
     });
 })(jQuery);
