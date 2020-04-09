@@ -36,7 +36,6 @@ AOS.init({
 
                 }, 100);
             }
-
         });
         // $(window).scroll(function() {
         //     $(".menu").addClass("menu--opacity");
@@ -49,5 +48,23 @@ AOS.init({
         //         $(".sidebar").addClass("blend");
         //     }, 200);
         // });
+
+        //SLIDER__________________________________
+        $('.slider').slick({
+            dots: false,
+            infinite: true,
+            arrows: true,
+            speed: 500,
+            cssEase: 'linear',
+            slidesToShow: 3
+        });
+        $('.objects-slider').slick({
+            infinite: true,
+            arrows: true,
+            speed: 500,
+            cssEase: 'linear',
+            slidesToShow: 1
+        });
+        //slider button
     });
 })(jQuery);

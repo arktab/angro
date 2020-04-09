@@ -16,6 +16,7 @@ html {
     min-height: 100%;
     width: 100%;
     font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    color: $default-button-text-color;
 }
 
 .clear::after,
@@ -35,8 +36,9 @@ body {
 }
 
 section {
-    background: #ffffff;
-    padding: 100px 0 0 0;
+    //background: #ffffff;
+    padding: 100px 0 100px 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, .5), hsla(0, 0%, 100%, 0) 50%), linear-gradient(270deg, rgba(0, 0, 0, .5), hsla(0, 0%, 70%, 0) 47.55%);
 }
 
 .hidden {
@@ -48,8 +50,8 @@ section {
 .container {
     margin: 0 auto;
     padding: 0 10px;
-    max-width: 1140px;
-    padding-left: 5rem;
+    max-width: 1250px;
+    //padding-left: 7rem;
     @media (max-width: 1200px) {
         max-width: 1140px;
     }
@@ -103,7 +105,7 @@ button::-moz-focus-inner {
     text-decoration: none;
     color: $tw;
     p {
-        padding-left: 20px;
+        padding-left: 95px;
         font-size: 24px;
     }
     &:hover {
@@ -130,7 +132,7 @@ button::-moz-focus-inner {
         position: relative;
         transition: all .3s;
         svg {
-            @include pos($t: -17px, $l: -55px);
+            @include pos($t: -17px, $l: 30px);
             transform: rotate(-90deg);
             @include size(15px, 40px);
             z-index: 2;
@@ -141,7 +143,7 @@ button::-moz-focus-inner {
         }
         &:after {
             content: '';
-            @include pos($t: -37px, $l: -85px);
+            @include pos($t: -37px, $l: 0);
             @include size(75px);
             background: $button-default-color;
             border-radius: 50%;
@@ -157,7 +159,18 @@ button::-moz-focus-inner {
 //yellow round button
 //page 
 .headline {
-    font-size: 28px;
-    padding-left: 40px;
-    border-left: solid 2px white;
+    font-size: 25px;
+    line-height: 75px;
+    padding-left: 35px;
+    border-left: solid 2px $page-bg;
+    grid-column: 1 / 13;
+    height: 75px;
+    margin: 0 0 80px 2px;
+    text-transform: uppercase;
+}
+
+.title {
+    grid-column: 1 / 13;
+    margin-bottom: 80px;
+    text-transform: uppercase;
 }
