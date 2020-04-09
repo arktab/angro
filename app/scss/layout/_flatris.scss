@@ -1,0 +1,116 @@
+.chess_close_btn {
+    position: fixed;
+    left: auto;
+    right: 20px;
+    top: 20px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    width: 36px;
+    height: 36px;
+    background: #ec6372;
+    color: #3b4952;
+    line-height: 40px;
+    text-align: center;
+    transform: scale(1);
+    cursor: pointer;
+    transition: .25s ease-out;
+    opacity: 1;
+    border-radius: 2px;
+    z-index: 10001
+}
+
+.chess_close_btn path {
+    fill: #fff
+}
+
+@keyframes blink {
+    0% {
+        box-shadow: 0 0 0 10px rgba(241, 241, 241, .2196078431372549)
+    }
+    30% {
+        box-shadow: 0 0 0 25px rgba(241, 241, 241, .2196078431372549)
+    }
+    50% {
+        box-shadow: 0 0 0 10px rgba(241, 241, 241, .2196078431372549)
+    }
+    80% {
+        box-shadow: 0 0 0 25px rgba(241, 241, 241, .2196078431372549)
+    }
+    100% {
+        box-shadow: 0 0 0 10px rgba(241, 241, 241, .2196078431372549)
+    }
+}
+
+.chess_active_btn {
+    z-index: 1000;
+    position: fixed;
+    top: auto;
+    left: auto;
+    right: 60px;
+    bottom: 60px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    width: 80px;
+    height: 80px;
+    background: #1abc9c;
+    color: #3b4952;
+    border-radius: 50%;
+    line-height: 80px;
+    text-align: center;
+    transform: scale(1);
+    cursor: pointer;
+    transition: .25s ease-out;
+    opacity: 1;
+    box-shadow: 0 0 0 11px rgba(241, 241, 241, .2196078431372549);
+    animation: blink 3s infinite
+}
+
+.chess_active_btn:hover {
+    background: #21d2af
+}
+
+.chess_active_btn_text {
+    position: absolute;
+    top: 16px;
+    font-family: Arial;
+    font-size: 8px;
+    color: #fff;
+    width: 100%;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .8px
+}
+
+.hidden {
+    transform: scale(0)!important;
+    opacity: .2!important
+}
+
+.chess_iframe {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background: #fff
+}
+
+.chess_logo {
+    width: 28%;
+    height: 72%;
+    vertical-align: top
+}
+
+.chess_close_img {
+    width: 35%;
+    height: 96%;
+    vertical-align: baseline
+}

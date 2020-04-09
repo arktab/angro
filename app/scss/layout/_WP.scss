@@ -1,0 +1,73 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 96px;
+}
+
+h2 {
+    font-size: 64px;
+}
+
+h3 {
+    font-size: 36px;
+}
+
+h4 {
+    font-size: 29px;
+}
+
+h5 {
+    font-size: 24px;
+}
+
+h6 {
+    font-size: 19px;
+}
+
+strong {
+    //font-size: 1.15rem;
+    font-weight: 600;
+}
+
+p {
+    margin-bottom: 1rem;
+    em {
+        font-style: italic;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.alignleft {
+    float: left;
+    margin: 10px 10px 10px 0;
+    width: 40%;
+    height: auto;
+}
+
+.aligncenter {
+    display: block;
+    margin: 0 auto;
+    width: 40%;
+    height: auto;
+}
+
+.alignright {
+    float: right;
+    margin: 10px 0 10px 10px;
+    width: 40%;
+    height: auto;
+}
+
+.alignnone {
+    width: 100%;
+    height: auto;
+}

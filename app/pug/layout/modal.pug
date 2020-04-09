@@ -1,0 +1,17 @@
+.modal
+    .modal-content
+        form(action="")
+            fieldset
+                legend Оставьте координаты, и мы с вами свяжемся
+            label( for="username") Ваше имя
+                input#username(type="text" required )
+            label( for="tel" ) Телефон
+                input#tel(type="tel" required )
+            label( for="email") EMAIL (НЕ ОБЯЗАТЕЛЬНО)
+                input#email(type="email")
+            label( for="check") Я даю согласие на обработку моих персональных данных согласно 
+                a политике конфиденциальности
+                input#check(type="checkbox")
+            button Отправить запрос
+    button.close
+                

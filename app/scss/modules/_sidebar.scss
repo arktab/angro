@@ -1,0 +1,143 @@
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 4;
+        mix-blend-mode: normal;
+        background: rgba(0, 0, 0, 0);
+        mix-blend-mode: difference;
+        &-content {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px 40px 100px;
+            height: 100vh;
+            color: #ffffff;
+            z-index: 5;
+            background: inherit;
+            mix-blend-mode: exclusion;
+        }
+        .logo {
+            height: 130px;
+            cursor: pointer;
+            img {
+                @include size(auto, 100%);
+                transition: all .3s;
+            }
+        }
+        .lang {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.25em;
+            height: 100px;
+            p {
+                margin: 0;
+                padding: 0 5px;
+            }
+        }
+        .button {
+            @include size(80px, 400px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            &__menu {
+                @include size(400px, 80px);
+                cursor: pointer;
+                color: rgb(255, 255, 255);
+                background: inherit;
+                transform: rotate(270deg);
+                font-size: 19px;
+                text-transform: uppercase;
+                letter-spacing: 5px;
+                font-weight: 100;
+                transition: all .3s;
+                font-family: $df;
+            }
+        }
+        .link-wrap {
+            @include pos($b: 100px, $l: 60px);
+            display: flex;
+            flex-direction: column;
+            height: 216px;
+            .link--info {
+                margin-bottom: 1em;
+                svg {
+                    width: 65px;
+                    height: 60px;
+                }
+            }
+        }
+    }
+    
+    .blend {
+        //mix-blend-mode: exclusion;
+    }
+    
+    .menu {
+        @include pos($t: 0, $l: 0);
+        @include size(40rem, 100vh);
+        z-index: 1;
+        padding: 50px 0;
+        transition: all .3s;
+        display: block;
+        &__item {
+            padding: 1rem 0;
+            font-size: 1.5rem;
+        }
+        &__main {
+            @include pos($t: 7.5rem, $l: 17rem);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        &__footer {
+            height: 216px;
+            @include pos($b: 100px, $l: 17rem);
+            @media (max-width: 1024px) {
+                top: 30rem;
+            }
+            @media (max-width: 768) {
+                top: 30rem;
+            }
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        &--opacity {
+            opacity: 0;
+        }
+        &--none {
+            display: none;
+        }
+    }
+    
+    .bg {
+        @include pos($t: 0, $l: 0);
+        position: fixed;
+        @include size(40rem, 100vh);
+        z-index: 3;
+        transition: all .3s;
+        background: $page-bg;
+        pointer-events: none;
+    }
+    
+    .hide {
+        @include pos($t: 0, $l: -40rem);
+    }
+    
+    .link--nav {
+        font-size: 29px;
+    }
+    
+    // @media (max-width: 1200px) {
+    //     font-size: 16px;
+    // }
+    // @media (max-width: 1024px) {
+    //     font-size: 12px;
+    // }
+    // @media (max-width: 768px) {
+    //     font-size: 10px;
+    // }

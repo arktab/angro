@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+html(lang="en")
+    include layout/head.pug
+    body
+        include layout/sprite-main.html
+<!-- info popup -->
+        include layout/info.pug
+<!-- info popup end -->
+<!-- sidebar____________________________________________ -->
+        include layout/sidebar.pug
+<!-- sidebar end ________________________________________-->       
+        header
+            .header 
+                .header-main
+                    h1 Современное <br> жилье в Полтаве и <br> Миргороде
+                    p.text Новые квартиры от застройщика в престижном <br> районе Полтавы и Миргорода
+
+                    a.link.sm-button(href="#about")
+                        .svg-wrap
+                            svg
+                                use(xlink:href="#arrow")
+                        p Прокрутить вниз
+        section#about.about
+            include layout/section-about.pug
+        section.objects
+            include layout/section-objects.pug
+        section.articles
+            include layout/section-articles.pug
+        footer
+<!-- modal -->
+        include layout/modal.pug
+<!-- modal end-->                  
+
+            
+<!--build:js js/main.min.js -->
+    script(src="js/libs/jquery.min.js")
+    script(src="js/libs/aos.js")
+    script(src="js/main.js")
+<!--endbuild-->
