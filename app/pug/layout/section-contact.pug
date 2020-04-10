@@ -1,0 +1,16 @@
+.container
+    .form-wrap
+        form(action="").grid
+            fieldset
+                legend С удовольствием проконсультируем Вас!
+            label( for="username") Ваше имя
+                input#username(type="text" required )
+            label( for="tel" ) Телефон
+                input#tel(type="tel" required )
+            label( for="email") EMAIL (НЕ ОБЯЗАТЕЛЬНО)
+                input#email(type="email")
+            .checkbox-wrap
+                input#check(type="checkbox")
+                label( for="check") Я даю согласие на обработку моих персональных данных согласно 
+                a.link политике конфиденциальности 
+            button Отправить запрос

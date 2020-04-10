@@ -29,8 +29,9 @@
                 border-radius: 50%;
             }
             &__head {
-                font-size: 2rem;
+                font-size: 1.8em;
                 margin-bottom: 30px;
+                text-transform: uppercase;
             }
             &__text {
                 font-size: 1.25rem;
@@ -40,7 +41,7 @@
             left: -90px;
         }
         .slick-next {
-            top: calc( 50% - 52px);
+            top: calc( 50% - 52.5px);
             transform: rotate(180deg);
             right: -90px;
         }
@@ -58,6 +59,7 @@
     }
     .link-wrap {
         grid-column: 1 / 13;
+        margin-top: 100px;
         padding: 0 0 0 1rem;
     }
 }

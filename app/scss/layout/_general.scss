@@ -51,7 +51,6 @@ section {
     margin: 0 auto;
     padding: 0 10px;
     max-width: 1250px;
-    //padding-left: 7rem;
     @media (max-width: 1200px) {
         max-width: 1140px;
     }
@@ -92,13 +91,18 @@ section {
     text-transform: lowercase;
 }
 
+//
+.blend {
+    mix-blend-mode: exclusion !important;
+}
+
 //buttons
 button::-moz-focus-inner {
     border: 0;
 }
 
 .sm-button {
-    height: 75px;
+    height: 77px;
     display: flex;
     align-items: center;
     text-transform: uppercase;
@@ -173,4 +177,5 @@ button::-moz-focus-inner {
     grid-column: 1 / 13;
     margin-bottom: 80px;
     text-transform: uppercase;
+    letter-spacing: 0.05em;
 }

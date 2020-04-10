@@ -1,7 +1,7 @@
 'use strict';
 //Animation lib AOS
 AOS.init({
-    duration: 1200,
+    //duration: 1200,
     easing: 'ease-in-out-back'
 });
 //___________________________________
@@ -63,7 +63,35 @@ AOS.init({
             arrows: true,
             speed: 500,
             cssEase: 'linear',
+            //fade: true,
             slidesToShow: 1
+        });
+        $('.bg__animate').slick({
+            autoplay: true,
+            autoplaySpeed: 4000,
+            infinite: true,
+            arrows: false,
+            draggable: false,
+            speed: 500,
+            cssEase: 'linear',
+            fade: true
+        });
+        $('.articles__content').slick({
+            autoplay: true,
+            autoplaySpeed: 4000,
+            infinite: true,
+            arrows: true,
+            speed: 500,
+            cssEase: 'linear',
+            slidesToShow: 1
+        });
+        $('.apartments-slider').slick({
+            dots: false,
+            infinite: true,
+            arrows: true,
+            speed: 500,
+            cssEase: 'linear',
+            slidesToShow: 3
         });
         //slider button
     });

@@ -17,10 +17,12 @@
             z-index: 5;
             background: inherit;
             mix-blend-mode: exclusion;
+            transition: all .3s;
         }
         .logo {
             height: 130px;
             cursor: pointer;
+            transition: all .3s;
             img {
                 @include size(auto, 100%);
                 transition: all .3s;
