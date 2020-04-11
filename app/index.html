@@ -156,7 +156,7 @@
   </ul>
 </div>
 <div class="bg"></div><!-- sidebar end ________________________________________-->       
-<header>
+<header id="header">
   <div class="header"> 
     <div class="header-main">
       <h1>Современное <br> жилье в Полтаве и <br> Миргороде</h1>
@@ -429,14 +429,73 @@
         </label>
         <div class="checkbox-wrap">
           <input id="check" type="checkbox"/>
-          <label for="check">Я даю согласие на обработку моих персональных данных согласно </label><a class="link">политике конфиденциальности </a>
+          <div class="text-wrap">
+            <label for="check">Я даю согласие на обработку моих персональных данных согласно </label><a class="link" href="#">политике конфиденциальности </a>
+          </div>
         </div>
-        <button>Отправить запрос</button>
+        <button class="submit">Отправить запрос</button>
       </form>
     </div>
   </div>
 </section>
-<footer></footer><!-- modal -->
+<footer>
+  <div class="container">
+    <div class="footer-content grid">
+      <div class="address">
+        <h5>Наши офисы</h5><a class="link link--footer" href="#">г.Полтава, ул. А.Кукоби, 12</a><a class="link link--footer" href="#">г.Миргород, ул.Победы,10, оф.1</a><a class="link link--footer" href="#">Время работы: 9:00 – 18:00</a>
+      </div>
+      <div class="link-logo"><a class="link" href="#"> 
+          <svg> 
+            <!--use(xlink:"")-->
+          </svg></a></div>
+      <div class="contacts">
+        <h5>Наши офисы</h5><a class="link link--footer" href="mailto:angrobud@gmail.com"> angrobud@gmail.com</a><a class="link link--footer" href="tel=+380509915883">+38(050) 991-58-83</a><a class="link link--footer" href="tel=+380509915883">+38(050) 991-58-82</a>
+      </div>
+      <div class="newsletter">
+        <form action="">
+          <fieldset>
+            <legend>Будьте в курсе спецпредложений</legend>
+          </fieldset>
+          <div class="text-wrap">
+            <label for="newsletter">Ваш e-mail
+              <input id="newsletter" type="text"/>
+            </label>
+            <button class="submit">Хочу быть в курсе!</button>
+          </div>
+        </form>
+      </div><a class="link sm-button" href="#header">
+        <div class="svg-wrap">
+          <svg>
+            <use xlink:href="#arrow"></use>
+          </svg>
+        </div>
+        <p>Вверх</p></a>
+      <div class="backcall">
+        <p>Мы предоставляем бесплатные консультации!</p><a class="submit">Закажите звонок!</a>
+      </div>
+      <div class="social">
+        <h6>МЫ В СОЦСЕТЯХ</h6>
+        <div class="icon-wrap"><a class="link" href="#header">
+            <div class="svg-wrap">
+              <svg>
+                <use xlink:href="#facebook icon"></use>
+              </svg>
+            </div></a><a class="link" href="#header">
+            <div class="svg-wrap">
+              <svg>
+                <use xlink:href="#telegram"></use>
+              </svg>
+            </div></a><a class="link" href="#header">
+            <div class="svg-wrap">
+              <svg>
+                <use xlink:href="#insta icon"></use>
+              </svg>
+            </div></a></div>
+      </div>
+      <p class="copyright">© 2020. www.angro.com.ua</p>
+    </div>
+  </div>
+</footer><!-- modal -->
 <div class="modal">
   <div class="modal__content">
     <form class="grid" action="">

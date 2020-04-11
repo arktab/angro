@@ -9,7 +9,7 @@ html(lang="en")
 <!-- sidebar____________________________________________ -->
         include layout/sidebar.pug
 <!-- sidebar end ________________________________________-->       
-        header
+        header#header
             .header 
                 .header-main
                     h1 Современное <br> жилье в Полтаве и <br> Миргороде
@@ -31,6 +31,60 @@ html(lang="en")
         section#info.contact
             include layout/section-contact.pug
         footer
+            .container
+                .footer-content.grid
+                    .address
+                        h5 Наши офисы
+                        a(href="#").link.link--footer г.Полтава, ул. А.Кукоби, 12
+                        a(href="#").link.link--footer г.Миргород, ул.Победы,10, оф.1
+                        a(href="#").link.link--footer Время работы: 9:00 – 18:00
+                    .link-logo
+                        a(href="#").link 
+                            svg 
+                                //use(xlink:"")
+                    .contacts
+                        h5 Наши офисы
+                        a(href="mailto:angrobud@gmail.com").link.link--footer  angrobud@gmail.com
+                        a(href="tel=+380509915883").link.link--footer +38(050) 991-58-83
+                        a(href="tel=+380509915883").link.link--footer +38(050) 991-58-82
+                    .newsletter
+                         form(action="")
+                            fieldset
+                                legend Будьте в курсе спецпредложений
+                            .text-wrap
+                                label( for="newsletter") Ваш e-mail
+                                    input#newsletter(type="text")
+                                button.submit Хочу быть в курсе!
+                    a(href="#header").link.sm-button
+                        .svg-wrap
+                            svg
+                                use(xlink:href="#arrow")
+                        p Вверх
+                    .backcall
+                        p Мы предоставляем бесплатные консультации!
+                        a.submit Закажите звонок!
+                    .social
+                        h6 МЫ В СОЦСЕТЯХ
+                        .icon-wrap
+                            a(href="#header").link
+                                .svg-wrap
+                                    svg
+                                        use(xlink:href="#facebook icon")
+                            a(href="#header").link
+                                .svg-wrap
+                                    svg
+                                        use(xlink:href="#telegram")
+                            a(href="#header").link
+                                .svg-wrap
+                                    svg
+                                        use(xlink:href="#insta icon")
+                    p.copyright © 2020. www.angro.com.ua
+                                            
+
+
+
+
+
 <!-- modal -->
         include layout/modal.pug
 <!-- modal end-->                  

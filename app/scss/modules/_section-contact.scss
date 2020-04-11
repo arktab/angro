@@ -17,6 +17,7 @@
             display: flex;
             flex-direction: column;
             text-transform: uppercase;
+            font-size: 1.25rem;
             input {
                 margin: 1rem 0 0 0;
                 font-size: 1rem;
@@ -28,7 +29,7 @@
             }
         }
         label:nth-child(2) {
-            grid-column: 1 / 4;
+            grid-column: 1 / 5;
             grid-row: 2 / 3;
         }
         label:nth-child(3) {
@@ -44,22 +45,35 @@
             grid-row: 3 / 4;
             display: flex;
             align-items: center;
-            font-size: 1rem;
             line-height: 1.2rem;
             text-transform: uppercase;
+            margin-top: 100px;
             input {
-                margin: 0 25px 0 0;
+                margin: 0 20px 0 0;
+            }
+            .text-wrap {
+                text-align: center;
             }
             label {
                 display: inline-block;
+                font-size: 1rem;
             }
             a {
                 display: inline-block;
+                cursor: pointer;
             }
         }
         button {
             grid-column: 9 / 12;
             grid-row: 3 / 4;
+            height: 4rem;
+            align-self: flex-end;
         }
+        // .submit {
+        //     font-size: 1.25rem;
+        //     color: #828282;
+        //     background: #FFF3A6;
+        //     font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+        // }
     }
 }
