@@ -1,5 +1,7 @@
 .contact {
     background: url(/images/bg-contacts.jpg) 50% no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
     color: $tw;
     form {
         fieldset {
@@ -60,7 +62,15 @@
             }
             a {
                 display: inline-block;
+                //text-decoration: underline;
+                color: #FFF3A6;
+                border-bottom: 1px solid #FFF3A6;
+                padding: 0 0 .1rem 0;
                 cursor: pointer;
+                &:hover {
+                    color: #FFFFFF;
+                    border-bottom: 1px solid #FFFFFF;
+                }
             }
         }
         button {

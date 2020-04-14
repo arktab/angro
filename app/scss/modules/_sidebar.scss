@@ -2,7 +2,7 @@
         position: fixed;
         top: 0;
         left: 0;
-        z-index: 4;
+        z-index: 5;
         mix-blend-mode: normal;
         background: rgba(0, 0, 0, 0);
         mix-blend-mode: difference;
@@ -11,7 +11,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 50px 40px 100px;
+            padding: 50px 40px 27vh;
             height: 100vh;
             color: #ffffff;
             z-index: 5;
@@ -19,85 +19,112 @@
             mix-blend-mode: exclusion;
             transition: all .3s;
         }
-        .logo {
+        &-logo {
             height: 130px;
             cursor: pointer;
-            transition: all .3s;
-            img {
-                @include size(auto, 100%);
-                transition: all .3s;
+            &__icon {
+                @include size(130px);
+                fill: #FFFFFF;
+                &:hover {
+                    fill: $link-default;
+                }
             }
         }
-        .lang {
+        &-lang {
             display: flex;
             justify-content: center;
             align-items: center;
             font-size: 1.25em;
             height: 100px;
-            p {
-                margin: 0;
-                padding: 0 5px;
-            }
         }
-        .button {
-            @include size(80px, 400px);
+        &-menu {
+            //@include size(80px, 400px);
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            &__menu {
-                @include size(400px, 80px);
+            flex-grow: 2;
+            &__triger {
+                @include size(100%, 80px);
                 cursor: pointer;
                 color: rgb(255, 255, 255);
                 background: inherit;
                 transform: rotate(270deg);
                 font-size: 19px;
                 text-transform: uppercase;
-                letter-spacing: 5px;
+                letter-spacing: 1px;
                 font-weight: 100;
                 transition: all .3s;
                 font-family: $df;
+                text-align: center;
+                line-height: 80px;
+                &:hover {
+                    color: $link-default;
+                }
             }
         }
-        .link-wrap {
-            @include pos($b: 100px, $l: 60px);
+        &-icons {
+            @include pos($b: 100px, $l: 70px);
             display: flex;
             flex-direction: column;
-            height: 216px;
-            .link--info {
+            &__icon {
+                width: 65px;
+                height: 60px;
+                fill: #ffffff;
+                transition: all .3s;
                 margin-bottom: 1em;
-                svg {
-                    width: 65px;
-                    height: 60px;
+                &:hover {
+                    fill: $button-default-color;
+                }
+            }
+            .icon--email {
+                fill: transparent;
+                use {
+                    stroke: #FFFFFF;
+                }
+                &:hover {
+                    use {
+                        stroke: $button-default-color;
+                    }
                 }
             }
         }
     }
     
-    .blend {
-        //mix-blend-mode: exclusion;
-    }
-    
     .menu {
         @include pos($t: 0, $l: 0);
+        // position: relative;
         @include size(40rem, 100vh);
         z-index: 1;
         padding: 50px 0;
         transition: all .3s;
         display: block;
-        &__item {
+        position: fixed;
+        z-index: 3;
+        background: $page-bg;
+        &:after {
+            content: '';
+            @include pos($t: 0, $l: 40rem);
+            @include size(calc(100vw - 40rem), 100vh);
+            position: fixed;
+            z-index: 9;
+            background: rgba(66, 60, 58, 0.7);
+            pointer-events: none;
+            transition: all .3s;
+        }
+        &-item {
             padding: 1rem 0;
             font-size: 1.5rem;
+            text-transform: uppercase;
         }
-        &__main {
+        &-top {
             @include pos($t: 7.5rem, $l: 17rem);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
         }
-        &__footer {
-            height: 216px;
-            @include pos($b: 100px, $l: 17rem);
+        &-footer {
+            @include pos($b: 140px, $l: 17rem);
             @media (max-width: 1024px) {
                 top: 30rem;
             }
@@ -111,27 +138,13 @@
         &--opacity {
             opacity: 0;
         }
-        &--none {
+        &--is-hide {
             display: none;
         }
     }
     
-    .bg {
-        @include pos($t: 0, $l: 0);
-        position: fixed;
-        @include size(40rem, 100vh);
-        z-index: 3;
-        transition: all .3s;
-        background: $page-bg;
-        pointer-events: none;
-    }
-    
     .hide {
         @include pos($t: 0, $l: -40rem);
-    }
-    
-    .link--nav {
-        font-size: 29px;
     }
     
     // @media (max-width: 1200px) {

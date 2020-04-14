@@ -9,29 +9,29 @@ AOS.init({
     $(document).ready(function() {
         // Code
         var visible = new Boolean(false);
-        $(".button__menu").click(function() {
+        $(".sidebar-menu__triger").click(function() {
 
             if (visible == false) {
                 setTimeout(function() {
                     visible = true;
                     $(".menu").toggleClass("menu--opacity");
-                    $(".bg").toggleClass("menu--opacity");
+                    //$(".bg").toggleClass("menu--opacity");
                     setTimeout(function() {
-                        $(".menu").toggleClass("menu--none");
-                        $(".bg").toggleClass("menu--none");
-                        $(".sidebar").toggleClass("blend");
+                        $(".menu").toggleClass("menu--is-hide");
+                        //$(".bg").toggleClass("menu--none");
+                        //$(".sidebar").toggleClass("blend");
                     }, 200);
 
                 }, 100);
             } else {
                 visible = false;
                 setTimeout(function() {
-                    $(".menu").toggleClass("menu--none");
-                    $(".bg").toggleClass("menu--none");
-                    $(".sidebar").toggleClass("blend");
+                    $(".menu").toggleClass("menu--is-hide");
+                    //$(".bg").toggleClass("menu--none");
+                    //$(".sidebar").toggleClass("blend");
                     setTimeout(function() {
                         $(".menu").toggleClass("menu--opacity");
-                        $(".bg").toggleClass("menu--opacity");
+                        //$(".bg").toggleClass("menu--opacity");
                     }, 200);
 
                 }, 100);
@@ -50,33 +50,28 @@ AOS.init({
         // });
 
         //SLIDER__________________________________
-        $('.slider').slick({
+        $('.about-slider').slick({
+            nextArrow: $('.about-slider__next'),
+            prevArrow: $('.about-slider__prev'),
             dots: false,
             infinite: true,
             arrows: true,
             speed: 500,
             cssEase: 'linear',
+            draggable: false,
             slidesToShow: 3
         });
         $('.objects-slider').slick({
-            infinite: true,
+            nextArrow: $('.objects-slider__icon'),
             arrows: true,
+            //draggable: false,
+            infinite: true,
             speed: 500,
             cssEase: 'linear',
-            //fade: true,
             slidesToShow: 1
         });
-        $('.bg__animate').slick({
-            autoplay: true,
-            autoplaySpeed: 4000,
-            infinite: true,
-            arrows: false,
-            draggable: false,
-            speed: 500,
-            cssEase: 'linear',
-            fade: true
-        });
-        $('.articles__content').slick({
+        $('.articles-slider').slick({
+            nextArrow: $('.articles-slider__icon'),
             autoplay: true,
             autoplaySpeed: 4000,
             infinite: true,

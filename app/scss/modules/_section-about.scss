@@ -2,64 +2,91 @@
     .headline {
         line-height: 37px;
     }
-    .slider {
+    &-slider {
         position: relative;
         grid-column: 2 / 12;
         align-items: center;
-        .tile {
-            width: 400px;
-            height: 400px;
-            padding: 1rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            transition: all .5s;
-            svg {
-                @include size(100px);
-            }
-            .svg__wrap {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                @include size(150px);
-                background: $page-bg;
-                margin-bottom: 45px;
-                border-radius: 50%;
-            }
-            &__head {
-                font-size: 1.8em;
-                margin-bottom: 30px;
-                text-transform: uppercase;
-            }
-            &__text {
-                font-size: 1.25rem;
+        &__btn {
+            grid-row: 3 / 4;
+            align-self: center;
+            fill: #423C3A;
+            transition: all .3s;
+            &:hover {
+                fill: #514947;
             }
         }
-        .slick-prev {
-            left: -90px;
+        &__prev {
+            grid-column: 1 / 2;
+            justify-self: flex-start;
         }
-        .slick-next {
-            top: calc( 50% - 52.5px);
+        &__next {
+            grid-column: 12 / 13;
             transform: rotate(180deg);
-            right: -90px;
-        }
-        .slick-arrow {
-            @include size(65px, 105px);
-            font-size: 50px;
-            background: url(/images/icons/arrow.svg) 60% no-repeat;
-            cursor: pointer;
-            &:before {
-                content: '';
-                @include size(45px, 85px);
-                font-size: 50px;
-            }
+            justify-self: flex-end;
         }
     }
-    .link-wrap {
+    &-tile {
+        width: 400px;
+        height: 400px;
+        padding: 1rem;
+        display: flex !important; //hack for Slick Slider
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        transition: all .5s;
+        &__icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include size(150px);
+            background: $page-bg;
+            margin-bottom: 45px;
+            border-radius: 50%;
+        }
+        &__head {
+            font-size: 1.8em;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+        &__text {
+            font-size: 1.25rem;
+        }
+    }
+    &-icon {
+        @include size(100px);
+        fill: #FFF3A6;
+    }
+    &-btn {
         grid-column: 1 / 13;
         margin-top: 100px;
         padding: 0 0 0 1rem;
+        .arrow-btn {
+            .icon {
+                left: 15px;
+                transform: rotate(0);
+                width: 45px;
+            }
+        }
+    }
+    //SLICK SLIDER 
+    .slick-prev {
+        left: -90px;
+    }
+    .slick-next {
+        top: calc( 50% - 52.5px);
+        transform: rotate(180deg);
+        right: -90px;
+    }
+    .slick-arrow {
+        @include size(65px, 105px);
+        font-size: 50px;
+        //background: url(/images/icons/arrow.svg) 60% no-repeat;
+        cursor: pointer;
+        &:before {
+            content: '';
+            @include size(45px, 85px);
+            font-size: 50px;
+        }
     }
 }

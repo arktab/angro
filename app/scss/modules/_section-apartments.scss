@@ -7,6 +7,11 @@
     .head-wrap {
         grid-column: 1/7;
     }
+    .sm-button {
+        grid-column: 1/7;
+        grid-row: 2/3;
+        align-self: flex-end;
+    }
     .slide {
         display: flex;
         justify-content: space-between;

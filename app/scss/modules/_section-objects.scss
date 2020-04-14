@@ -4,67 +4,79 @@
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
-    &-slider {}
-    &-content {}
+    .container {
+        position: relative;
+    }
     .headline {
         line-height: 37px;
         border-color: #FFFFFF;
     }
-    .slide {
-        display: flex;
-        justify-content: space-between;
+    &-slider {
+        margin: 0 -15px;
     }
-    .text {
+    &-tile {
+        display: flex !important; //hack for Slick Slider
+        justify-content: space-between;
+        margin: 0 15px;
+    }
+    &-tile__info {
         display: flex;
         flex-direction: column;
         width: 47%;
-        &__headline {
-            color: $link-default;
-            font-size: 36px;
-            line-height: 44px;
-            margin: 0 0 45px 0;
-        }
-        &__text {
-            font-weight: 300;
-            font-size: 1.3;
-            line-height: 30px;
+        margin: 0 1rem 0 0;
+    }
+    &-tile__headline {
+        color: $link-default;
+        font-size: 36px;
+        line-height: 44px;
+        margin: 0 0 45px 0;
+    }
+    &-tile__text {
+        font-weight: 300;
+        font-size: 1.3;
+        line-height: 30px;
+        margin: 0 0 50px 0;
+    }
+    &-tile__links {
+        //font-size: 1rem;
+        .arrow-btn:first-child {
             margin: 0 0 50px 0;
         }
-        .link-wrap {
-            font-size: 1rem;
-            .sm-button:first-child {
-                margin: 0 0 50px 0;
-            }
-        }
     }
-    .image__wrap {
+    &-tile__illustration {
         width: 47%;
         background: $page-darken-bg;
-        //margin: 0 0 0 50px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        //border: 1.5px solid #FFF3A6;
-        img {
-            width: 100%;
-            height: auto;
+    }
+    &-tile__img {
+        width: 100%;
+        height: auto;
+    }
+    &-tile__icons {
+        display: flex;
+        padding: 1rem 1rem 1rem 1rem;
+        height: 30%;
+    }
+    &-tile__icon {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 19px;
+        padding: 1rem;
+        width: 33%;
+        svg {
+            @include size(95px);
+            fill: transparent;
         }
-        .icon_wrap {
-            display: flex;
-            padding: 1rem 1rem 1rem 1rem;
-            height: 30%;
-            .link {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                font-size: 19px;
-                padding: 1rem;
-                width: 33%;
-                svg {
-                    @include size(95px);
-                }
-            }
-        }
+    }
+    //SLICK SLIDER START
+    &-slider__icon {
+        @include pos($t: 50%, $r: -100px);
+        top: calc(50% - 52px);
+        transform: rotate(180deg);
+        z-index: 3;
     }
     .slick-arrow.slick-prev {
         display: none !important;
@@ -77,12 +89,17 @@
     .slick-arrow {
         @include size(65px, 105px);
         font-size: 50px;
-        background: url(/images/icons/arrow.svg) 60% no-repeat;
+        fill: #FFF3A6;
         cursor: pointer;
+        transition: all .3s;
+        &:hover {
+            fill: #FFFFFF;
+        }
         &:before {
             content: '';
             @include size(45px, 85px);
             font-size: 50px;
         }
     }
+    //SLICK SLIDER END
 }

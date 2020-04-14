@@ -1,42 +1,47 @@
 
 .sidebar
     .sidebar-content
-        a.logo
-            img.logo__img(src="images/logo.svg")
-        .lang
+        // LOGO START  
+        a(href="#").sidebar-logo              
+            svg.sidebar-logo__icon
+                use(xlink:href="images/main-page_icons-sprite.svg#logo")
+        // LOGO END 
+        // LANG SELECT START
+        .sidebar-lang
             a.link.active(href="#") UA
-            p |
+            
             a.link(href="#") RU
-        .button
-            button.button__menu меню
-        .link-wrap
-            a.link.link--info(href="#")
-                svg.icon
-                    use(xlink:href="#apartament")
-            a.link.link--info(href="#")
-                svg.icon
-                    use(xlink:href="#phone")
-            a.link.link--info(href="#")
-                svg.icon
-                    use(xlink:href="#email")
-        
-    ul.menu
-        .menu__main      
-            li.menu__item
-                a.link.active(href="#") Главная
-            li.menu__item
-                a.link(href="#") Объекты
-            li.menu__item
-                a.link(href="#") Квартиры
-            li.menu__item
-                a.link(href="#") Галерея
-            li.menu__item
-                a.link(href="#") Блог
-        .menu__footer
-            li.menu__item
-                a.link.active(href="#") Выбрать квартиру
-            li.menu__item
-                a.link(href="tel:+38(050)-991-58-80") +38 (050) 991 58 80
-            li.menu__item
-                a.link.email(href="mailto:angrobud@gmail.com") angrobud@gmail.com
-.bg
+        // LANG SELECT END
+        .sidebar-menu
+            .sidebar-menu__triger Меню
+        .sidebar-icons
+            a.sidebar-icons__item(href="#")
+                svg.sidebar-icons__icon
+                    use(xlink:href="images/main-page_icons-sprite.svg#apartament")
+            a.sidebar-icons__item(href="#")
+                svg.sidebar-icons__icon.icon--phone
+                    use(xlink:href="images/main-page_icons-sprite.svg#phone")
+            a.sidebar-icons__item(href="#")
+                svg.sidebar-icons__icon.icon--email
+                    use(xlink:href="images/main-page_icons-sprite.svg#email")
+
+
+.menu
+    ul.menu-top      
+        li.menu-item
+            a.link--active(href="#") Главная
+        li.menu-item
+            a(href="#") Объекты
+        li.menu-item
+            a(href="#") Квартиры
+        li.menu-item
+            a(href="#") Галерея
+        li.menu-item
+            a(href="#") Блог
+    ul.menu-footer
+        li.menu-item
+            a.link--active(href="#") Выбрать квартиру
+        li.menu-item
+            a(href="tel:+38(050)-991-58-80") +38 (050) 991 58 80
+        li.menu-item
+            a.link--email(href="mailto:angrobud@gmail.com") angrobud@gmail.com

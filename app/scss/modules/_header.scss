@@ -2,22 +2,21 @@
     height: 100vh;
     position: relative;
     background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0) 50%), linear-gradient(270deg, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0) 47.55%), url(/images/main-bg.jpg) 60% no-repeat;
-    //background-attachment: fixed;
-    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     color: $tw;
-    &-main {
+    &-content {
         text-align: right;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
         width: 100%;
-        padding: 0 100px 100px 0;
+        padding: 40px 100px;
         text-transform: uppercase;
-        h1 {
-            margin-bottom: 30px;
+        &__title {
+            margin-bottom: 12px;
+            line-height: 118px;
             @media (max-width: 1330px) {
                 font-size: 84px;
             }
@@ -31,9 +30,11 @@
                 font-size: 48px;
             }
         }
-        .text {
-            font-size: 28px;
+        &__text {
+            font-size: 29px;
+            line-height: 36px;
             padding-right: 40px;
+            letter-spacing: .0001rem;
             border-right: solid 2px white;
             line-height: 1.3;
             @media (max-width: 1200px) {
@@ -46,8 +47,8 @@
                 font-size: 18px;
             }
         }
-        .sm-button {
-            margin-top: 50px;
+        .arrow-btn {
+            margin-top: 21px;
             align-self: center;
         }
     }

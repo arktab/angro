@@ -2,35 +2,66 @@
     .grid
         h3.headline Angro.com.ua - Дом в Полтаве или Миргороде, новостройка, что бы вы не искали о недвижимости в Полтаве или Миргороде ответы есть на Angro.com.ua.
         h2.title О нас
-        .slider
-            .tile
-                .svg__wrap
-                    svg
-                        use(xlink:href="#chalice")
-                h3.tile__head Профессионализм
-                p.tile__text Сочитаем експертность и креативный подход
-            .tile
-                .svg__wrap
-                    svg
-                        use(xlink:href="#star")
-                h3.tile__head Качество
-                p.tile__text Все наши объекты выдержали проверку временем
-            .tile
-                .svg__wrap
-                    svg
-                        use(xlink:href="#briefcase")
-                h3.tile__head Опыт
-                p.tile__text Спроектировали, построили и управляем 4 объктами.
-            .tile
-                .svg__wrap
-                    svg
-                        use(xlink:href="#chalice")
-                h3.tile__head Профессионализм
-                p.tile__text Сочитаем експертность и креативный подход
-           
-        .link-wrap
-            a.link.sm-button(href="#")
-                .svg-wrap
-                    svg
-                        use(xlink:href="#arrow")
-                p Узнать больше
+        //SLIDER START
+        //SLIDER BUTTON START
+        svg.about-slider__prev.about-slider__btn
+            use(xlink:href="images/main-page_icons-sprite.svg#arrow") 
+        svg.about-slider__next.about-slider__btn
+            use(xlink:href="images/main-page_icons-sprite.svg#arrow") 
+        //SLIDER BUTTON END 
+        .about-slider
+            // TILE START
+            .about-tile
+                .about-tile__icon
+                    svg.about-icon
+                        use(xlink:href="images/main-page_icons-sprite.svg#chalice")
+                h3.about-tile__head Профессионализм
+                p.about-tile__text Сочитаем експертность и креативный подход
+            // TILE END
+            // TILE START
+            .about-tile
+                .about-tile__icon
+                    svg.about-icon
+                        use(xlink:href="images/main-page_icons-sprite.svg#star")
+                h3.about-tile__head Качество
+                p.about-tile__text Все наши объекты выдержали проверку временем
+            // TILE END
+            // TILE START
+            .about-tile
+                .about-tile__icon
+                    svg.about-icon
+                        use(xlink:href="images/main-page_icons-sprite.svg#briefcase")
+                h3.about-tile__head Опыт
+                p.about-tile__text Спроектировали, построили и управляем 4 объктами
+            // TILE END
+            // TILE START
+            .about-tile
+                .about-tile__icon
+                    svg.about-icon
+                        use(xlink:href="images/main-page_icons-sprite.svg#handshake")
+                h3.about-tile__head Надежность
+                p.about-tile__text Наши проекты ликвидные и экономически обоснованные
+            // TILE END
+            // TILE START
+            .about-tile
+                .about-tile__icon
+                        svg.about-icon
+                            use(xlink:href="images/main-page_icons-sprite.svg#town")
+                h3.about-tile__head Комфорт
+                p.about-tile__text Создаем качественное жилье с современной архитектурой
+            // TILE END
+            // TILE START
+            .about-tile
+                .about-tile__icon
+                        svg.about-icon
+                            use(xlink:href="images/main-page_icons-sprite.svg#lamp")
+                h3.about-tile__head Инновации
+                p.about-tile__text Используем передовые технологии в проектировании и строительстве
+            // TILE END
+        //SLIDER END    
+        .about-btn
+            a.arrow-btn.arrow-btn--dark(href="#about")
+                .arrow-btn__icon
+                    svg.icon
+                        use(xlink:href="images/main-page_icons-sprite.svg#play-button")
+                p.arrow-btn__text Смотреть видео

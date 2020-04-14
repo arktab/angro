@@ -1,23 +1,20 @@
 .articles {
     position: relative;
-    //padding: 0;
+    overflow: hidden;
     color: $tw;
-    .bg__animate {
-        overflow: hidden;
-        .bg__img {
-            img {
-                //object-fit: cover;
-                opacity: .9;
-            }
-        }
+    padding: 0;
+    .container {
+        position: relative;
     }
-    .bg__animate {
+    &-content {
         @include pos($t: 0, $l: 0);
-        padding: 0 0 0 0;
-        @include size(100%);
-    }
-    .grid {
-        @include size(100%);
+        padding: 100px 0 50px 0;
+        width: 100%;
+        pointer-events: none;
+        .grid {
+            grid-template-rows: auto auto 420px auto;
+            //pointer-events: none;
+        }
     }
     .headline {
         grid-column: 1/13;
@@ -30,52 +27,78 @@
         grid-row: 2/3;
         z-index: 2;
     }
-    .articles__content {
+    &-slider {
         grid-column: 1/13;
         grid-row: 3/4;
-        .slick-prev {
-            display: none !important;
-        }
-        .slick-next {
-            top: calc( 50% - 52.5px);
-            transform: rotate(180deg);
-            right: -90px;
-        }
-        .slick-arrow {
-            @include size(65px, 105px);
-            font-size: 50px;
-            background: url(/images/icons/arrow.svg) 60% no-repeat;
-            cursor: pointer;
-            &:before {
-                content: '';
-                @include size(45px, 85px);
-                font-size: 50px;
-            }
-        }
+        // position: absolute;
+        top: 0;
+        left: 0;
     }
-    .sm-button {
-        z-index: 2;
+    &-tile {
+        position: relative;
+        padding: 420px 0 300px 0;
+    }
+    &-tile__title {
+        font-family: Century Gothic;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 29px;
+        margin: 0 0 30px;
+        grid-column: 1/7;
+        position: relative;
+        z-index: 5;
+    }
+    &-tile__text {
+        font-family: Bellota Text;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 30px;
+        margin: 0 0 80px;
+        grid-column: 1/11;
+    }
+    &-tile__img {
+        position: absolute;
+        top: -15px;
+        left: -3px;
+        // right: 0;
+        // bottom: 0;
+        @include size(105%);
+        z-index: -1;
+    }
+    .arrow-btn {
+        pointer-events: visible;
         grid-column: 1/6;
         grid-row: 4/5;
+        //margin: 300px 0 0 0;
     }
-    .articles__content {
-        .article {
-            &__titile {
-                font-family: Century Gothic;
-                font-style: normal;
-                font-weight: bold;
-                font-size: 24px;
-                line-height: 29px;
-                margin: 0 0 30px;
-            }
-            &__text {
-                font-family: Bellota Text;
-                font-style: normal;
-                font-weight: 300;
-                font-size: 24px;
-                line-height: 30px;
-                margin: 0 0 80px;
-            }
+    //SLICK SLIDER
+    .slick-prev {
+        display: none !important;
+    }
+    &-slider__icon {
+        position: absolute;
+        z-index: 10;
+        top: calc( 50% - 52.5px);
+        right: -105px;
+        transform: rotate(180deg);
+        fill: #FFF3A6;
+        transition: all .3s;
+        &:hover {
+            fill: #FFFFFF;
+        }
+    }
+    .slick-arrow {
+        pointer-events: visible;
+        @include size(65px, 105px);
+        font-size: 50px;
+        //background: url(/images/icons/arrow.svg) 60% no-repeat;
+        cursor: pointer;
+        &:before {
+            content: '';
+            @include size(45px, 85px);
+            font-size: 50px;
         }
     }
 }

@@ -1,6 +1,6 @@
 footer {
-    padding: 100px 0 100px 0;
-    background: linear-gradient(90deg, rgba(0, 0, 0, .5), hsla(0, 0%, 100%, 0) 50%), linear-gradient(270deg, rgba(0, 0, 0, .5), hsla(0, 0%, 70%, 0) 47.55%);
+    padding: 100px 0 50px 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, .2), hsla(0, 0%, 100%, 0) 50%), linear-gradient(270deg, rgba(0, 0, 0, .2), hsla(0, 0%, 70%, 0) 47.55%);
     color: #0D0D0D;
     .link--footer {
         color: #0D0D0D;
@@ -14,11 +14,15 @@ footer {
         flex-direction: column;
         align-content: flex-end;
         text-align: right;
+        justify-content: flex-start;
+        padding: 1.5rem 0 0 0;
     }
     .link-logo {
         grid-column: 6 / 8;
         grid-row: 1 / 2;
+        margin: 0 0 75px 0;
         svg {
+            width: 100%;
             fill: #423C3A;
         }
     }
@@ -28,9 +32,11 @@ footer {
         display: flex;
         flex-direction: column;
         align-content: flex-start;
+        justify-content: flex-start;
+        padding: 1.5rem 0 0 0;
     }
     .newsletter {
-        grid-column: 2 / 6;
+        grid-column: 1 / 6;
         grid-row: 2 / 3;
         .text-wrap {
             display: flex;
@@ -38,20 +44,31 @@ footer {
             padding: 1rem 0;
         }
         form {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            .text-wrap {
+                padding: 1rem 0 0 0;
+            }
             fieldset {
                 text-transform: uppercase;
                 font-size: 1.25rem;
             }
             label {
                 font-size: 1.1rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
             }
             input {
                 font-size: 1.1rem;
                 background: transparent;
-                border-bottom: 2px solid #4F4F4F;
+                border-bottom: 1px solid #4F4F4F;
                 margin-top: .5rem;
                 padding: .1rem .5rem;
                 color: #4F4F4F;
+                width: 230px;
             }
         }
     }
@@ -76,6 +93,11 @@ footer {
     .backcall {
         grid-column: 8 / 11;
         grid-row: 2 / 3;
+        .submit {
+            display: block;
+            text-align: center;
+            line-height: 4rem;
+        }
     }
     .social {
         grid-column: 11 / 13;
@@ -84,9 +106,19 @@ footer {
         .icon-wrap {
             display: flex;
             justify-content: space-between;
+            padding: 0 1rem;
+            .link {
+                &:hover {
+                    svg {
+                        fill: #514947;
+                    }
+                }
+            }
         }
         svg {
             @include size(40px);
+            fill: #423C3A;
+            transition: all .3s;
         }
     }
     .copyright {
@@ -94,5 +126,19 @@ footer {
         grid-row: 3 / 4;
         justify-self: center;
         margin: 100px 0 0 0;
+    }
+    .submit {
+        width: 250px;
+        height: 4rem;
+    }
+    .copyright {
+        grid-column: 1 / 13;
+        grid-row: 3 / 4;
+        justify-self: center;
+        margin: 100px 0 0 0;
+    }
+    .submit {
+        width: 250px;
+        height: 4rem;
     }
 }

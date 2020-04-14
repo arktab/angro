@@ -15,8 +15,6 @@ body,
 html {
     min-height: 100%;
     width: 100%;
-    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-    color: $default-button-text-color;
 }
 
 .clear::after,
@@ -32,13 +30,16 @@ html {
 // Main styles
 body {
     position: relative;
-    //font-family: 'Bellota Text', cursive;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    color: $default-button-text-color;
 }
 
-section {
-    //background: #ffffff;
-    padding: 100px 0 100px 0;
-    background: linear-gradient(90deg, rgba(0, 0, 0, .5), hsla(0, 0%, 100%, 0) 50%), linear-gradient(270deg, rgba(0, 0, 0, .5), hsla(0, 0%, 70%, 0) 47.55%);
+input {
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+}
+
+button::-moz-focus-inner {
+    border: 0;
 }
 
 .hidden {
@@ -68,121 +69,9 @@ section {
     gap: 10px;
 }
 
-.link {
-    color: $tw;
-    text-decoration: none;
-    transition: all .3s;
-    &:hover {
-        color: $link-default;
-    }
-    &:visited {
-        text-decoration: none;
-    }
-}
-
-.active {
-    color: $link-default;
-    &:hover {
-        color: $light-hover;
-    }
-}
-
-.email {
-    text-transform: lowercase;
-}
-
-//
-.blend {
-    mix-blend-mode: exclusion !important;
-}
-
-//buttons
-button::-moz-focus-inner {
-    border: 0;
-}
-
-.sm-button {
-    height: 77px;
-    display: flex;
-    align-items: center;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: $tw;
-    p {
-        padding-left: 95px;
-        font-size: 24px;
-    }
-    &:hover {
-        .svg-wrap {
-            svg {
-                //opacity: .8;
-            }
-            &:after {
-                background: $light-hover;
-            }
-        }
-    }
-    &:active {
-        .svg-wrap {
-            svg {
-                mix-blend-mode: exclusion;
-            }
-            &:after {
-                background: $bb-pressed;
-            }
-        }
-    }
-    .svg-wrap {
-        position: relative;
-        transition: all .3s;
-        svg {
-            @include pos($t: -17px, $l: 30px);
-            transform: rotate(-90deg);
-            @include size(15px, 40px);
-            z-index: 2;
-            transition: all .2s;
-            use {
-                transition: all .2s;
-            }
-        }
-        &:after {
-            content: '';
-            @include pos($t: -37px, $l: 0);
-            @include size(75px);
-            background: $button-default-color;
-            border-radius: 50%;
-            z-index: 1;
-            transition: all .5s;
-            &:hover {
-                background: $active-button-t-color;
-            }
-        }
-    }
-}
-
 .submit {
     font-size: 1.25rem;
-    color: #828282;
+    color: $bb-pressed;
     background: #FFF3A6;
     font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
-}
-
-//yellow round button
-//page 
-.headline {
-    font-size: 25px;
-    line-height: 75px;
-    padding-left: 35px;
-    border-left: solid 2px $page-bg;
-    grid-column: 1 / 13;
-    height: 75px;
-    margin: 0 0 80px 2px;
-    text-transform: uppercase;
-}
-
-.title {
-    grid-column: 1 / 13;
-    margin-bottom: 80px;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
 }
