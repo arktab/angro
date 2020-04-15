@@ -10,6 +10,14 @@ a {
     }
 }
 
+.link {
+    color: $link-default;
+    text-decoration: underline;
+    &:hover {
+        color: $light-hover;
+    }
+}
+
 .link--active {
     color: $link-default;
     &:hover {
@@ -21,6 +29,18 @@ a {
     text-transform: lowercase;
 }
 
+.btn {
+    font-size: 1.25rem;
+    color: $bb-pressed;
+    background: #FFF3A6;
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    transition: all .3s;
+    &:hover {
+        background: #514947;
+        color: #FFFFFF;
+    }
+}
+
 .arrow-btn {
     height: 77px;
     display: flex;
@@ -28,12 +48,6 @@ a {
     text-transform: uppercase;
     text-decoration: none;
     color: $tw;
-    &--dark {
-        color: #423C3A;
-        &:hover {
-            color: #514947;
-        }
-    }
     &__text {
         padding-left: 95px;
         font-size: 19px;
@@ -78,6 +92,12 @@ a {
             &:hover {
                 background: $active-button-t-color;
             }
+        }
+    }
+    &--dark {
+        color: #423C3A;
+        &:hover {
+            color: #514947;
         }
     }
     &--left {

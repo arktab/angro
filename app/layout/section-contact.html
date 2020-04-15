@@ -1,26 +1,22 @@
 
 <div class="container">
-  <div class="form-wrap">
-    <form class="grid" action="">
-      <fieldset>
-        <legend>С удовольствием проконсультируем Вас!</legend>
-      </fieldset>
-      <label for="username">Ваше имя
-        <input id="username" type="text" required="required"/>
-      </label>
-      <label for="tel">Телефон
-        <input id="tel" type="tel" required="required"/>
-      </label>
-      <label for="email">EMAIL (НЕ ОБЯЗАТЕЛЬНО)
-        <input id="email" type="email"/>
-      </label>
-      <div class="checkbox-wrap">
-        <input id="check" type="checkbox"/>
-        <div class="text-wrap">
-          <label for="check">Я даю согласие на обработку моих персональных данных согласно </label><a class="link" href="#">политике конфиденциальности </a>
-        </div>
+  <form class="grid contact-form" action="">
+    <h4 class="contact-form__headline">С удовольствием проконсультируем Вас!</h4>
+    <label class="contact-form__title" for="username">Ваше имя
+      <input class="contact-form__field" id="username" type="text" required="required"/>
+    </label>
+    <label class="contact-form__title" for="tel">Телефон
+      <input class="contact-form__field" id="tel" type="tel" required="required"/>
+    </label>
+    <label class="contact-form__title" for="email">EMAIL (НЕ ОБЯЗАТЕЛЬНО)
+      <input class="contact-form__field" id="email" type="email"/>
+    </label>
+    <div class="contact-form__checkbox">
+      <input class="contact-form__field" id="check" type="checkbox"/>
+      <div class="contact-form__text">
+        <label class="contact-form__title" for="check">Я даю согласие на обработку моих персональных данных согласно </label><a class="link contact-form__link" href="#">политике конфиденциальности </a>
       </div>
-      <button class="submit">Отправить запрос</button>
-    </form>
-  </div>
+    </div>
+    <button class="btn contact-form__btn" type="submit">Отправить запрос</button>
+  </form>
 </div>

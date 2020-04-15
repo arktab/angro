@@ -1,49 +1,64 @@
 .container
     .grid
-        .head-wrap
+        .apartments-head  
             h3.headline Только лучшее для амбициозных и успешных
             h2.title Квартиры в новостройках
-        a.link.sm-button.sm-button--main(href="#")
-            .svg-wrap
-                svg
+        a.arrow-btn.arrow-btn--left.arrow-btn--dark(href="#")
+            .arrow-btn__icon
+                svg.icon
                     use(xlink:href="images/main-page_icons-sprite.svg#arrow")
-            p Посмотреть все статьи
-
-        .apartments-slider
-            .slide
-                .slide__name ЖК "Остров"
-                .slide__img
-                    img(src="images/object_img1.jpg")
-                .slide__icon
-                    svg
-                        use(xlink:href="images/main-page_icons-sprite.svg#tover")
-                .slide__title Выразительная архитектура
-                .slide__link.link Смотреть квартиры объекта
-            .slide
-                .slide__name ЖК "Мирного"
-                .slide__img
-                    img(src="images/object_img1.jpg")
-                .slide__icon
-                    svg
-                        use(xlink:href="images/main-page_icons-sprite.svg#location")
-                .slide__title Транспортная доступность
-                .slide__link.link Смотреть квартиры объекта
-            .slide
-                .slide__name ЖК "Победы"
-                .slide__img
-                    img(src="images/object_img1.jpg")
-                .slide__icon
-                    svg
-                        use(xlink:href="images/main-page_icons-sprite.svg#interest-points")
-                .slide__title Развитая ифраструктура 
-                .slide__link.link Смотреть квартиры объекта
-            .slide
-                .slide__name ЖК "Остров"
-                .slide__img
-                    img(src="images/object_img1.jpg")
-                .slide__icon
-                    svg
-                        use(xlink:href="images/main-page_icons-sprite.svg#tover")
-                .slide__title Выразительная архитектура
-                .slide__link.link Смотреть квартиры объекта
+            p.arrow-btn__text Посмотреть квартиры объекта
+//SLIDER BUTTON START
+svg.apartments-slider__prevbtn
+    use(xlink:href="images/main-page_icons-sprite.svg#arrow") 
+svg.apartments-slider__nextbtn
+    use(xlink:href="images/main-page_icons-sprite.svg#arrow") 
+//SLIDER BUTTON END 
+//SLIDER
+.apartments-slider__wrap
+    .apartments-slider
+        //SLIDER TILE
+        .apartments-tile
+            .apartments-tile__name ЖК "Остров"
+            .apartments-tile__img
+                //TILE IMG
+                img(src="images/apartaments/apartaments1.jpg")
+            .apartments-tile__icon
+                svg
+                    use(xlink:href="images/main-page_icons-sprite.svg#tover")
+            .apartments-tile__title Выразительная архитектура
+            a(href="").apartments-tile__link.link Смотреть квартиры объекта
+        //SLEDER TILE
+        .apartments-tile
+            .apartments-tile__name ЖК "Мирного"
+            .apartments-tile__img
+                //TILE IMG
+                img(src="images/apartaments/apartaments2.jpg")
+            .apartments-tile__icon
+                svg
+                    use(xlink:href="images/main-page_icons-sprite.svg#location")
+            .apartments-tile__title Транспортная доступность
+            a(href="").apartments-tile__link.link Смотреть квартиры объекта
+        //SLIDER TILE
+        .apartments-tile
+            .apartments-tile__name ЖК "Победы"
+            .apartments-tile__img
+                //TILE IMG
+                img(src="images/apartaments/apartaments3.jpg")
+            .apartments-tile__icon
+                svg
+                    use(xlink:href="images/main-page_icons-sprite.svg#interest-points")
+            .apartments-tile__title Развитая ифраструктура 
+            a(href="").apartments-tile__link.link Смотреть квартиры объекта
+        //SLIDER TILE
+        .apartments-tile
+            .apartments-tile__name ЖК "Остров"
+            .apartments-tile__img
+                //TILE IMG
+                img(src="images/apartaments/apartaments1.jpg")
+            .apartments-tile__icon
+                svg
+                    use(xlink:href="images/main-page_icons-sprite.svg#tover")
+            .apartments-tile__title Выразительная архитектура
+            a(href="").apartments-tile__link.link Смотреть квартиры объекта
         

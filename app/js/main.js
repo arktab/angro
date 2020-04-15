@@ -81,6 +81,8 @@ AOS.init({
             slidesToShow: 1
         });
         $('.apartments-slider').slick({
+            nextArrow: $('.apartments-slider__nextbtn'),
+            prevArrow: $('.apartments-slider__prevbtn'),
             dots: false,
             infinite: true,
             arrows: true,

@@ -1,52 +1,50 @@
 .container
-    .footer-content.grid
-        .address
+    .grid
+        .footer-address
             h5 Наши офисы
-            a(href="#").link.link--footer г.Полтава, ул. А.Кукоби, 12
-            a(href="#").link.link--footer г.Миргород, ул.Победы,10, оф.1
-            a(href="#").link.link--footer Время работы: 9:00 – 18:00
+            a(href="#").footer-link г.Полтава, ул. А.Кукоби, 12
+            a(href="#").footer-link г.Миргород, ул.Победы,10, оф.1
+            a(href="#").footer-link Время работы: 9:00 – 18:00
         
-        .link-logo
+        .footer-logo
             a(href="#").link 
                 svg 
                     use(xlink:href="images/main-page_icons-sprite.svg#logo")
         
-        .contacts
+        .footer-contacts
             h5 Наши офисы
-            a(href="mailto:angrobud@gmail.com").link.link--footer  angrobud@gmail.com
-            a(href="tel=+380509915883").link.link--footer +38(050) 991-58-83
-            a(href="tel=+380509915883").link.link--footer +38(050) 991-58-82
-        .newsletter
+            a(href="mailto:angrobud@gmail.com").footer-link  angrobud@gmail.com
+            a(href="tel=+380509915883").footer-link +38(050) 991-58-83
+            a(href="tel=+380509915883").footer-link +38(050) 991-58-82
+        .footer-newsletter
+                form(action="").newsletter-form
+                h5.newsletter-form__headline Будьте в курсе спецпредложений 
+                .newsletter-form__text
+                    label( for="newsletter").newsletter-form__title Ваш e-mail
+                        input#newsletter(type="text").newsletter-form__field
+                    button.btn.newsletter-form__btn Хочу быть в курсе!
             
-                form(action="")
-                fieldset
-                    legend Будьте в курсе спецпредложений 
-                .text-wrap
-                    label( for="newsletter") Ваш e-mail
-                        input#newsletter(type="text")
-                    button.submit Хочу быть в курсе!
-            
-        a(href="#header").link.sm-button
-            .svg-wrap
-                svg
+        a.arrow-btn.footer-btn(href="#about")
+            .arrow-btn__icon
+                svg.icon
                     use(xlink:href="images/main-page_icons-sprite.svg#arrow")
-            p Вверх
-        .backcall
+            p.arrow-btn__text Вверх
+        .footer-backcall
             p Мы предоставляем бесплатные консультации!
-            a.submit Закажите звонок!
-        .social
-            h6 МЫ В СОЦСЕТЯХ
-            .icon-wrap
-                a(href="#header").link
+            a.btn Закажите звонок!
+        .footer-social
+            h6.footer-social__title МЫ В СОЦСЕТЯХ
+            .footer-social__icons
+                a(href="#header").footer-social__link
                     .svg-wrap
                         svg
                             use(xlink:href="images/main-page_icons-sprite.svg#facebook icon")
-                a(href="#header").link
+                a(href="#header").footer-social__link
                     .svg-wrap
                         svg
                             use(xlink:href="images/main-page_icons-sprite.svg#telegram")
-                a(href="#header").link
+                a(href="#header").footer-social__link
                     .svg-wrap
                         svg
                             use(xlink:href="images/main-page_icons-sprite.svg#insta icon")
-        p.copyright © 2020. www.angro.com.ua
+        p.footer-copyright © 2020. www.angro.com.ua
