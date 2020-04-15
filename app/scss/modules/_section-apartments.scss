@@ -70,6 +70,9 @@
                 @include size(85px);
             }
         }
+        &__svg {
+            fill: transparent;
+        }
         &__title {
             margin-bottom: 75px;
             font-size: 36px;

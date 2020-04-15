@@ -1,12 +1,6 @@
-@mixin center-v () {
+.info {
     position: fixed;
     top: 0;
-    bottom: 0;
-    //margin: auto;
-}
-
-.info {
-    @include center-v;
     right: 0;
     z-index: 1;
     color: #FFFFFF;
@@ -15,9 +9,8 @@
     flex-direction: row;
     justify-content: space-around;
     @include size(33%, 7rem);
-    //min-width: 400px;
     padding: 20px;
-    .link {
+    &-block {
         width: 50%;
         min-width: 205px;
         padding: .5rem;
@@ -28,56 +21,56 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        &:nth-child(1) {
-            padding: .8rem;
-            .top {
-                font-size: 1.25rem;
-                text-decoration: none;
-                margin: 0;
+    }
+    &-left {
+        padding: .8rem;
+        .info-text {
+            font-size: 1.25rem;
+            text-decoration: none;
+            margin: 0;
+        }
+        .info-link {
+            font-size: 1rem;
+            text-decoration: underline;
+        }
+        @media (max-width: 1250px) {
+            .info-text {
+                font-size: 1.1rem;
             }
-            .bottom {
-                font-size: 1rem;
-                text-decoration: underline;
-            }
-            @media (max-width: 1250px) {
-                .top {
-                    font-size: 1.1rem;
-                }
-                .bottom {
-                    font-size: .8rem;
-                }
-            }
-            @media (max-width: 1030px) {
-                .top {
-                    font-size: .8rem;
-                }
-                .bottom {
-                    font-size: .5rem;
-                }
+            .info-link {
+                font-size: .8rem;
             }
         }
-        &:nth-child(2) {
-            justify-content: center;
-            flex-direction: row;
-            text-transform: uppercase;
-            line-height: 1.3rem;
-            .top {
-                fill: $light-hover;
-                @include size(65px, 50px);
-                margin: .7rem;
+        @media (max-width: 1030px) {
+            .info-text {
+                font-size: .8rem;
             }
-            .bottom {
-                font-size: 1.3rem;
+            .info-link {
+                font-size: .5rem;
             }
-            @media (max-width: 1250px) {
-                .bottom {
-                    font-size: 1.1rem;
-                }
+        }
+    }
+    &-right {
+        justify-content: center;
+        flex-direction: row;
+        text-transform: uppercase;
+        line-height: 1.3rem;
+        .info-icon {
+            fill: $light-hover;
+            @include size(65px, 50px);
+            margin: .7rem;
+        }
+        .info-link {
+            font-size: 1.3rem;
+        }
+        @media (max-width: 1250px) {
+            .info-link {
+                font-size: 1.1rem;
             }
-            @media (max-width: 1030px) {
-                .bottom {
-                    font-size: .8rem;
-                }
+        }
+        @media (max-width: 1030px) {
+            .info-link {
+                font-size: .8rem;
             }
         }
     }

@@ -36,6 +36,21 @@
             align-items: center;
             font-size: 1.25em;
             height: 100px;
+            position: relative;
+            &:after {
+                content: '';
+                @include pos($t: 50%, $l: 50%);
+                width: 2px;
+                height: 24px;
+                background: #FFFFFF;
+                transform: translateY(-50%);
+            }
+            &__link {
+                padding: 0 .5rem;
+            }
+            .link--active {
+                text-decoration: underline;
+            }
         }
         &-menu {
             //@include size(80px, 400px);

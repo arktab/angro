@@ -203,4 +203,12 @@
     <path stroke="#FFF3A6" stroke-width="1.5" stroke-linecap="round" d="M5.131 97.222h105.55"></path>
   </symbol>
 
+
+
+   <symbol viewBox="0 0 100 89" xmlns="http://www.w3.org/2000/svg" id="layout">
+    <path d="M92.394 68.5H98.5V1H1v67.5h54.858M39.75 7.25v55m0-27.5H7.25" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M73.197 70.454L86 67.924 60.923 47.25l2.978 32.364 9.296-9.16z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M73.197 70.454l8.767 16.573" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+  </symbol>
+
     </svg>
