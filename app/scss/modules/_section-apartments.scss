@@ -40,7 +40,6 @@
     }
     &-tile {
         height: 920px;
-        width: 200px;
         margin: 0 .25rem;
         background: linear-gradient(270deg, rgba(66, 60, 58, 0.33) -20.49%, #423C3A -20.49%, rgba(255, 255, 255, 0) 18.52%), linear-gradient(90deg, rgba(66, 60, 58, 0.33) -12.06%, rgba(255, 255, 255, 0) 25.73%), $page-darken-bg;
         text-align: center;
@@ -52,7 +51,7 @@
         &__name {
             padding: 25px 0;
             //font-size: 24px;
-            font-size: 36px;
+            font-size: 32px;
             line-height: 44px;
         }
         &__img {
@@ -75,7 +74,7 @@
         }
         &__title {
             margin-bottom: 75px;
-            font-size: 33px;
+            font-size: 30px;
             line-height: 44px;
             text-align: center;
             padding: 0 .25rem;
