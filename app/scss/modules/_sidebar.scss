@@ -6,6 +6,9 @@
         mix-blend-mode: normal;
         background: rgba(0, 0, 0, 0);
         mix-blend-mode: difference;
+        @media (max-width: 576px) {
+            display: none;
+        }
         &-content {
             position: relative;
             display: flex;
@@ -18,6 +21,9 @@
             background: inherit;
             mix-blend-mode: exclusion;
             transition: all .3s;
+            @media (max-width: 1366px) {
+                padding: 50px 40px 45vh;
+            }
         }
         &-logo {
             height: 130px;

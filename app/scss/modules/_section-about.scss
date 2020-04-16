@@ -1,6 +1,16 @@
 .about {
+    @media (max-width: 576px) {
+        padding: 30px 10px;
+        //margin: 0 0 10px 2px;
+    }
     .headline {
-        line-height: 37px;
+        @media (max-width: 1024px) {
+            line-height: 37px;
+        }
+        @media (max-width: 576px) {
+            line-height: 20px;
+            margin: 0 0 10px 2px;
+        }
     }
     &-slider {
         position: relative;
@@ -13,6 +23,9 @@
             transition: all .3s;
             &:hover {
                 fill: #514947;
+            }
+            @media (max-width: 576px) {
+                display: none !important;
             }
         }
         &__prev {
@@ -48,9 +61,17 @@
             font-size: 1.8em;
             margin-bottom: 30px;
             text-transform: uppercase;
+            @media (max-width: 576px) {
+                font-size: 24px;
+                line-height: 29px
+            }
         }
         &__text {
             font-size: 1.25rem;
+            @media (max-width: 576px) {
+                font-size: 19px;
+                line-height: 24px
+            }
         }
     }
     &-icon {
@@ -61,11 +82,21 @@
         grid-column: 1 / 13;
         margin-top: 100px;
         padding: 0 0 0 1rem;
+        @media (max-width: 1366px) {
+            margin-top: 50px;
+        }
+        @media (max-width: 576px) {
+            grid-column: 2 / 12;
+            left: -2px;
+        }
         .arrow-btn {
             .icon {
                 left: 15px;
                 transform: rotate(0);
                 width: 45px;
+                @media (max-width: 576px) {
+                    left: -2px;
+                }
             }
         }
     }
@@ -87,6 +118,9 @@
             content: '';
             @include size(45px, 85px);
             font-size: 50px;
+        }
+        @media (max-width: 576px) {
+            display: none !important;
         }
     }
 }

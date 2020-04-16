@@ -14,20 +14,25 @@
         width: 100%;
         padding: 40px 100px;
         text-transform: uppercase;
+        @media (max-width: 576px) {
+            padding: 90px 20px;
+        }
         &__title {
             margin-bottom: 12px;
             line-height: 118px;
-            @media (max-width: 1330px) {
-                font-size: 84px;
-            }
-            @media (max-width: 1200px) {
-                font-size: 66px;
+            @media (max-width: 1366px) {
+                font-size: 72px;
+                line-height: 86px;
             }
             @media (max-width: 1024px) {
                 font-size: 52px;
             }
             @media (max-width: 768px) {
                 font-size: 48px;
+            }
+            @media (max-width: 576px) {
+                font-size: 36px;
+                line-height: 44px;
             }
         }
         &__text {
@@ -46,6 +51,11 @@
             @media (max-width: 768px) {
                 font-size: 18px;
             }
+            @media (max-width: 576px) {
+                font-size: 16px;
+                padding-right: 20px;
+                margin-bottom: 100px;
+            }
         }
         .arrow-btn {
             margin-top: 21px;
@@ -53,3 +63,53 @@
         }
     }
 }
+
+//MOBILE
+// .burger-menu {
+//     cursor: pointer;
+//     height: 20px;
+//     display: flex;
+//     align-items: center;
+//     transition: all .3s;
+//     margin: 9px 15px 0 0;
+//     @media (min-width: $width-md) {
+//         display: none;
+//     }
+//     &__item {
+//         @include size(20px, 2px);
+//         display: block;
+//         background: #000;
+//         position: relative;
+//         &::before,
+//         &::after {
+//             @include size(26px, 100%);
+//             @include pos($l: -3px);
+//             content: '';
+//             background: #000;
+//             transition: all .3s;
+//         }
+//         &::before {
+//             top: -9px;
+//         }
+//         &::after {
+//             bottom: -9px;
+//         }
+//     }
+//     &.burger-menu--active {
+//         margin-right: 155px;
+//         .burger-menu__item {
+//             background: transparent;
+//             &::before {
+//                 transform: rotate(45deg);
+//                 transform-origin: 0 0;
+//             }
+//             &::after {
+//                 transform: rotate(-45deg);
+//                 transform-origin: 0 100%;
+//             }
+//         }
+//         +.nav {
+//             right: 0;
+//         }
+//     }
+// }

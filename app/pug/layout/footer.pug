@@ -1,36 +1,36 @@
 .container
     .grid
         .footer-address
-            h5 Наши офисы
+            h5.footer-address__title Наши офисы
             a(href="#").footer-link г.Полтава, ул. А.Кукоби, 12
             a(href="#").footer-link г.Миргород, ул.Победы,10, оф.1
             a(href="#").footer-link Время работы: 9:00 – 18:00
         
         .footer-logo
             a(href="#").link 
-                svg 
+                svg(data-aos="fade-down" data-aos-easing="linear" data-aos-duration="800")
                     use(xlink:href="images/main-page_icons-sprite.svg#logo")
         
         .footer-contacts
-            h5 Наши офисы
+            h5.footer-contacts__title Наши офисы
             a(href="mailto:angrobud@gmail.com").footer-link  angrobud@gmail.com
             a(href="tel=+380509915883").footer-link +38(050) 991-58-83
             a(href="tel=+380509915883").footer-link +38(050) 991-58-82
         .footer-newsletter
-                form(action="").newsletter-form
-                h5.newsletter-form__headline Будьте в курсе спецпредложений 
-                .newsletter-form__text
-                    label( for="newsletter").newsletter-form__title Ваш e-mail
-                        input#newsletter(type="text").newsletter-form__field
-                    button.btn.newsletter-form__btn Хочу быть в курсе!
-            
-        a.arrow-btn.footer-btn(href="#about")
+            //FORM START
+            form(action="").footer-newsletter__form
+                h5.footer-newsletter__headline Будьте в курсе спецпредложений   
+                label( for="newsletter").footer-newsletter__title Ваш e-mail
+                input#newsletter(type="text").footer-newsletter__field
+                button.btn.footer-newsletter__btn Хочу быть в курсе!
+            //FORM END          
+        a.arrow-btn.footer-btn(href="#header")
             .arrow-btn__icon
                 svg.icon
                     use(xlink:href="images/main-page_icons-sprite.svg#arrow")
             p.arrow-btn__text Вверх
         .footer-backcall
-            p Мы предоставляем бесплатные консультации!
+            p.footer-backcall__title Мы предоставляем бесплатные консультации!
             a.btn Закажите звонок!
         .footer-social
             h6.footer-social__title МЫ В СОЦСЕТЯХ

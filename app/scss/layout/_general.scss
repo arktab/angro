@@ -52,14 +52,21 @@ button::-moz-focus-inner {
     margin: 0 auto;
     padding: 0 10px;
     max-width: 1250px;
-    @media (max-width: 1200px) {
-        max-width: 1140px;
+    @media (max-width: 1367px) {
+        max-width: 960px;
+    }
+    @media (max-width: 1366px) {
+        max-width: 960px;
     }
     @media (max-width: 1024px) {
-        max-width: 960px;
+        max-width: 766px;
     }
     @media (max-width: 768px) {
         max-width: 766px;
+    }
+    @media (max-width: 576px) {
+        width: 100%;
+        padding: 0 20px;
     }
 }
 
@@ -67,11 +74,4 @@ button::-moz-focus-inner {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 10px;
-}
-
-.submit {
-    font-size: 1.25rem;
-    color: $bb-pressed;
-    background: #FFF3A6;
-    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
 }

@@ -5,15 +5,16 @@
     padding: 0;
     .container {
         position: relative;
+        @include size(100%);
     }
     &-content {
         @include pos($t: 0, $l: 0);
         padding: 100px 0 50px 0;
-        width: 100%;
+        @include size(100%);
         pointer-events: none;
         .grid {
-            grid-template-rows: auto auto 450px auto;
-            //pointer-events: none;
+            grid-template-rows: auto auto 1fr auto;
+            @include size(100%);
         }
     }
     .headline {
@@ -30,13 +31,15 @@
     &-slider {
         grid-column: 1/13;
         grid-row: 3/4;
-        // position: absolute;
         top: 0;
         left: 0;
     }
     &-tile {
         position: relative;
         padding: 420px 0 300px 0;
+        @media (max-width: 1366px) {
+            padding: 290px 0 200px 0;
+        }
     }
     &-tile__title {
         font-family: Century Gothic;
@@ -48,6 +51,11 @@
         grid-column: 1/7;
         position: relative;
         z-index: 5;
+        @media (max-width: 576px) {
+            font-size: 16px;
+            line-height: 20px;
+            grid-column: 1/13;
+        }
     }
     &-tile__text {
         font-family: Bellota Text;
@@ -57,6 +65,11 @@
         line-height: 30px;
         margin: 0 0 80px;
         grid-column: 1/11;
+        @media (max-width: 576px) {
+            font-size: 16px;
+            line-height: 20px;
+            grid-column: 1/13;
+        }
     }
     &-tile__img {
         position: absolute;
@@ -71,7 +84,9 @@
         pointer-events: visible;
         grid-column: 1/6;
         grid-row: 4/5;
-        //margin: 300px 0 0 0;
+        @media (max-width: 576px) {
+            grid-column: 1/13;
+        }
     }
     //SLICK SLIDER
     .slick-prev {
@@ -79,14 +94,17 @@
     }
     &-slider__icon {
         position: absolute;
-        z-index: 10;
+        z-index: 2;
         top: calc( 50% - 52.5px);
-        right: -105px;
+        right: 25px;
         transform: rotate(180deg);
         fill: #FFF3A6;
         transition: all .3s;
         &:hover {
             fill: #FFFFFF;
+        }
+        @media (max-width: 576px) {
+            display: none;
         }
     }
     .slick-arrow {

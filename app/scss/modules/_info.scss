@@ -10,6 +10,9 @@
     justify-content: space-around;
     @include size(33%, 7rem);
     padding: 20px;
+    @media (max-width: 576px) {
+        display: none;
+    }
     &-block {
         width: 50%;
         min-width: 205px;
