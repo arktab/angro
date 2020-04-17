@@ -211,4 +211,8 @@
     <path d="M73.197 70.454l8.767 16.573" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
   </symbol>
 
+
+  <symbol viewBox="0 0 56 56"  xmlns="http://www.w3.org/2000/svg" id="menu icon">
+    <path stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M14 15h18M14 26h23M14 37h33"></path>
+  </symbol>
     </svg>

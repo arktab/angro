@@ -103,6 +103,12 @@
     //SLICK SLIDER 
     .slick-prev {
         left: -90px;
+        fill: #423C3A;
+        cursor: pointer;
+        transition: all .3s;
+        &:hover {
+            fill: #626262;
+        }
     }
     .slick-next {
         top: calc( 50% - 52.5px);
@@ -121,6 +127,12 @@
         }
         @media (max-width: 576px) {
             display: none !important;
+        }
+        fill: #423C3A;
+        cursor: pointer;
+        transition: all .3s;
+        &:hover {
+            fill: #626262;
         }
     }
 }

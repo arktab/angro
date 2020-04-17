@@ -15,30 +15,60 @@ AOS.init({
                 setTimeout(function() {
                     visible = true;
                     $(".menu").toggleClass("menu--opacity");
+
                     setTimeout(function() {
                         $(".menu").toggleClass("menu--is-hide");
+
                     }, 200);
                 }, 100);
             } else {
                 visible = false;
                 setTimeout(function() {
                     $(".menu").toggleClass("menu--is-hide");
+
                     setTimeout(function() {
                         $(".menu").toggleClass("menu--opacity");
+
                     }, 200);
                 }, 100);
             }
         });
         //
-        var width = $(window).width();
-        if (width <= 576) {
-            setTimeout(function() {
-                visible = true;
-                $(".menu").toggleClass("menu--opacity");
+        $(".mobile-menu__icon").click(function() {
+
+            if (visible == false) {
+                setTimeout(function() {
+                    visible = true;
+                    $(".menu").toggleClass("menu--opacity");
+
+                    setTimeout(function() {
+                        $(".menu").toggleClass("menu--is-hide");
+
+                    }, 200);
+                }, 100);
+            } else {
+                visible = false;
                 setTimeout(function() {
                     $(".menu").toggleClass("menu--is-hide");
-                }, 200);
-            }, 100);
+
+                    setTimeout(function() {
+                        $(".menu").toggleClass("menu--opacity");
+
+                    }, 200);
+                }, 100);
+            }
+        });
+        var width = $(window).width();
+        if (width <= 576) {
+            if (visible == false) {
+                setTimeout(function() {
+                    visible = false;
+                    $(".menu").toggleClass("menu--opacity");
+                    setTimeout(function() {
+                        $(".menu").toggleClass("menu--is-hide");
+                    }, 200);
+                }, 100);
+            }
         }
 
         // $(window).scroll(function() {

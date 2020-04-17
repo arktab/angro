@@ -17,8 +17,10 @@
     }
     .arrow-btn {
         @include pos($b: 50px, $l: 0);
+        width: 36%;
         @media (max-width: 576px) {
-            @include pos($b: 50px, $l: 20px);
+            @include pos($b: 30px, $l: 20px);
+            width: 80%;
         }
     }
     &-slider {
@@ -145,6 +147,12 @@
             content: '';
             @include size(45px, 85px);
             font-size: 50px;
+        }
+        fill: #FFF3A6;
+        cursor: pointer;
+        transition: all .3s;
+        &:hover {
+            fill: #FFFFFF;
         }
     }
 }

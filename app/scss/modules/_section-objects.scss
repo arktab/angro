@@ -110,7 +110,7 @@
             @include size(95px);
             fill: transparent;
             @media (max-width: 576px) {
-                @include size(40px);
+                @include size(60px);
             }
         }
     }

@@ -37,6 +37,29 @@
             a(href="#") Галерея
         li.menu-item
             a(href="#") Блог
+    //MOBILE LANG
+    .mobile-menu__lang
+        a.mobile-menu__link.link--active(href="#") UA
+        a.mobile-menu__link(href="#") RU
+    //MOBILE LANG END
+    //MOBILE LOGO
+    a(href="#").mobile-logo              
+            svg.mobile-logo__icon
+                use(xlink:href="images/main-page_icons-sprite.svg#logo")
+    //MOBILE LOGO END
+    .menu-info
+        a(href="#").menu-info__item
+                svg.menu-info__icon
+                    use(xlink:href="images/main-page_icons-sprite.svg#apartament")
+                .menu-info__text 
+                    p.info-link Выбрать квартиру
+        a(href="tel:+380506347178").menu-info__item
+            svg.menu-info__icon
+                use(xlink:href="images/main-page_icons-sprite.svg#phone")
+                .menu-info__text 
+                    p +38(050) 634 71 78
+                    p.link--active Заказать звонок
+       
     ul.menu-footer
         li.menu-item
             a.link--active(href="#") Выбрать квартиру
@@ -44,3 +67,10 @@
             a(href="tel:+38(050)-991-58-80") +38 (050) 991 58 80
         li.menu-item
             a.link--email(href="mailto:angrobud@gmail.com") angrobud@gmail.com
+    
+
+
+.mobile-menu
+    svg.mobile-menu__icon
+        use(xlink:href="images/main-page_icons-sprite.svg#menu icon")
+    
