@@ -101,11 +101,6 @@ AOS.init({
         // });
 
         //MOBILE 
-        //BURGER MENU
-        $('.burger-menu').click(function() {
-            $(this).toggleClass('burger-menu--active');
-            $('body').toggleClass('is-menu-shown');
-        });
 
         //SLIDER__________________________________
         $('.about-slider').slick({
