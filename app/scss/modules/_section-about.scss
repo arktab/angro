@@ -11,6 +11,10 @@
             line-height: 20px;
             margin: 0 0 10px 2px;
         }
+        @media (min-width: 768px) and (orientation: portrait) {
+            line-height: 20px;
+            margin: 0 0 10px 2px;
+        }
     }
     &-slider {
         position: relative;
@@ -45,7 +49,7 @@
         display: flex !important; //hack for Slick Slider
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         text-align: center;
         transition: all .5s;
         &__icon {
@@ -61,16 +65,34 @@
             font-size: 1.8em;
             margin-bottom: 30px;
             text-transform: uppercase;
+            text-align: center;
+            flex-grow: 2;
             @media (max-width: 576px) {
                 font-size: 24px;
                 line-height: 29px
             }
+            @media (max-width: 1366px) {
+                font-size: 24px;
+                line-height: 29px
+            }
+            @media (max-width: 812px) and (orientation: landscape) {
+                margin: 0;
+                font-size: 1.5em;
+            }
         }
         &__text {
             font-size: 1.25rem;
+            flex-grow: 2;
             @media (max-width: 576px) {
                 font-size: 19px;
                 line-height: 24px
+            }
+            @media (max-width: 1366px) {
+                font-size: 19px;
+                line-height: 24px
+            }
+            @media (max-width: 812px) and (orientation: landscape) {
+                font-size: 1.1em;
             }
         }
     }
@@ -89,12 +111,19 @@
             grid-column: 2 / 12;
             left: -2px;
         }
+        @media (max-width: 812px) and (orientation: landscape) {
+            grid-column: 4 / 9;
+            left: -2px;
+        }
         .arrow-btn {
             .icon {
                 left: 15px;
                 transform: rotate(0);
                 width: 45px;
                 @media (max-width: 576px) {
+                    left: -2px;
+                }
+                @media (max-width: 812px) and (orientation: landscape) {
                     left: -2px;
                 }
             }

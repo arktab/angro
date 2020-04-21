@@ -56,6 +56,11 @@
             line-height: 20px;
             grid-column: 1/13;
         }
+        @media (max-width: 812px) and (orientation: landscape) {
+            font-size: 16px;
+            line-height: 20px;
+            grid-column: 1/13;
+        }
     }
     &-tile__text {
         font-family: Bellota Text;
@@ -69,6 +74,11 @@
             font-size: 16px;
             line-height: 20px;
             grid-column: 1/13;
+        }
+        @media (max-width: 812px) and (orientation: landscape) {
+            font-size: 16px;
+            line-height: 20px;
+            grid-column: 1/12;
         }
     }
     &-tile__img {
@@ -85,6 +95,9 @@
         grid-column: 1/6;
         grid-row: 4/5;
         @media (max-width: 576px) {
+            grid-column: 1/13;
+        }
+        @media (max-width: 812px) and (orientation: landscape) {
             grid-column: 1/13;
         }
     }
@@ -106,12 +119,17 @@
         @media (max-width: 576px) {
             display: none;
         }
+        @media (max-width: 812px) and (orientation: landscape) {
+            display: none;
+        }
     }
     .slick-arrow {
         pointer-events: visible;
         @include size(65px, 105px);
         font-size: 50px;
-        //background: url(/images/icons/arrow.svg) 60% no-repeat;
+        @media (max-width: 812px) and (orientation: landscape) {
+            width: 25px;
+        }
         cursor: pointer;
         &:before {
             content: '';

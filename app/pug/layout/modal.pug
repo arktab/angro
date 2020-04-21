@@ -1,17 +1,19 @@
 .modal
     .modal__content
-        form(action="").grid
-            fieldset
-                legend Оставьте координаты, и мы с вами свяжемся
-            label( for="username") Ваше имя
-                input#username(type="text" required )
-            label( for="tel" ) Телефон
-                input#tel(type="tel" required )
-            label( for="email") EMAIL (НЕ ОБЯЗАТЕЛЬНО)
-                input#email(type="email")
-            label( for="check") Я даю согласие на обработку моих персональных данных согласно 
-                a политике конфиденциальности
-                input#check(type="checkbox")
-            button Отправить запрос
-    button.close
+        form(action="").modal__form.grid.container
+            h4.modal__headline Оставьте координаты, и мы с вами свяжемся
+            label( for="modal-username").modal__label Ваше имя
+                input#modal-username(type="text" required ).modal__field
+            label( for="modal-tel" ).modal__label Телефон
+                input#modal-tel(type="tel" required ).modal__field
+            label( for="modal-email").modal__label EMAIL (НЕ ОБЯЗАТЕЛЬНО)
+                input#modal-email(type="email").modal__field
+            label( for="modal-check").modal__checkbox Я даю согласие на обработку моих персональных данных согласно 
+                input#modal-check(type="checkbox").modal__check
+                .modal__custom-check
+                a(href="#").modal__link.link--active политике конфиденциальности         
+            button(type="submit").btn.modal__btn Отправить запрос
+            .modal__close
+                .close
+
                 

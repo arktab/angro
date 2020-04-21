@@ -1,24 +1,25 @@
 
 <div class="modal">
   <div class="modal__content">
-    <form class="grid" action="">
-      <fieldset>
-        <legend>Оставьте координаты, и мы с вами свяжемся</legend>
-      </fieldset>
-      <label for="username">Ваше имя
-        <input id="username" type="text" required="required"/>
+    <form class="modal__form grid container" action="">
+      <h4 class="modal__headline">Оставьте координаты, и мы с вами свяжемся</h4>
+      <label class="modal__label" for="modal-username">Ваше имя
+        <input class="modal__field" id="modal-username" type="text" required="required"/>
       </label>
-      <label for="tel">Телефон
-        <input id="tel" type="tel" required="required"/>
+      <label class="modal__label" for="modal-tel">Телефон
+        <input class="modal__field" id="modal-tel" type="tel" required="required"/>
       </label>
-      <label for="email">EMAIL (НЕ ОБЯЗАТЕЛЬНО)
-        <input id="email" type="email"/>
+      <label class="modal__label" for="modal-email">EMAIL (НЕ ОБЯЗАТЕЛЬНО)
+        <input class="modal__field" id="modal-email" type="email"/>
       </label>
-      <label for="check">Я даю согласие на обработку моих персональных данных согласно <a>политике конфиденциальности</a>
-        <input id="check" type="checkbox"/>
+      <label class="modal__checkbox" for="modal-check">Я даю согласие на обработку моих персональных данных согласно 
+        <input class="modal__check" id="modal-check" type="checkbox"/>
+        <div class="modal__custom-check"></div><a class="modal__link link--active" href="#">политике конфиденциальности         </a>
       </label>
-      <button>Отправить запрос</button>
+      <button class="btn modal__btn" type="submit">Отправить запрос</button>
+      <div class="modal__close">
+        <div class="close"></div>
+      </div>
     </form>
   </div>
-  <button class="close"></button>
 </div>

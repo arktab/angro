@@ -6,13 +6,16 @@
     @media (max-width: 576px) {
         padding: 30px 0 50px 0;
     }
+    @media (max-width: 812px) and (orientation: landscape) {
+        padding: 30px 0 50px 0;
+    }
     &-link {
         color: #0D0D0D;
-        font-size: 1.1rem;
+        //font-size: 1.1rem;
         line-height: 1.75rem;
     }
     &-address {
-        grid-column: 2 / 6;
+        grid-column: 1 / 5;
         grid-row: 1 / 2;
         display: flex;
         flex-direction: column;
@@ -36,6 +39,19 @@
                 margin: 0 0 10px 0;
             }
         }
+        @media (max-width: 812px) and (orientation: landscape) {
+            grid-column: 1 / 13;
+            grid-row: 1 / 2;
+            text-align: center;
+            font-size: 16px;
+            line-height: 20px;
+            margin: 0 0 30px 0;
+            &__title {
+                font-size: 19px;
+                line-height: 23px;
+                margin: 0 0 10px 0;
+            }
+        }
     }
     &-logo {
         grid-column: 6 / 8;
@@ -44,35 +60,47 @@
         svg {
             width: 100%;
             fill: #423C3A;
+            transition: all .3s;
+        }
+        &:hover {
+            svg {
+                fill: $button-default-color;
+            }
         }
         @media (max-width: 576px) {
             display: none;
         }
+        @media (max-width: 812px) and (orientation: landscape) {
+            display: none;
+        }
     }
     &-contacts {
-        grid-column: 8 / 12;
+        grid-column: 9 / 13;
         grid-row: 1 / 2;
         display: flex;
         flex-direction: column;
         align-content: flex-start;
         justify-content: flex-start;
         padding: 1.5rem 0 0 0;
-        &__title {
-            text-transform: uppercase;
-        }
+        margin: 20px 0 0 0;
+        font-size: 24px;
         @media (max-width: 576px) {
             grid-column: 1 / 13;
             grid-row: 2 / 3;
             text-align: center;
-            margin-bottom: 30px;
+            margin: 20px 0 30px 0;
             font-size: 16px;
             line-height: 20px;
             padding: 0;
-            &__title {
-                font-size: 19px;
-                line-height: 23px;
-                margin: 0 0 10px 0;
-            }
+        }
+        @media (max-width: 812px) and (orientation: landscape) {
+            grid-column: 1 / 13;
+            grid-row: 2 / 3;
+            text-align: center;
+            margin: 20px 0 50px 0;
+            font-size: 19px;
+            line-height: 20px;
+            padding: 0;
         }
     }
     &-btn {
@@ -104,6 +132,9 @@
         @media (max-width: 576px) {
             display: none;
         }
+        @media (max-width: 812px) and (orientation: landscape) {
+            display: none;
+        }
     }
     &-backcall {
         grid-column: 8 / 11;
@@ -128,6 +159,16 @@
             &__title {
                 font-size: 19px;
                 line-height: 23px;
+            }
+        }
+        @media (max-width: 812px) and (orientation: landscape) {
+            grid-column: 1 / 13;
+            grid-row: 3 / 4;
+            margin: 0 0 50px 0;
+            &__title {
+                font-size: 19px;
+                line-height: 23px;
+                margin-bottom: 30px;
             }
         }
     }
@@ -179,6 +220,16 @@
                 line-height: 29px;
             }
         }
+        @media (max-width: 812px) and (orientation: landscape) {
+            grid-column: 5 / 9;
+            grid-row: 4 / 5;
+            margin-bottom: 50px;
+            &__title {
+                font-size: 24px;
+                line-height: 29px;
+                margin-bottom: 20px;
+            }
+        }
     }
     &-copyright {
         grid-column: 1 / 13;
@@ -186,6 +237,11 @@
         justify-self: center;
         margin: 100px 0 0 0;
         @media (max-width: 576px) {
+            grid-column: 1 / 13;
+            grid-row: 6 / 7;
+            margin: 50px 0 0 0;
+        }
+        @media (max-width: 812px) and (orientation: landscape) {
             grid-column: 1 / 13;
             grid-row: 6 / 7;
             margin: 50px 0 0 0;
@@ -199,10 +255,23 @@
             grid-row: 5 / 6;
             margin-top: 30px;
         }
+        @media (max-width: 812px) and (orientation: landscape) {
+            grid-column: 2 / 12;
+            grid-row: 5 / 6;
+            margin-top: 30px;
+        }
         &__form {
             display: grid;
             grid-template-columns: repeat(6, 1fr);
             @media (max-width: 576px) {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+            @media (max-width: 812px) and (orientation: landscape) {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
@@ -221,6 +290,10 @@
                 font-size: 18px;
             }
             @media (max-width: 576px) {
+                margin: 0 0 30px 0;
+                text-align: center;
+            }
+            @media (max-width: 812px) and (orientation: landscape) {
                 margin: 0 0 30px 0;
                 text-align: center;
             }
@@ -243,6 +316,10 @@
                 margin: 0 0 30px 0;
                 padding: .5rem 0;
             }
+            @media (max-width: 812px) and (orientation: landscape) {
+                margin: 0 0 30px 0;
+                padding: .5rem 0;
+            }
         }
         &__btn {
             grid-column: 4 / 7;
@@ -254,14 +331,11 @@
                 line-height: 20px;
                 margin: 0 auto;
             }
+            @media (max-width: 812px) and (orientation: landscape) {
+                font-size: 16px;
+                line-height: 20px;
+                margin: 0 auto;
+            }
         }
-        // @media (max-width: 1366px) {
-        //     &__headline {
-        //         font-size: 1.1rem;
-        //     }
-        //     &__title {
-        //         font-size: .9rem;
-        //     }
-        // }
     }
 }

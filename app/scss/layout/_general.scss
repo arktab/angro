@@ -73,3 +73,7 @@ button::-moz-focus-inner {
     grid-template-columns: repeat(12, 1fr);
     gap: 10px;
 }
+
+.is-menu-shown {
+    overflow: hidden;
+}

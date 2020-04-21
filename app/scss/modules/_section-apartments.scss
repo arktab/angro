@@ -1,6 +1,9 @@
 .apartments {
     position: relative;
     height: 1150px;
+    @media (max-width: 812px) and (orientation: landscape) {
+        height: 830px;
+    }
     .container {
         height: 100%;
         position: relative;
@@ -11,8 +14,12 @@
     }
     &-head {
         grid-column: 1/7;
+        z-index: 5;
         @media (max-width: 576px) {
             grid-column: 1/13;
+        }
+        @media (max-width: 812px) and (orientation: landscape) {
+            //grid-column: 1/13;
         }
     }
     .arrow-btn {
@@ -22,6 +29,9 @@
             @include pos($b: 30px, $l: 20px);
             width: 80%;
         }
+        @media (max-width: 812px) and (orientation: landscape) {
+            @include pos($b: 30px, $l: 20px);
+        }
     }
     &-slider {
         display: flex;
@@ -30,57 +40,104 @@
     &-slider {
         &__nextbtn {
             @include pos($r: 50px, $t: 50%);
-            z-index: 2;
+            z-index: 3;
             fill: #FFF3A6;
             transform: translateX(50%) rotate(180deg);
             @media (max-width: 576px) {
                 top: 65%;
                 right: 13px;
             }
+            @media (max-width: 812px) and (orientation: landscape) {
+                display: none;
+            }
         }
         &__prevbtn {
-            @include pos($r: 51%, $t: 50%);
-            z-index: 2;
+            @include pos($r: 50%, $t: 50%);
+            z-index: 3;
             fill: #FFF3A6;
             @media (max-width: 576px) {
                 top: 65%;
                 left: 8px;
             }
+            @media (max-width: 812px) and (orientation: landscape) {
+                display: none;
+            }
         }
         &__wrap {
-            @include pos($t: 100px, $l: 49.4%);
-            width: 50vw;
+            @include pos($t: 100px, $l: 45%);
+            width: 55vw;
+            &:before {
+                content: '';
+                display: block;
+                @include pos($t: 0, $l: 0);
+                @include size(350px, 100%);
+                background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 21.79%);
+                z-index: 2;
+            }
+            &:after {
+                content: '';
+                display: block;
+                @include pos($t: 0, $r: 0);
+                @include size(350px, 100%);
+                transform: rotate(180deg);
+                background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 21.79%);
+                z-index: 2;
+            }
             @media (max-width: 576px) {
                 @include pos($t: 250px, $l: 20px);
                 width: calc(100% - 40px);
+                &:before {
+                    display: none;
+                }
+                &:after {
+                    display: none;
+                }
+            }
+            @media (max-width: 812px) and (orientation: landscape) {
+                @include pos($t: 340px, $l: 20px);
+                width: calc(100% - 40px);
+                &:before {
+                    display: none;
+                }
+                &:after {
+                    display: none;
+                }
             }
         }
     }
     &-tile {
-        height: 920px;
-        @media (max-width: 576px) {
-            height: unset;
-        }
+        @media (max-width: 812px) and (orientation: landscape) {}
         margin: 0 .25rem;
-        background: linear-gradient(270deg, rgba(66, 60, 58, 0.33) -20.49%, #423C3A -20.49%, rgba(255, 255, 255, 0) 18.52%),
-        linear-gradient(90deg, rgba(66, 60, 58, 0.33) -12.06%, rgba(255, 255, 255, 0) 25.73%),
-        $page-darken-bg;
+        background: linear-gradient(270deg, rgba(66, 60, 58, 0.33) -20.49%, #423C3A -20.49%, rgba(255, 255, 255, 0) 18.52%), linear-gradient(90deg, rgba(66, 60, 58, 0.33) -12.06%, rgba(255, 255, 255, 0) 25.73%), $page-darken-bg;
         text-align: center;
         color: $tw;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
+        display: grid !important;
+        // flex-direction: column;
+        // align-items: center;
+        // justify-items: space-between;
         &__name {
             padding: 25px 0;
             //font-size: 24px;
             font-size: 32px;
             line-height: 44px;
+            @media (max-width: 812px) and (orientation: landscape) {
+                grid-row: 1/2;
+                grid-column: 1/13;
+                padding: 25px 0 0;
+            }
         }
         &__img {
             width: 100%;
             height: 370px;
             overflow: hidden;
+            @media (max-width: 812px) and (orientation: landscape) {
+                grid-row: 2/5;
+                grid-column: 1/7;
+                justify-self: center;
+                align-self: center;
+                height: 260px;
+                margin: 15px;
+            }
             img {
                 min-height: 100%;
                 width: 100%;
@@ -89,9 +146,19 @@
                     width: calc(100% - 30px);
                     margin: 15px;
                 }
+                @media (max-width: 812px) and (orientation: landscape) {
+                    min-height: calc(80% - 30px);
+                    //width: calc(80% - 30px);
+                    margin: 15px;
+                }
             }
         }
         &__icon {
+            @media (max-width: 812px) and (orientation: landscape) {
+                grid-row: 2/3;
+                grid-column: 7/13;
+                margin: 40px 0 0;
+            }
             margin: 50px 0;
             @media (max-width: 576px) {
                 margin: 15px 0;
@@ -109,8 +176,19 @@
             line-height: 44px;
             text-align: center;
             padding: 0 .25rem;
+            @media (max-width: 812px) and (orientation: landscape) {
+                grid-row: 3/4;
+                grid-column: 7/13;
+                margin-bottom: 35px;
+                padding: 0 .5rem;
+            }
         }
         &__link {
+            @media (max-width: 812px) and (orientation: landscape) {
+                grid-row: 4/5;
+                grid-column: 7/13;
+                margin: 0 0 20px;
+            }
             margin-bottom: 50px;
             text-transform: uppercase;
             font-size: 22px;
@@ -152,7 +230,7 @@
         cursor: pointer;
         transition: all .3s;
         &:hover {
-            fill: #FFFFFF;
+            fill: $bb-pressed;
         }
     }
 }

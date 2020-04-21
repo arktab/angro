@@ -53,11 +53,12 @@
                     use(xlink:href="images/main-page_icons-sprite.svg#apartament")
                 .menu-info__text 
                     p.info-link Выбрать квартиру
-        a(href="tel:+380506347178").menu-info__item
+        .menu-info__item
             svg.menu-info__icon
                 use(xlink:href="images/main-page_icons-sprite.svg#phone")
+                //CLASS CHANGE!!!
                 .menu-info__text 
-                    p +38(050) 634 71 78
+                    a(href="tel:+380506347178") +38(050) 634 71 78
                     p.link--active Заказать звонок
        
     ul.menu-footer
