@@ -59,7 +59,10 @@ button::-moz-focus-inner {
         max-width: 880px;
     }
     @media (max-width: 1024px) {
-        max-width: 766px;
+        max-width: 960px;
+    }
+    @media (max-width: 960px) {
+        max-width: 680px;
     }
     @media (max-width: 768px) {}
     @media (max-width: 576px) {

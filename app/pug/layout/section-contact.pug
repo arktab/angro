@@ -1,14 +1,17 @@
 .container
-        form(action="").grid.contact-form
-            h4.contact-form__headline С удовольствием проконсультируем Вас!
-            label( for="username").contact-form__title Ваше имя
-                input#username(type="text" required).contact-form__field
-            label( for="tel" ).contact-form__title Телефон
-                input#tel(type="tel" required ).contact-form__field
-            label( for="email").contact-form__title EMAIL (НЕ ОБЯЗАТЕЛЬНО)
-                input#email(type="email").contact-form__field
-            label( for="check").contact-form__checkbox.contact-form__title Я даю согласие на обработку моих персональных данных согласно 
-                input#check(type="checkbox").contact-form__field 
-                .contact-form__custom-check
-                a(href="#").contact-form__link политике конфиденциальности 
-            button(type="submit").btn.contact-form__btn Отправить запрос
+    form(action="").grid.contact-form
+        h4.contact-form__headline С удовольствием проконсультируем Вас!
+        label( for="contact-username").contact-form__title Ваше имя
+            input#contact-username(type="text" required).contact-form__field
+            span.alert__text.contact__user-text Ваше имя не указано
+        label( for="contact-tel" ).contact-form__title Телефон
+            input#contact-tel(type="tel" required placeholder="+380" pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}").contact-form__field
+            span.alert__text.contact__tel-text Телефон не указан
+        label( for="email").contact-form__title EMAIL (НЕ ОБЯЗАТЕЛЬНО)
+            input#email(type="email").contact-form__field
+        label( for="contact-check").contact-form__checkbox.contact-form__title Я даю согласие на обработку моих персональных данных согласно 
+            input#contact-check(type="checkbox" checked).contact-form__field 
+            .contact-form__custom-check
+            a(href="#").contact-form__link политике конфиденциальности 
+            span.alert__text.contact__check-text Обязательное поле 
+        button(type="submit").btn.contact-form__btn Отправить запрос

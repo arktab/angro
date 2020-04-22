@@ -3,6 +3,7 @@
     position: relative;
     background: linear-gradient(90deg, rgba(0, 0, 0, .1), hsla(0, 0%, 80%, 0) 40%), linear-gradient(270deg, rgba(0, 0, 0, .1), hsla(0, 0%, 50.2%, 0) 47.55%), url(../images/main-bg.jpg) 60% no-repeat;
     background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     color: $tw;
     @media (max-width: 576px) {
@@ -20,6 +21,20 @@
         text-transform: uppercase;
         @media (max-width: 576px) {
             padding: 90px 20px;
+        }
+        .mobile-logo {
+            display: none;
+            @media (max-width: 1024px) {
+                display: block;
+            }
+            &__icon {
+                @media (max-width: 1024px) {
+                    @include size(120px);
+                }
+                @media (max-width: 812px) {
+                    @include size(100px);
+                }
+            }
         }
         &__title {
             margin-bottom: 12px;

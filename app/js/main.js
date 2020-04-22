@@ -4,10 +4,111 @@ AOS.init({
     //duration: 800,
     //easing: 'ease-in-out-back'
 });
+
+
 //___________________________________
 (function($) {
     $(document).ready(function() {
         // Code
+
+        //Form validation
+        var modalname = new String;
+        var modaltel = new String;
+        $("#modal-username")
+            .focusout(function() {
+                modalname = $("#modal-username").val();
+                if (modalname == '') {
+                    $(".modal__user-text").addClass("alert__text-red");
+                    $(".modal__btn").prop('disabled', true);
+                    $(".modal__btn").addClass("btn__disabled");
+                    $("#modal-username").addClass("modal__field--red");
+                } else {
+                    $(".modal__user-text").removeClass("alert__text-red");
+                    $(".modal__btn").prop('disabled', false);
+                    $(".modal__btn").removeClass("btn__disabled");
+                    $("#modal-username").removeClass("modal__field--red");
+                }
+            })
+            .keyup();
+        $("#modal-tel")
+            .focusout(function() {
+                modaltel = $("#modal-tel").val();
+                if (modaltel == '') {
+                    $(".modal__tel-text").addClass("alert__text-red");
+                    $(".modal__btn").prop('disabled', true);
+                    $(".modal__btn").addClass("btn__disabled");
+                    $("#modal-tel").addClass("modal__field--red");
+                } else {
+                    $("modal__tel-text").removeClass("alert__text-red");
+                    $(".modal__btn").prop('disabled', false);
+                    $(".modal__btn").removeClass("btn__disabled");
+                    $("#modal-tel").removeClass("modal__field--red");
+                }
+            })
+            .keyup();
+        $("#modal-check").click(function() {
+            if ($(this).prop("checked") == false) {
+                $(".modal__check-text").addClass("alert__text-red");
+                $(".modal__btn").prop('disabled', true);
+                $(".modal__btn").addClass("btn__disabled");
+
+            } else if ($(this).prop("checked") == true) {
+                $(".modal__check-text").removeClass("alert__text-red");
+                $(".modal__btn").prop('disabled', false);
+                $(".modal__btn").removeClass("btn__disabled");
+
+            }
+        });
+        //CONTACT
+        var contactname = new String;
+        var contacttel = new String;
+        $("#contact-username")
+            .focusout(function() {
+                contactname = $("#contact-username").val();
+                if (contactname == '') {
+                    $(".contact__user-text").addClass("alert__text-red");
+                    $(".contact-form__btn").prop('disabled', true);
+                    $(".contact-form__btn").addClass("btn__disabled");
+                    $("#contact-username").addClass("contact-form__field--red");
+                } else {
+                    $(".contact__user-text").removeClass("alert__text-red");
+                    $(".contact-form__btn").prop('disabled', false);
+                    $(".contact-form__btn").removeClass("btn__disabled");
+                    $("#contact-username").removeClass("contact-form__field--red");
+                }
+            })
+            .keyup();
+        $("#contact-tel")
+            .focusout(function() {
+                contacttel = $("#contact-tel").val();
+                if (contacttel == '') {
+                    $(".contact__tel-text").addClass("alert__text-red");
+                    $(".contact-form__btn").prop('disabled', true);
+                    $(".contact-form__btn").addClass("btn__disabled");
+                    $("#contact-tel").addClass("contact-form__field--red");
+                } else {
+                    $(".contact__tel-text").removeClass("alert__text-red");
+                    $(".contact-form__btn").prop('disabled', false);
+                    $(".contact-form__btn").removeClass("btn__disabled");
+                    $("#contact-tel").removeClass("contact-form__field--red");
+                }
+            })
+            .keyup();
+        $("#contact-check").click(function() {
+            if ($(this).prop("checked") == false) {
+                $(".contact__check-text").addClass("alert__text-red");
+                $(".contact-form__btn").prop('disabled', true);
+                $(".contact-form__btn").addClass("btn__disabled");
+
+            } else if ($(this).prop("checked") == true) {
+                $(".contact__check-text").removeClass("alert__text-red");
+                $(".contact-form__btn").prop('disabled', false);
+                $(".contact-form__btn").removeClass("btn__disabled");
+
+            }
+        });
+        //.prop('disabled', true);
+        //Form validation END
         var visible = new Boolean(false);
         $(".sidebar-menu__triger").click(function() {
 

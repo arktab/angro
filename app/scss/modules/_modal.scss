@@ -1,4 +1,7 @@
 .modal {
+    .alert__text {
+        font-size: 11px;
+    }
     &-is-shown {
         display: block;
     }
@@ -35,6 +38,9 @@
         }
         @media (max-width: 812px) and (orientation: landscape) {
             padding: 20px;
+        }
+        @media (max-width: 960px) {
+            padding: 60px 50px 110px;
         }
         label:nth-child(2) {
             grid-column: 1 / 5;
@@ -74,7 +80,7 @@
         }
         label:nth-child(5) {
             grid-column: 2 / 8;
-            grid-row: 5 / 6;
+            grid-row: 4 / 5;
             @media (max-width: 576px) {
                 grid-column: 2 / 13;
                 grid-row: 5 / 6;
@@ -86,7 +92,7 @@
         }
         button {
             grid-column: 9 / 12;
-            grid-row: 5 / 6;
+            grid-row: 4 / 5;
             @media (max-width: 576px) {
                 grid-column: 2 / 13;
                 grid-row: 6 / 7;
@@ -123,6 +129,16 @@
         flex-direction: column;
         text-transform: uppercase;
         font-size: 1.25rem;
+        position: relative;
+        @media (max-width: 960px) {
+            font-size: .8rem;
+        }
+        @media (max-width: 1200px) {
+            font-size: .9rem;
+        }
+        @media (max-width: 768px) {
+            font-size: .7rem;
+        }
         @media (max-width: 576px) {
             font-weight: normal;
             font-size: 18px;
@@ -143,21 +159,25 @@
         background: transparent;
         border-bottom: 2px solid #423C3A;
         padding: .2rem 0;
+        position: relative;
+        &--red {
+            border-color: #EB5757;
+        }
     }
     &__custom-check {
         cursor: pointer;
-        @include pos($t: 50%, $l: -35px);
+        @include pos($t: 2px, $l: -35px);
         @include size(20px);
-        transform: translateY(-50%);
+        //transform: translateY(-50%);
         background: #FFFFFF;
         border: 1px solid #828282;
         border-radius: 3px;
         transition: all .3s;
         @media (max-width: 576px) {
-            @include pos($t: 50%, $l: -30px);
+            @include pos($t: 2px, $l: -30px);
         }
         @media (max-width: 812px) and (orientation: landscape) {
-            @include pos($t: 50%, $l: -30px);
+            @include pos($t: 2px, $l: -30px);
         }
         &:after {
             content: "";
@@ -170,8 +190,8 @@
         }
     }
     &__checkbox {
-        grid-column: 2 / 8;
-        grid-row: 3 / 4;
+        // grid-column: 2 / 8;
+        // grid-row: 3 / 4;
         position: relative;
         word-wrap: break-word;
         display: inline;
@@ -179,6 +199,12 @@
         text-transform: uppercase;
         margin: 20px 0;
         cursor: pointer;
+        @media (max-width: 960px) {
+            font-size: 13px;
+        }
+        @media (max-width: 1200px) {
+            font-size: 15px;
+        }
         &:hover {
             ~.modal__custom-check {
                 background: $bb-pressed;
@@ -292,6 +318,9 @@
                 @include size(1px, 25px);
                 @include pos($t: 7px, $r: 20px);
             }
+        }
+        @media (max-width: 960px) {
+            @include pos($t: -25px, $r: -20px);
         }
     }
 }

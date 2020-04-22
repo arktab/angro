@@ -4,17 +4,17 @@
     <form class="modal__form grid container" action="">
       <h4 class="modal__headline">Оставьте координаты, и мы с вами свяжемся</h4>
       <label class="modal__label" for="modal-username">Ваше имя
-        <input class="modal__field" id="modal-username" type="text" required="required"/>
+        <input class="modal__field" id="modal-username" type="text" required="required"/><span class="alert__text modal__user-text">Ваше имя не указано</span>
       </label>
       <label class="modal__label" for="modal-tel">Телефон
-        <input class="modal__field" id="modal-tel" type="tel" required="required"/>
+        <input class="modal__field" id="modal-tel" type="tel" required="required" placeholder="+380" pattern="[+]d{3}s[(]d{2}[)]sd{3}[-]d{2}[-]d{2}"/><span class="alert__text modal__tel-text">Телефон не указан</span>
       </label>
       <label class="modal__label" for="modal-email">EMAIL (НЕ ОБЯЗАТЕЛЬНО)
         <input class="modal__field" id="modal-email" type="email"/>
       </label>
       <label class="modal__checkbox" for="modal-check">Я даю согласие на обработку моих персональных данных согласно 
-        <input class="modal__check" id="modal-check" type="checkbox"/>
-        <div class="modal__custom-check"></div><a class="modal__link" href="#">политике конфиденциальности         </a>
+        <input class="modal__check" id="modal-check" type="checkbox" checked="checked"/>
+        <div class="modal__custom-check"></div><a class="modal__link" href="#">политике конфиденциальности</a><span class="alert__text modal__check-text">Обязательное поле       </span>
       </label>
       <button class="btn modal__btn" type="submit">Отправить запрос</button>
       <div class="modal__close">

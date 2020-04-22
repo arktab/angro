@@ -37,16 +37,21 @@ a {
     transition: all .3s;
     border-radius: 2px;
     text-transform: inherit;
+    width: 220px;
     &:hover {
         background: #514947;
         color: #FFFFFF;
     }
     @media (max-width: 1366px) {
         font-size: 1.1rem;
-        width: 180px;
+        width: unset;
     }
     @media (max-width: 576px) {
         width: 220px;
+    }
+    &__disabled {
+        color: #828282;
+        pointer-events: none;
     }
 }
 
@@ -220,6 +225,19 @@ section {
     }
     @media (max-width: 812px) and (orientation: landscape) {
         padding: 40px 0;
+    }
+}
+
+.alert__text {
+    font-size: 19px;
+    line-height: 23px;
+    display: none;
+    &-red {
+        color: #EB5757 !important;
+        display: block !important;
+        position: absolute;
+        bottom: -20px;
+        left: 0;
     }
 }
 

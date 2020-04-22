@@ -4,14 +4,17 @@
             h4.modal__headline Оставьте координаты, и мы с вами свяжемся
             label( for="modal-username").modal__label Ваше имя
                 input#modal-username(type="text" required ).modal__field
+                span.alert__text.modal__user-text Ваше имя не указано
             label( for="modal-tel" ).modal__label Телефон
-                input#modal-tel(type="tel" required ).modal__field
+                input#modal-tel(type="tel" required placeholder="+380" pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}").modal__field
+                span.alert__text.modal__tel-text Телефон не указан
             label( for="modal-email").modal__label EMAIL (НЕ ОБЯЗАТЕЛЬНО)
                 input#modal-email(type="email").modal__field
             label( for="modal-check").modal__checkbox Я даю согласие на обработку моих персональных данных согласно 
-                input#modal-check(type="checkbox").modal__check
+                input#modal-check(type="checkbox" checked).modal__check
                 .modal__custom-check
-                a(href="#").modal__link политике конфиденциальности         
+                a(href="#").modal__link политике конфиденциальности
+                span.alert__text.modal__check-text Обязательное поле       
             button(type="submit").btn.modal__btn Отправить запрос
             .modal__close
                 .close

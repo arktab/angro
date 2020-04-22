@@ -24,6 +24,9 @@
             @media (max-width: 1200px) {
                 padding: 50px 20px 45vh;
             }
+            @media (max-width: 960px) {
+                padding: 50px 10px 45vh;
+            }
             @media (max-width: 576px) {
                 display: none;
             }
