@@ -134,7 +134,13 @@ AOS.init({
             infinite: true,
             speed: 500,
             cssEase: 'linear',
-            slidesToShow: 1
+            slidesToShow: 1,
+            responsive: [{
+                breakpoint: 576,
+                settings: {
+                    arrows: true
+                }
+            }]
         });
         $('.articles-slider').slick({
             nextArrow: $('.articles-slider__icon'),

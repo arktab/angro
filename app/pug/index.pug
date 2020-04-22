@@ -13,6 +13,11 @@ html(lang="en")
         //HEADER START 
         header#header.header 
             .header-content
+                //MOBILE LOGO
+                a(href="#").mobile-logo              
+                        svg.mobile-logo__icon
+                            use(xlink:href="images/main-page_icons-sprite.svg#logo")
+                //MOBILE LOGO END
                 h1(data-aos="fade-left").header-content__title Современное <br> жилье в Полтаве и <br> Миргороде
                 p(data-aos="fade-right").header-content__text Новые квартиры от застройщика в престижном <br> районе Полтавы и Миргорода
 

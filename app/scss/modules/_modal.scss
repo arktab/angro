@@ -12,13 +12,9 @@
     overflow: auto;
     background: rgba(66, 60, 58, 0.7);
     &__content {
-        // background: $light-bg;
-        // color: #423C3A;
-        // padding: 60px 100px 110px;
         @include pos($t: 50%, $l: 50%);
         transform: translateX(-50%) translateY(-50%);
         width: 100%;
-        //@include size(100%);
         @media (max-width: 576px) {
             @include pos($t: 0, $l: 0);
             transform: none;
@@ -77,7 +73,7 @@
             }
         }
         label:nth-child(5) {
-            grid-column: 2 / 7;
+            grid-column: 2 / 8;
             grid-row: 5 / 6;
             @media (max-width: 576px) {
                 grid-column: 2 / 13;
@@ -174,7 +170,7 @@
         }
     }
     &__checkbox {
-        grid-column: 2 / 7;
+        grid-column: 2 / 8;
         grid-row: 3 / 4;
         position: relative;
         word-wrap: break-word;
@@ -205,22 +201,25 @@
         }
     }
     &__link {
+        color: inherit;
+        text-decoration: underline;
         &:hover {
-            color: #514947;
+            //color: #514947;
+            color: $link-default;
         }
     }
     &__btn {
+        align-self: center;
+        justify-self: center;
+        height: 4rem;
+        text-transform: uppercase;
+        padding: 0 1rem;
         @media (max-width: 576px) {
-            justify-self: center;
             margin-top: 40px;
         }
         @media (max-width: 812px) and (orientation: landscape) {
-            justify-self: center;
             margin-top: 40px;
         }
-        height: 4rem;
-        align-self: flex-end;
-        text-transform: uppercase;
     }
     &__close {
         grid-column: 12 / 13;

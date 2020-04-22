@@ -1,13 +1,15 @@
 .container
     //SLIDER BUTTON START
-    svg.objects-slider__icon
+    svg.objects-slider__icon.objects-slider__prev
+        use(xlink:href="images/main-page_icons-sprite.svg#arrow") 
+    svg.objects-slider__icon.objects-slider__next
         use(xlink:href="images/main-page_icons-sprite.svg#arrow") 
     //SLIDER BUTTON END 
     .objects__title
-        .container
-            .grid
-                h3.headline ТОЛЬКО ЛУЧШЕЕ ДЛЯ АМБИЦИОЗНЫХ И УСПЕШНЫХ
-                h2.title Наши объекты
+        //.container
+        .grid
+            h3.headline ТОЛЬКО ЛУЧШЕЕ ДЛЯ АМБИЦИОЗНЫХ И УСПЕШНЫХ
+            h2.title Наши объекты
     .objects-slider
         // TILE START
         .objects-tile.grid           

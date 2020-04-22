@@ -28,6 +28,9 @@
         @media (max-width: 812px) and (orientation: landscape) {
             grid-column: 1/13;
         }
+        .container {
+            padding: 0 !important;
+        }
     }
     &-slider {
         margin: 0 -15px;
@@ -48,6 +51,7 @@
             grid-column: 1/13;
             grid-row: 3/4;
             text-align: center;
+            margin: 0 0 15px 0;
         }
     }
     &-tile__text {
@@ -90,6 +94,8 @@
         @media (max-width: 576px) {
             grid-column: 1/13;
             grid-row: 4/5;
+            width: 95%;
+            justify-self: center;
         }
     }
     &-tile__img {
@@ -99,6 +105,9 @@
     &-tile__icons {
         display: flex;
         padding: 1rem 1rem 2rem 1rem;
+        @media (max-width: 576px) {
+            padding: 0 .5rem;
+        }
         //height: 30%;
     }
     &-tile__icon {
@@ -113,36 +122,45 @@
         &-text {
             line-height: 2rem;
             @media (max-width: 576px) {
-                font-size: .9rem;
+                font-size: 16px;
                 line-height: 20px;
+                margin: 0 0 14px 0;
             }
         }
         svg {
             @include size(95px);
             fill: transparent;
             @media (max-width: 576px) {
-                @include size(60px);
+                @include size(45px);
             }
         }
     }
     //SLICK SLIDER START
     &-slider__icon {
+        z-index: 2;
+    }
+    &-slider__prev {
+        display: none !important;
+        @media (max-width: 576px) {
+            display: block !important;
+            @include pos($t: 35%, $l: 5px);
+        }
+    }
+    &-slider__next {
         @include pos($t: 50%, $r: -100px);
         top: calc(50% - 52px);
         transform: rotate(180deg);
-        z-index: 2;
+        right: -90px;
+        @media (max-width: 576px) {
+            right: 5px;
+            top: 35%;
+        }
         @media (max-width: 812px) and (orientation: landscape) {
             @include pos($t: 50%, $r: -20px);
         }
     }
-    .slick-arrow.slick-prev {
-        display: none !important;
-    }
-    .slick-next {
-        top: calc( 50% - 52.5px);
-        transform: rotate(180deg);
-        right: -90px;
-    }
+    .slick-arrow.slick-prev {}
+    .slick-next {}
     .slick-arrow {
         @include size(65px, 105px);
         font-size: 50px;
@@ -156,6 +174,9 @@
             content: '';
             @include size(45px, 85px);
             font-size: 50px;
+        }
+        @media (max-width: 576px) {
+            @include size(14px, 30px);
         }
         @media (max-width: 812px) and (orientation: landscape) {
             width: 25px;

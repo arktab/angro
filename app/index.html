@@ -100,6 +100,11 @@
     <!--HEADER START -->
     <header class="header" id="header"> 
       <div class="header-content">
+        <!--MOBILE LOGO--><a class="mobile-logo" href="#">             
+          <svg class="mobile-logo__icon">
+            <use xlink:href="images/main-page_icons-sprite.svg#logo"></use>
+          </svg></a>
+        <!--MOBILE LOGO END-->
         <h1 class="header-content__title" data-aos="fade-left">Современное <br> жилье в Полтаве и <br> Миргороде</h1>
         <p class="header-content__text" data-aos="fade-right">Новые квартиры от застройщика в престижном <br> районе Полтавы и Миргорода</p><a class="arrow-btn" href="#about">
           <div class="arrow-btn__icon">
@@ -210,16 +215,18 @@
     <section class="objects" id="objects">
       <div class="container">
         <!--SLIDER BUTTON START-->
-        <svg class="objects-slider__icon">
+        <svg class="objects-slider__icon objects-slider__prev">
+          <use xlink:href="images/main-page_icons-sprite.svg#arrow"> </use>
+        </svg>
+        <svg class="objects-slider__icon objects-slider__next">
           <use xlink:href="images/main-page_icons-sprite.svg#arrow"> </use>
         </svg>
         <!--SLIDER BUTTON END -->
         <div class="objects__title">
-          <div class="container">
-            <div class="grid">
-              <h3 class="headline">ТОЛЬКО ЛУЧШЕЕ ДЛЯ АМБИЦИОЗНЫХ И УСПЕШНЫХ</h3>
-              <h2 class="title">Наши объекты</h2>
-            </div>
+          <!--.container-->
+          <div class="grid">
+            <h3 class="headline">ТОЛЬКО ЛУЧШЕЕ ДЛЯ АМБИЦИОЗНЫХ И УСПЕШНЫХ</h3>
+            <h2 class="title">Наши объекты</h2>
           </div>
         </div>
         <div class="objects-slider">
@@ -548,7 +555,7 @@
           </label>
           <label class="contact-form__checkbox contact-form__title" for="check">Я даю согласие на обработку моих персональных данных согласно 
             <input class="contact-form__field" id="check" type="checkbox"/>
-            <div class="contact-form__custom-check"></div><a class="link contact-form__link" href="#">политике конфиденциальности </a>
+            <div class="contact-form__custom-check"></div><a class="contact-form__link" href="#">политике конфиденциальности </a>
           </label>
           <button class="btn contact-form__btn" type="submit">Отправить запрос</button>
         </form>
@@ -565,7 +572,7 @@
               <svg>
                 <use xlink:href="images/main-page_icons-sprite.svg#logo"></use>
               </svg></a></div>
-          <div class="footer-contacts"><a class="footer-link" href="mailto:angrobud@gmail.com"> angrobud@gmail.com</a><a class="footer-link" href="tel=+380509915883">+38(050) 991-58-83</a><a class="footer-link" href="tel=+380509915883">+38(050) 991-58-82</a></div>
+          <div class="footer-contacts"><a class="footer-link" href="mailto:angrobud@gmail.com"> angrobud@gmail.com</a><a class="footer-link" href="tel:+380509915883">+38(050) 991-58-83</a><a class="footer-link" href="tel:+380509915883">+38(050) 991-58-82</a></div>
           <div class="footer-newsletter">
             <!--FORM START-->
             <form class="footer-newsletter__form" action="">
@@ -575,7 +582,7 @@
               <button class="btn footer-newsletter__btn">Хочу быть в курсе!</button>
             </form>
             <!--FORM END          -->
-          </div><a class="arrow-btn footer-btn" href="#header">
+          </div><a class="arrow-btn footer-btn" href="#">
             <div class="arrow-btn__icon">
               <svg class="icon">
                 <use xlink:href="images/main-page_icons-sprite.svg#arrow"></use>
@@ -587,17 +594,17 @@
           </div>
           <div class="footer-social">
             <h6 class="footer-social__title">МЫ В СОЦСЕТЯХ</h6>
-            <div class="footer-social__icons"><a class="footer-social__link" href="#header">
+            <div class="footer-social__icons"><a class="footer-social__link" href="#">
                 <div class="svg-wrap">
                   <svg>
                     <use xlink:href="images/main-page_icons-sprite.svg#facebook icon"></use>
                   </svg>
-                </div></a><a class="footer-social__link" href="#header">
+                </div></a><a class="footer-social__link" href="#">
                 <div class="svg-wrap">
                   <svg>
                     <use xlink:href="images/main-page_icons-sprite.svg#telegram"></use>
                   </svg>
-                </div></a><a class="footer-social__link" href="#header">
+                </div></a><a class="footer-social__link" href="#">
                 <div class="svg-wrap">
                   <svg>
                     <use xlink:href="images/main-page_icons-sprite.svg#insta icon"></use>
@@ -624,7 +631,7 @@
           </label>
           <label class="modal__checkbox" for="modal-check">Я даю согласие на обработку моих персональных данных согласно 
             <input class="modal__check" id="modal-check" type="checkbox"/>
-            <div class="modal__custom-check"></div><a class="modal__link link--active" href="#">политике конфиденциальности         </a>
+            <div class="modal__custom-check"></div><a class="modal__link" href="#">политике конфиденциальности         </a>
           </label>
           <button class="btn modal__btn" type="submit">Отправить запрос</button>
           <div class="modal__close">

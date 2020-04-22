@@ -20,6 +20,9 @@
         position: relative;
         grid-column: 2 / 12;
         align-items: center;
+        @media (max-width: 576px) {
+            grid-column: 1 / 13;
+        }
         &__btn {
             grid-row: 3 / 4;
             align-self: center;
@@ -55,6 +58,9 @@
         justify-content: space-between;
         text-align: center;
         transition: all .5s;
+        @media (max-width: 576px) {
+            height: unset;
+        }
         &__icon {
             display: flex;
             align-items: center;
@@ -113,6 +119,7 @@
         @media (max-width: 576px) {
             grid-column: 2 / 12;
             left: -2px;
+            margin: 0;
         }
         @media (max-width: 812px) and (orientation: landscape) {
             grid-column: 4 / 9;
