@@ -31,6 +31,9 @@
             @media (max-width: 576px) {
                 display: none !important;
             }
+            @media (max-width: 812px) and (orientation: landscape) {
+                display: none !important;
+            }
         }
         &__prev {
             grid-column: 1 / 2;

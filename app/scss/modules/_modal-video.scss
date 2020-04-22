@@ -14,14 +14,13 @@
     &__content {
         @include pos($t: 50%, $l: 50%);
         transform: translateX(-50%) translateY(-50%);
-        @include size(90vw, 90vh);
+        @include size(80vw, 80vh);
         @media (max-width: 576px) {
-            @include pos($t: 0, $l: 0);
-            transform: none;
+            @include size(100vw, 56vw);
+            //padding: 50px 25px;
         }
         @media (max-width: 812px) and (orientation: landscape) {
-            @include pos($t: 0, $l: 0);
-            transform: none;
+            @include size(80vw, 45vw);
         }
         iframe {
             @include size(100%);
@@ -59,10 +58,8 @@
             background: #514947;
         }
         @media (max-width: 576px) {
-            grid-column: 12 / 13;
-            grid-row: 1 / 2;
             @include size(40px);
-            @include pos($t: 4px, $r: -25px);
+            @include pos($t: -50px, $r: 10px);
             &:before {
                 @include size(1px, 25px);
                 @include pos($t: 7px, $r: 20px);
@@ -73,10 +70,8 @@
             }
         }
         @media (max-width: 812px) and (orientation: landscape) {
-            grid-column: 11 / 12;
-            grid-row: 1 / 2;
             @include size(40px);
-            @include pos($t: 4px, $r: -25px);
+            @include pos($t: 13px, $r: -55px);
             &:before {
                 @include size(1px, 25px);
                 @include pos($t: 7px, $r: 20px);
