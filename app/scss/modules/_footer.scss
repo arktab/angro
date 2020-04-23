@@ -143,10 +143,10 @@
         @media (max-width: 812px) and (orientation: landscape) {
             display: none;
         }
-        @media (max-width: 960px) {
-            grid-column: 6/8;
-            grid-row: 3/4;
-        }
+        // @media (max-width: 960px) {
+        //     grid-column: 6/8;
+        //     grid-row: 3/4;
+        // }
     }
     &-backcall {
         grid-column: 8 / 11;
@@ -189,9 +189,9 @@
                 margin-bottom: 30px;
             }
         }
-        @media (max-width: 960px) {
-            grid-column: 7 / 10;
-        }
+        // @media (max-width: 960px) {
+        //     grid-column: 7 / 10;
+        // }
     }
     &-social {
         grid-column: 11 / 13;
@@ -255,9 +255,9 @@
                 margin-bottom: 20px;
             }
         }
-        @media (max-width: 960px) {
-            grid-column: 10 / 13;
-        }
+        // @media (max-width: 960px) {
+        //     grid-column: 10 / 13;
+        // }
     }
     &-copyright {
         grid-column: 1 / 13;
@@ -276,10 +276,10 @@
             grid-row: 6 / 7;
             margin: 15px 0 0;
         }
-        @media (max-width: 960px) {
-            grid-column: 1/13;
-            grid-row: 4/5;
-        }
+        // @media (max-width: 960px) {
+        //     grid-column: 1/13;
+        //     grid-row: 4/5;
+        // }
     }
     .footer-newsletter {
         grid-column: 1 / 6;
@@ -294,9 +294,9 @@
             grid-row: 5 / 6;
             margin-top: 30px;
         }
-        @media (max-width: 960px) {
-            grid-column: 1 / 7;
-        }
+        // @media (max-width: 960px) {
+        //     grid-column: 1 / 7;
+        // }
         &__form {
             display: grid;
             grid-template-columns: repeat(6, 1fr);
@@ -378,10 +378,10 @@
                 line-height: 20px;
                 margin: 0 auto;
             }
-            @media (max-width: 960px) {
-                font-size: 12px;
-                padding: 0 1rem;
-            }
+            // @media (max-width: 960px) {
+            //     font-size: 12px;
+            //     padding: 0 1rem;
+            // }
         }
     }
 }

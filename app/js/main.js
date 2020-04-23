@@ -135,7 +135,8 @@ AOS.init({
             }
         });
         //
-        $(".mobile-menu__icon").click(function() {
+        $(".mobile-menu").click(function() {
+            $(".mobile-menu__icon").toggleClass("mobile-menu__icon--active");
             if (visible == false) {
                 setTimeout(function() {
                     visible = true;

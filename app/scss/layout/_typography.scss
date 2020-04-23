@@ -233,11 +233,19 @@ section {
     line-height: 23px;
     display: none;
     &-red {
-        color: #EB5757 !important;
+        color: #EB5757;
         display: block !important;
         position: absolute;
         bottom: -20px;
         left: 0;
+        @media (max-width: 576px) {
+            left: unset;
+            right: 0;
+        }
+        @media (max-width: 812px) and (orientation: landscape) {
+            left: unset;
+            right: 0;
+        }
     }
 }
 
