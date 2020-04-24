@@ -10,7 +10,7 @@ AOS.init({
 (function($) {
     $(document).ready(function() {
         // Code
-
+        $(".object-tabs").tabs();
         //Form validation
         var modalname = new String;
         var modaltel = new String;
@@ -161,7 +161,7 @@ AOS.init({
         });
         //
         var width = $(window).width();
-        if (width <= 813) {
+        if (width <= 1024) {
             if (visible == false) {
                 setTimeout(function() {
                     visible = false;
@@ -200,6 +200,16 @@ AOS.init({
             $(".modal-video").toggleClass("modal-video-is-shown");
             $('body').removeClass('is-menu-shown');
         });
+        //OBJECT MODAL START
+        $(".object-info__link").click(function() {
+            $(".object-modal").toggleClass("object-modal-is-shown");
+            $('body').toggleClass('is-menu-shown');
+        });
+        $(".object-modal__close").click(function() {
+            $(".object-modal").toggleClass("object-modal-is-shown");
+            $('body').removeClass('is-menu-shown');
+        });
+        //OBJECT MODAL END
         //MODAL END
 
         //MOBILE 

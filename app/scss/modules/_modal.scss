@@ -295,7 +295,7 @@
             grid-column: 12 / 13;
             grid-row: 1 / 2;
             @include size(40px);
-            @include pos($t: 4px, $r: -25px);
+            @include pos($t: -25px, $r: -45px);
             &:before {
                 @include size(1px, 25px);
                 @include pos($t: 7px, $r: 20px);
@@ -316,11 +316,10 @@
             }
             &:after {
                 @include size(1px, 25px);
-                @include pos($t: 7px, $r: 20px);
             }
         }
-        @media (max-width: 960px) {
-            @include pos($t: -25px, $r: -20px);
-        }
+        // @media (max-width: 960px) {
+        //     @include pos($t: -25px, $r: -45px);
+        // }
     }
 }

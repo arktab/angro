@@ -14,7 +14,7 @@
     <!--POPUP START-->
     <div class="info" data-aos="fade-down" data-aos-anchor="#about" data-aos-easing="linear" data-aos-duration="400" data-aos-anchor-placement="bottom">
       <div class="info-block info-left"><a class="info-text" href="tel:+380506347178">+38(050) 634 71 78</a>
-        <p class="info-link link--active">Заказать звонок</p>
+        <p class="open-modal info-link link--active">Заказать звонок</p>
       </div><a class="info-block info-right">
         <svg class="info-icon">
           <use xlink:href="images/main-page_icons-sprite.svg#apartament"></use>
@@ -50,8 +50,8 @@
     </div>
     <div class="menu">
       <ul class="menu-top">     
-        <li class="menu-item"><a class="link--active" href="#">Главная</a></li>
-        <li class="menu-item"><a href="#">Объекты</a></li>
+        <li class="menu-item"><a class="link--active" href="index.html">Главная</a></li>
+        <li class="menu-item"><a href="object.html">Объекты</a></li>
         <li class="menu-item"><a href="#">Квартиры</a></li>
         <li class="menu-item"><a href="#">Галерея</a></li>
         <li class="menu-item"><a href="#">Блог</a></li>
@@ -70,14 +70,17 @@
           </svg>
           <div class="menu-info__text"> 
             <p class="info-link">Выбрать квартиру</p>
-          </div></a><a class="menu-info__item" href="tel:+380506347178">
+          </div></a>
+        <div class="menu-info__item">
           <svg class="menu-info__icon">
             <use xlink:href="images/main-page_icons-sprite.svg#phone"></use>
-            <div class="menu-info__text"> 
-              <p>+38(050) 634 71 78</p>
+            <!--CLASS CHANGE!!!-->
+            <div class="menu-info__text"> <a href="tel:+380506347178">+38(050) 634 71 78</a>
               <p class="link--active">Заказать звонок</p>
             </div>
-          </svg></a></div>
+          </svg>
+        </div>
+      </div>
       <ul class="menu-footer">
         <li class="menu-item"><a class="link--active" href="#">Выбрать квартиру</a></li>
         <li class="menu-item"><a href="tel:+38(050)-991-58-80">+38 (050) 991 58 80</a></li>
@@ -85,14 +88,19 @@
       </ul>
     </div>
     <div class="mobile-menu">
-      <svg class="mobile-menu__icon">
-        <use xlink:href="images/main-page_icons-sprite.svg#menu icon"></use>
-      </svg>
+      <div class="mobile-menu__icon">
+        <!--use(xlink:href="images/main-page_icons-sprite.svg#menu icon")-->
+      </div>
     </div>
     <!--SIDEBAR END-->
     <!--HEADER START -->
     <header class="header" id="header"> 
       <div class="header-content">
+        <!--MOBILE LOGO--><a class="mobile-logo" href="#">             
+          <svg class="mobile-logo__icon">
+            <use xlink:href="images/main-page_icons-sprite.svg#logo"></use>
+          </svg></a>
+        <!--MOBILE LOGO END-->
         <h1 class="header-content__title" data-aos="fade-left">Современное <br> жилье в Полтаве и <br> Миргороде</h1>
         <p class="header-content__text" data-aos="fade-right">Новые квартиры от застройщика в престижном <br> районе Полтавы и Миргорода</p><a class="arrow-btn" href="#about">
           <div class="arrow-btn__icon">
@@ -187,29 +195,34 @@
             <!-- TILE END-->
           </div>
           <!--SLIDER END    -->
-          <div class="about-btn"><a class="arrow-btn arrow-btn--dark" href="#about">
+          <div class="about-btn">
+            <div class="arrow-btn arrow-btn--dark">
               <div class="arrow-btn__icon">
                 <svg class="icon">
                   <use xlink:href="images/main-page_icons-sprite.svg#play-button"></use>
                 </svg>
               </div>
-              <p class="arrow-btn__text">Смотреть видео</p></a></div>
+              <p class="arrow-btn__text">Смотреть видео</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
     <section class="objects" id="objects">
       <div class="container">
         <!--SLIDER BUTTON START-->
-        <svg class="objects-slider__icon">
+        <svg class="objects-slider__icon objects-slider__prev">
+          <use xlink:href="images/main-page_icons-sprite.svg#arrow"> </use>
+        </svg>
+        <svg class="objects-slider__icon objects-slider__next">
           <use xlink:href="images/main-page_icons-sprite.svg#arrow"> </use>
         </svg>
         <!--SLIDER BUTTON END -->
         <div class="objects__title">
-          <div class="container">
-            <div class="grid">
-              <h3 class="headline">ТОЛЬКО ЛУЧШЕЕ ДЛЯ АМБИЦИОЗНЫХ И УСПЕШНЫХ</h3>
-              <h2 class="title">Наши объекты</h2>
-            </div>
+          <!--.container-->
+          <div class="grid">
+            <h3 class="headline">ТОЛЬКО ЛУЧШЕЕ ДЛЯ АМБИЦИОЗНЫХ И УСПЕШНЫХ</h3>
+            <h2 class="title">Наши объекты</h2>
           </div>
         </div>
         <div class="objects-slider">
@@ -479,7 +492,7 @@
                 <use xlink:href="images/main-page_icons-sprite.svg#tover"></use>
               </svg>
             </div>
-            <div class="apartments-tile__title">Выразительная архитектура</div><a class="apartments-tile__link link" href="">Смотреть квартиры объекта</a>
+            <div class="apartments-tile__title">Выразительная архитектура</div><a class="apartments-tile__link link" href="#">Смотреть квартиры объекта</a>
           </div>
           <!--SLEDER TILE-->
           <div class="apartments-tile">
@@ -492,7 +505,7 @@
                 <use xlink:href="images/main-page_icons-sprite.svg#location"></use>
               </svg>
             </div>
-            <div class="apartments-tile__title">Транспортная доступность</div><a class="apartments-tile__link link" href="">Смотреть квартиры объекта</a>
+            <div class="apartments-tile__title">Транспортная доступность</div><a class="apartments-tile__link link" href="#">Смотреть квартиры объекта</a>
           </div>
           <!--SLIDER TILE-->
           <div class="apartments-tile">
@@ -505,7 +518,7 @@
                 <use xlink:href="images/main-page_icons-sprite.svg#interest-points"></use>
               </svg>
             </div>
-            <div class="apartments-tile__title">Развитая ифраструктура </div><a class="apartments-tile__link link" href="">Смотреть квартиры объекта</a>
+            <div class="apartments-tile__title">Развитая ифраструктура </div><a class="apartments-tile__link link" href="#">Смотреть квартиры объекта</a>
           </div>
           <!--SLIDER TILE-->
           <div class="apartments-tile">
@@ -518,7 +531,7 @@
                 <use xlink:href="images/main-page_icons-sprite.svg#layout"></use>
               </svg>
             </div>
-            <div class="apartments-tile__title">Множество планировок</div><a class="apartments-tile__link link" href="">Смотреть квартиры объекта</a>
+            <div class="apartments-tile__title">Множество планировок</div><a class="apartments-tile__link link" href="#">Смотреть квартиры объекта</a>
           </div>
         </div>
       </div>
@@ -527,21 +540,19 @@
       <div class="container">
         <form class="grid contact-form" action="">
           <h4 class="contact-form__headline">С удовольствием проконсультируем Вас!</h4>
-          <label class="contact-form__title" for="username">Ваше имя
-            <input class="contact-form__field" id="username" type="text" required="required"/>
+          <label class="contact-form__title" for="contact-username">Ваше имя
+            <input class="contact-form__field" id="contact-username" type="text" required="required"/><span class="alert__text contact__user-text">Ваше имя не указано</span>
           </label>
-          <label class="contact-form__title" for="tel">Телефон
-            <input class="contact-form__field" id="tel" type="tel" required="required"/>
+          <label class="contact-form__title" for="contact-tel">Телефон
+            <input class="contact-form__field" id="contact-tel" type="tel" required="required" placeholder="+380" pattern="[+]d{3}s[(]d{2}[)]sd{3}[-]d{2}[-]d{2}"/><span class="alert__text contact__tel-text">Телефон не указан</span>
           </label>
           <label class="contact-form__title" for="email">EMAIL (НЕ ОБЯЗАТЕЛЬНО)
             <input class="contact-form__field" id="email" type="email"/>
           </label>
-          <div class="contact-form__checkbox">
-            <input class="contact-form__field" id="check" type="checkbox"/>
-            <div class="contact-form__text">
-              <label class="contact-form__title" for="check">Я даю согласие на обработку моих персональных данных согласно </label><a class="link contact-form__link" href="#">политике конфиденциальности </a>
-            </div>
-          </div>
+          <label class="contact-form__checkbox contact-form__title" for="contact-check">Я даю согласие на обработку моих персональных данных согласно 
+            <input class="contact-form__field" id="contact-check" type="checkbox" checked="checked"/>
+            <div class="contact-form__custom-check"></div><a class="contact-form__link" href="#">политике конфиденциальности </a><span class="alert__text contact__check-text">Обязательное поле </span>
+          </label>
           <button class="btn contact-form__btn" type="submit">Отправить запрос</button>
         </form>
       </div>
@@ -554,22 +565,20 @@
             <h5 class="footer-address__title">Наши офисы</h5><a class="footer-link" href="#">г.Полтава, ул. А.Кукоби, 12</a><a class="footer-link" href="#">г.Миргород, ул.Победы,10, оф.1</a><a class="footer-link" href="#">Время работы: 9:00 – 18:00</a>
           </div>
           <div class="footer-logo"><a class="link" href="#"> 
-              <svg data-aos="fade-down" data-aos-easing="linear" data-aos-duration="800">
+              <svg>
                 <use xlink:href="images/main-page_icons-sprite.svg#logo"></use>
               </svg></a></div>
-          <div class="footer-contacts">
-            <h5 class="footer-contacts__title">Наши офисы</h5><a class="footer-link" href="mailto:angrobud@gmail.com"> angrobud@gmail.com</a><a class="footer-link" href="tel=+380509915883">+38(050) 991-58-83</a><a class="footer-link" href="tel=+380509915883">+38(050) 991-58-82</a>
-          </div>
+          <div class="footer-contacts"><a class="footer-link" href="mailto:angrobud@gmail.com"> angrobud@gmail.com</a><a class="footer-link" href="tel:+380509915883">+38(050) 991-58-83</a><a class="footer-link" href="tel:+380509915883">+38(050) 991-58-82</a></div>
           <div class="footer-newsletter">
             <!--FORM START-->
             <form class="footer-newsletter__form" action="">
               <h5 class="footer-newsletter__headline">Будьте в курсе спецпредложений   </h5>
               <label class="footer-newsletter__title" for="newsletter">Ваш e-mail</label>
               <input class="footer-newsletter__field" id="newsletter" type="text"/>
-              <button class="btn footer-newsletter__btn">Хочу быть в курсе!</button>
+              <button class="btn footer-newsletter__btn" type="submit">Хочу быть в курсе!</button>
             </form>
             <!--FORM END          -->
-          </div><a class="arrow-btn footer-btn" href="#header">
+          </div><a class="arrow-btn footer-btn" href="#">
             <div class="arrow-btn__icon">
               <svg class="icon">
                 <use xlink:href="images/main-page_icons-sprite.svg#arrow"></use>
@@ -581,17 +590,17 @@
           </div>
           <div class="footer-social">
             <h6 class="footer-social__title">МЫ В СОЦСЕТЯХ</h6>
-            <div class="footer-social__icons"><a class="footer-social__link" href="#header">
+            <div class="footer-social__icons"><a class="footer-social__link" href="#">
                 <div class="svg-wrap">
                   <svg>
                     <use xlink:href="images/main-page_icons-sprite.svg#facebook icon"></use>
                   </svg>
-                </div></a><a class="footer-social__link" href="#header">
+                </div></a><a class="footer-social__link" href="#">
                 <div class="svg-wrap">
                   <svg>
                     <use xlink:href="images/main-page_icons-sprite.svg#telegram"></use>
                   </svg>
-                </div></a><a class="footer-social__link" href="#header">
+                </div></a><a class="footer-social__link" href="#">
                 <div class="svg-wrap">
                   <svg>
                     <use xlink:href="images/main-page_icons-sprite.svg#insta icon"></use>
@@ -605,26 +614,32 @@
     <!--FOOTER END--><!-- modal -->
     <div class="modal">
       <div class="modal__content">
-        <form class="grid" action="">
-          <fieldset>
-            <legend>Оставьте координаты, и мы с вами свяжемся</legend>
-          </fieldset>
-          <label for="username">Ваше имя
-            <input id="username" type="text" required="required"/>
+        <form class="modal__form grid container" action="">
+          <h4 class="modal__headline">Оставьте координаты, и мы с вами свяжемся</h4>
+          <label class="modal__label" for="modal-username">Ваше имя
+            <input class="modal__field" id="modal-username" type="text" required="required"/><span class="alert__text modal__user-text">Ваше имя не указано</span>
           </label>
-          <label for="tel">Телефон
-            <input id="tel" type="tel" required="required"/>
+          <label class="modal__label" for="modal-tel">Телефон
+            <input class="modal__field" id="modal-tel" type="tel" required="required" placeholder="+380" pattern="[+]d{3}s[(]d{2}[)]sd{3}[-]d{2}[-]d{2}"/><span class="alert__text modal__tel-text">Телефон не указан</span>
           </label>
-          <label for="email">EMAIL (НЕ ОБЯЗАТЕЛЬНО)
-            <input id="email" type="email"/>
+          <label class="modal__label" for="modal-email">EMAIL (НЕ ОБЯЗАТЕЛЬНО)
+            <input class="modal__field" id="modal-email" type="email"/>
           </label>
-          <label for="check">Я даю согласие на обработку моих персональных данных согласно <a>политике конфиденциальности</a>
-            <input id="check" type="checkbox"/>
+          <label class="modal__checkbox" for="modal-check">Я даю согласие на обработку моих персональных данных согласно 
+            <input class="modal__check" id="modal-check" type="checkbox" checked="checked"/>
+            <div class="modal__custom-check"></div><a class="modal__link" href="#">политике конфиденциальности</a><span class="alert__text modal__check-text">Обязательное поле       </span>
           </label>
-          <button>Отправить запрос</button>
+          <button class="btn modal__btn" type="submit">Отправить запрос</button>
+          <div class="modal__close">
+            <div class="close"></div>
+          </div>
         </form>
       </div>
-      <button class="close"></button>
+    </div>
+    <div class="modal-video">
+      <div class="modal-video__content"><iframe src="https://www.youtube.com/embed/lxqG2UTpGUg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="modal-video__close"></div>
+      </div>
     </div><!-- modal end-->                  
 <script src="js/main.min.js"></script>
   </body>

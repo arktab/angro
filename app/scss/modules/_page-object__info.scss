@@ -1,0 +1,36 @@
+.object-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(14, 14, 14, .5);
+    height: 47px;
+    @media (min-width: 1025px) {
+        position: absolute;
+        width: 475px;
+        height: 120px;
+        right: 0;
+        top: 0;
+    }
+    &__icon {
+        svg {
+            @include size(35px);
+            @media (min-width: 1025px) {
+                @include size(66px);
+            }
+        }
+    }
+    &__link {
+        margin: 0 0 0 10px;
+        text-decoration: underline;
+        a {
+            font-size: 16px;
+            line-height: 20px;
+            color: #FFF3A6;
+            @media (min-width: 1025px) {
+                font-size: 24px;
+                line-height: 29px;
+                margin: 0 0 0 35px;
+            }
+        }
+    }
+}

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="description" content="Starter")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Angro
+        link(rel="icon" href="images/favicon.png")
+        <!--build:css css/styles.min.css-->
+        link(rel="stylesheet" href="css/libs/aos.css")
+        link(rel="stylesheet" href="css/libs/slick.css")
+        link(rel="stylesheet" href="css/libs/slick-theme.css")
+        link(rel="stylesheet" href="css/global.min.css")
+        <!--endbuild-->
+        <!--[if lt IE 9]>
+        script(src="http://html5shiv.googlecode.com/svn/trunk/html5.js")
+        <![endif]-->
+    body.object-body
+        //POPUP START 
+        include object/object-info.pug
+        //POPUP END
+        
+        //SIDEBAR
+        include layout/sidebar.pug
+        //SIDEBAR END
+
+        //HEADER START 
+        header.object-header
+            .container
+                .grid
+                    //MOBILE LOGO
+                    a(href="#").mobile-logo              
+                            svg.mobile-logo__icon
+                                use(xlink:href="images/main-page_icons-sprite.svg#logo")
+                    //MOBILE LOGO END
+                    h2.title объекты
+                    h3.headline Город местонахождения строительства
+        //HEADER END
+
+        //CONTENT START
+        section.object-content
+            .container
+                .object-tabs
+                    ul
+                        li 
+                            a(href="#tab-1").object-tabs__title Полтава
+                        li 
+                            a(href="#tab-2").object-tabs__title Миргород
+                    #tab-1
+                        .item
+                            a.item__headline.link--active(href="#") ЖК "На Сенной"
+                            p.item__info Полтава, ул. Сенная, 19
+                            p.item__text Жилищный комплекс «На Сенной» состоит из двух 8-ми этажных жилых домов в самом центре города. Комплекс расположен в тихом, уютном районе города. Разнообразие планировочных решений позволит каждому найти жилье на свой вкус. Рядом с домом находятся детский сад, общеобразовательная школа, магазины.
+                            .item__links
+                                a.arrow-btn.arrow-btn--left(href="#")
+                                    .arrow-btn__icon
+                                        svg.icon
+                                            use(xlink:href="images/main-page_icons-sprite.svg#arrow")
+                                    p.arrow-btn__text Смотреть объект
+                                a.arrow-btn.arrow-btn--left(href="#")
+                                    .arrow-btn__icon
+                                        svg.icon
+                                            use(xlink:href="images/main-page_icons-sprite.svg#arrow")
+                                    p.arrow-btn__text Квартиры комплекса
+                            .item__img
+                                img(src="images/objects/object_img1.jpg", alt="ЖК 'На Сенной'")
+                                .item__icon-wrap
+                                    svg.icon
+                                        use(xlink:href="images/main-page_icons-sprite.svg#eye")
+                            .item__icons
+                                .item__icon
+                                    svg
+                                        use(xlink:href="images/main-page_icons-sprite.svg#stairs")
+                                    .icon-text
+                                        p.icon-text__headline Этажей
+                                        p 8
+                                        
+                                .item__icon
+                                    svg
+                                        use(xlink:href="images/main-page_icons-sprite.svg#wall")
+                                    .icon-text
+                                        p.icon-text__headline Год постройки
+                                        p 2019
+
+                                .item__icon
+                                    svg
+                                        use(xlink:href="images/main-page_icons-sprite.svg#door")
+                                    .icon-text
+                                        p.icon-text__headline Входные двери
+                                        p Металлические с МДФ-накладками
+ 
+
+                    #tab-2
+                        .item
+                            a.item__headline.link--active(href="#") ЖК "Остров"
+                            p.item__info Миргород, ул. Гоголя, 77
+                            p.item__text Комплекс расположен в тихом месте, недалеко от школы и детского садика. Рядом находятся магазины, мини-рынок, социальные службы города...
+                            .item__links
+                                a.arrow-btn.arrow-btn--left(href="#")
+                                    .arrow-btn__icon
+                                        svg.icon
+                                            use(xlink:href="images/main-page_icons-sprite.svg#arrow")
+                                    p.arrow-btn__text Смотреть объект
+                                a.arrow-btn.arrow-btn--left(href="#")
+                                    .arrow-btn__icon
+                                        svg.icon
+                                            use(xlink:href="images/main-page_icons-sprite.svg#arrow")
+                                    p.arrow-btn__text Квартиры комплекса
+                            .item__img
+                                img(src="images/objects/object_img4.jpg", alt="ЖК 'На Сенной'")
+                                .item__icon-wrap
+                                    svg.icon
+                                        use(xlink:href="images/main-page_icons-sprite.svg#eye")
+                            .item__icons
+                                .item__icon
+                                    svg
+                                        use(xlink:href="images/main-page_icons-sprite.svg#stairs")
+                                    .icon-text
+                                        p.icon-text__headline Этажей
+                                        p 8
+                                        
+                                .item__icon
+                                    svg
+                                        use(xlink:href="images/main-page_icons-sprite.svg#wall")
+                                    .icon-text
+                                        p.icon-text__headline Год постройки
+                                        p 2019
+
+                                .item__icon
+                                    svg
+                                        use(xlink:href="images/main-page_icons-sprite.svg#door")
+                                    .icon-text
+                                        p.icon-text__headline Входные двери
+                                        p Металлические с МДФ-накладками
+                        .item
+                            a.item__headline.link--active(href="#") ЖК "Мирного"
+                            p.item__info Миргород, ул. Панаса Мирного, 3
+                            p.item__text Hасположен в тихом месте, недалеко от школы и детского садика. Рядом находятся магазины, минирынок, социальные службы города...
+                            .item__links
+                                a.arrow-btn.arrow-btn--left(href="#")
+                                    .arrow-btn__icon
+                                        svg.icon
+                                            use(xlink:href="images/main-page_icons-sprite.svg#arrow")
+                                    p.arrow-btn__text Смотреть объект
+                                a.arrow-btn.arrow-btn--left(href="#")
+                                    .arrow-btn__icon
+                                        svg.icon
+                                            use(xlink:href="images/main-page_icons-sprite.svg#arrow")
+                                    p.arrow-btn__text Квартиры комплекса
+                            .item__img
+                                img(src="images/objects/object_img3.jpg", alt="ЖК 'На Сенной'")
+                                .item__icon-wrap
+                                    svg.icon
+                                        use(xlink:href="images/main-page_icons-sprite.svg#eye")
+                            .item__icons
+                                .item__icon
+                                    svg
+                                        use(xlink:href="images/main-page_icons-sprite.svg#stairs")
+                                    .icon-text
+                                        p.icon-text__headline Этажей
+                                        p 8
+                                        
+                                .item__icon
+                                    svg
+                                        use(xlink:href="images/main-page_icons-sprite.svg#wall")
+                                    .icon-text
+                                        p.icon-text__headline Год постройки
+                                        p 2019
+
+                                .item__icon
+                                    svg
+                                        use(xlink:href="images/main-page_icons-sprite.svg#door")
+                                    .icon-text
+                                        p.icon-text__headline Входные двери
+                                        p Металлические с МДФ-накладками
+                        .item
+                            a.item__headline.link--active(href="#") ЖК "Победа"
+                            p.item__info Миргород, ул. Победы, 10
+                            p.item__text Жилищный комплекс «На Сенной» состоит из двух 8-ми этажных жилых домов в самом центре города. Комплекс расположен в тихом, уютном районе города. Разнообразие планировочных решений позволит каждому найти жилье на свой вкус. Рядом с домом находятся детский сад, общеобразовательная школа, магазины.
+                            .item__links
+                                a.arrow-btn.arrow-btn--left(href="#")
+                                    .arrow-btn__icon
+                                        svg.icon
+                                            use(xlink:href="images/main-page_icons-sprite.svg#arrow")
+                                    p.arrow-btn__text Смотреть объект
+                                a.arrow-btn.arrow-btn--left(href="#")
+                                    .arrow-btn__icon
+                                        svg.icon
+                                            use(xlink:href="images/main-page_icons-sprite.svg#arrow")
+                                    p.arrow-btn__text Квартиры комплекса
+                            .item__img
+                                img(src="images/objects/object_img1.jpg", alt="ЖК 'На Сенной'")
+                                .item__icon-wrap
+                                    svg.icon
+                                        use(xlink:href="images/main-page_icons-sprite.svg#eye")
+                            .item__icons
+                                .item__icon
+                                    svg
+                                        use(xlink:href="images/main-page_icons-sprite.svg#stairs")
+                                    .icon-text
+                                        p.icon-text__headline Этажей
+                                        p 8
+                                        
+                                .item__icon
+                                    svg
+                                        use(xlink:href="images/main-page_icons-sprite.svg#wall")
+                                    .icon-text
+                                        p.icon-text__headline Год постройки
+                                        p 2019
+
+                                .item__icon
+                                    svg
+                                        use(xlink:href="images/main-page_icons-sprite.svg#door")
+                                    .icon-text
+                                        p.icon-text__headline Входные двери
+                                        p Металлические с МДФ-накладками
+        //CONTENT END
+        //FOOTER START
+        footer.footer
+            include layout/footer.pug
+        //FOOTER END
+        <!-- modal -->
+        include object/object-modal.pug
+        <!-- modal end-->                  
+        
+        <!--build:js js/main.min.js -->
+        script(src="js/libs/jquery.min.js")
+        script(src="js/libs/jquery-ui.js")
+        script(src="js/libs/aos.js")
+        script(src="js/libs/slick.min.js")
+        script(src="js/main.js")
+        <!--endbuild-->
