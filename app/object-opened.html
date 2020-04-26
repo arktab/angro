@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="description" content="Starter"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Angro</title>
+    <link rel="icon" href="images/favicon.png"/><!--build:css css/styles.min.css-->
+    <link rel="stylesheet" href="css/libs/aos.css"/>
+    <link rel="stylesheet" href="css/libs/slick.css"/>
+    <link rel="stylesheet" href="css/libs/slick-theme.css"/>
+    <link rel="stylesheet" href="css/global.min.css"/><!--endbuild-->
+<!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  </head>
+  <body class="object-opened-body">
+    <!--INFO START -->
+    <div class="object-info">
+      <div class="object-info__icon">
+        <svg>
+          <use xlink:href="images/main-page_icons-sprite.svg#newspaper"></use>
+        </svg>
+      </div>
+      <div class="object-info__link"><a href="#">Важная информация</a></div>
+    </div>
+    <!--INFO END-->
+    <!--SIDEBAR-->
+    <div class="sidebar">
+      <div class="sidebar-content">
+        <!-- LOGO START  --><a class="sidebar-logo" href="#">             
+          <svg class="sidebar-logo__icon">
+            <use xlink:href="images/main-page_icons-sprite.svg#logo"></use>
+          </svg></a>
+        <!-- LOGO END -->
+        <!-- LANG SELECT START-->
+        <div class="sidebar-lang"><a class="sidebar-lang__link link--active" href="#">UA</a><a class="sidebar-lang__link" href="#">RU</a></div>
+        <!-- LANG SELECT END-->
+        <div class="sidebar-menu">
+          <div class="sidebar-menu__triger">Меню</div>
+        </div>
+        <div class="sidebar-icons"><a class="sidebar-icons__item" href="#">
+            <svg class="sidebar-icons__icon">
+              <use xlink:href="images/main-page_icons-sprite.svg#apartament"></use>
+            </svg></a><a class="sidebar-icons__item" href="#">
+            <svg class="sidebar-icons__icon icon--phone">
+              <use xlink:href="images/main-page_icons-sprite.svg#phone"></use>
+            </svg></a><a class="sidebar-icons__item" href="#">
+            <svg class="sidebar-icons__icon icon--email">
+              <use xlink:href="images/main-page_icons-sprite.svg#email"></use>
+            </svg></a></div>
+      </div>
+    </div>
+    <div class="menu">
+      <ul class="menu-top">     
+        <li class="menu-item"><a class="link--active" href="index.html">Главная</a></li>
+        <li class="menu-item"><a href="object.html">Объекты</a></li>
+        <li class="menu-item"><a href="#">Квартиры</a></li>
+        <li class="menu-item"><a href="#">Галерея</a></li>
+        <li class="menu-item"><a href="#">Блог</a></li>
+      </ul>
+      <!--MOBILE LANG-->
+      <div class="mobile-menu__lang"><a class="mobile-menu__link link--active" href="#">UA</a><a class="mobile-menu__link" href="#">RU</a></div>
+      <!--MOBILE LANG END-->
+      <!--MOBILE LOGO--><a class="mobile-logo" href="#">             
+        <svg class="mobile-logo__icon">
+          <use xlink:href="images/main-page_icons-sprite.svg#logo"></use>
+        </svg></a>
+      <!--MOBILE LOGO END-->
+      <div class="menu-info"><a class="menu-info__item" href="#">
+          <svg class="menu-info__icon">
+            <use xlink:href="images/main-page_icons-sprite.svg#apartament"></use>
+          </svg>
+          <div class="menu-info__text"> 
+            <p class="info-link">Выбрать квартиру</p>
+          </div></a>
+        <div class="menu-info__item">
+          <svg class="menu-info__icon">
+            <use xlink:href="images/main-page_icons-sprite.svg#phone"></use>
+            <!--CLASS CHANGE!!!-->
+            <div class="menu-info__text"> <a href="tel:+380506347178">+38(050) 634 71 78</a>
+              <p class="link--active">Заказать звонок</p>
+            </div>
+          </svg>
+        </div>
+      </div>
+      <ul class="menu-footer">
+        <li class="menu-item"><a class="link--active" href="#">Выбрать квартиру</a></li>
+        <li class="menu-item"><a href="tel:+38(050)-991-58-80">+38 (050) 991 58 80</a></li>
+        <li class="menu-item"><a class="link--email" href="mailto:angrobud@gmail.com">angrobud@gmail.com</a></li>
+      </ul>
+    </div>
+    <div class="mobile-menu">
+      <div class="mobile-menu__icon">
+        <!--use(xlink:href="images/main-page_icons-sprite.svg#menu icon")-->
+      </div>
+    </div>
+    <!--SIDEBAR END-->
+    <!--HEADER START -->
+    <header class="object-header">
+      <div class="container">
+        <div class="grid">
+          <!--MOBILE LOGO--><a class="mobile-logo" href="#">             
+            <svg class="mobile-logo__icon">
+              <use xlink:href="images/main-page_icons-sprite.svg#logo"></use>
+            </svg></a>
+          <!--MOBILE LOGO END-->
+          <h2 class="title">ЖК "На Сенной"</h2><a class="arrow-btn arrow-btn--left" href="#">
+            <div class="arrow-btn__icon">
+              <svg class="icon">
+                <use xlink:href="images/main-page_icons-sprite.svg#arrow"></use>
+              </svg>
+            </div>
+            <p class="arrow-btn__text">Объекты</p></a>
+        </div>
+      </div>
+    </header>
+    <!--HEADER END-->
+    <!--CONTENT START-->
+    <section class="object-content">
+      <div class="container">
+        <div class="content grid">
+          <div class="content-logo">
+            <svg class="logo">
+              <use xlink:href="images/main-page_icons-sprite.svg#logo-head"></use>
+            </svg>
+            <p class="logo__text">жилой комплекс</p>
+            <h2 class="logo__title">На Сенной</h2>
+            <h4 class="logo__headline">Полтава ул. Сенная, 19</h4>
+          </div>
+          <div class="content-picture">
+            <div class="item__img"><img src="images/objects/object_img1.jpg" alt="ЖК 'На Сенной'"/>
+              <div class="item__icon-wrap">
+                <svg class="icon">
+                  <use xlink:href="images/main-page_icons-sprite.svg#eye"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="content-icons">
+            <div class="content-headline">
+              <h3 class="content-headline__text">Преимущества жилого комплекса</h3>
+            </div>
+            <div class="item__icon">
+              <svg>
+                <use xlink:href="images/main-page_icons-sprite.svg#stairs"></use>
+              </svg>
+              <div class="icon-text">
+                <p class="icon-text__headline">Этажей</p>
+                <p>8</p>
+              </div>
+            </div>
+            <div class="item__icon">
+              <svg>
+                <use xlink:href="images/main-page_icons-sprite.svg#wall"></use>
+              </svg>
+              <div class="icon-text">
+                <p class="icon-text__headline">Год постройки</p>
+                <p>2019</p>
+              </div>
+            </div>
+            <div class="item__icon">
+              <svg>
+                <use xlink:href="images/main-page_icons-sprite.svg#door"></use>
+              </svg>
+              <div class="icon-text">
+                <p class="icon-text__headline">Входные двери</p>
+                <p>Металлические с МДФ-накладками</p>
+              </div>
+            </div>
+            <div class="item__icon">
+              <svg>
+                <use xlink:href="images/main-page_icons-sprite.svg#building"></use>
+              </svg>
+              <div class="icon-text">
+                <p class="icon-text__headline">Конструктив</p>
+                <p>Монолитный каркас</p>
+              </div>
+            </div>
+            <!--second row-->
+            <div class="item__icon">
+              <svg>
+                <use xlink:href="images/main-page_icons-sprite.svg#window"></use>
+              </svg>
+              <div class="icon-text">
+                <p class="icon-text__headline">Окна</p>
+                <p>окна с двойным стеклопакетом</p>
+              </div>
+            </div>
+            <div class="item__icon">
+              <svg>
+                <use xlink:href="images/main-page_icons-sprite.svg#heating"></use>
+              </svg>
+              <div class="icon-text">
+                <p class="icon-text__headline">отопление</p>
+                <p>Индивидуальный газовый котел</p>
+              </div>
+            </div>
+            <div class="item__icon">
+              <svg>
+                <use xlink:href="images/main-page_icons-sprite.svg#area"></use>
+              </svg>
+              <div class="icon-text">
+                <p class="icon-text__headline">Высота помещений</p>
+                <p>270см</p>
+              </div>
+            </div>
+            <div class="item__icon">
+              <svg>
+                <use xlink:href="images/main-page_icons-sprite.svg#safety"></use>
+              </svg>
+              <div class="icon-text">
+                <p class="icon-text__headline">Контроль</p>
+                <p>Подьезд закрытого типа</p>
+              </div>
+            </div>
+            <!--third row-->
+            <div class="item__icon">
+              <svg>
+                <use xlink:href="images/main-page_icons-sprite.svg#puzzle"></use>
+              </svg>
+              <div class="icon-text">
+                <p class="icon-text__headline">Детсад</p>
+                <p>Детсад на расстоянии 300м                 </p>
+              </div>
+            </div>
+            <div class="item__icon">
+              <svg>
+                <use xlink:href="images/main-page_icons-sprite.svg#castle"></use>
+              </svg>
+              <div class="icon-text">
+                <p class="icon-text__headline">Школа</p>
+                <p>Школа по близости</p>
+              </div>
+            </div>
+            <div class="item__icon">
+              <svg>
+                <use xlink:href="images/main-page_icons-sprite.svg#park"></use>
+              </svg>
+              <div class="icon-text">
+                <p class="icon-text__headline">Парк</p>
+                <p>Парк на расстоянии 300м </p>
+              </div>
+            </div>
+            <div class="item__icon">
+              <svg>
+                <use xlink:href="images/main-page_icons-sprite.svg#beach"></use>
+              </svg>
+              <div class="icon-text">
+                <p class="icon-text__headline">Пляж</p>
+                <p>Зона отдыха в близости от дома</p>
+              </div>
+            </div>
+            <!--fourth row-->
+            <div class="item__icon">
+              <svg>
+                <use xlink:href="images/main-page_icons-sprite.svg#marketplace"></use>
+              </svg>
+              <div class="icon-text">
+                <p class="icon-text__headline">Магазины</p>
+                <p>Супермаркет в 100м от дома</p>
+              </div>
+            </div>
+            <div class="item__icon">
+              <svg>
+                <use xlink:href="images/main-page_icons-sprite.svg#apartament"></use>
+              </svg>
+              <div class="icon-text">
+                <p class="icon-text__headline">курорт</p>
+                <p>Курорт 1000м от дома</p>
+              </div>
+            </div>
+            <div class="item__icon">
+              <svg>
+                <use xlink:href="images/main-page_icons-sprite.svg#market"></use>
+              </svg>
+              <div class="icon-text">
+                <p class="icon-text__headline">Рынок</p>
+                <p>Рынок на расстоянии 1000м</p>
+              </div>
+            </div>
+            <div class="item__icon">
+              <svg>
+                <use xlink:href="images/main-page_icons-sprite.svg#playground"></use>
+              </svg>
+              <div class="icon-text">
+                <p class="icon-text__headline">Детская площадка</p>
+                <p>Возле дома обустроена детская площадка</p>
+              </div>
+            </div>
+          </div>
+          <div class="content-info">
+            <div class="content-headline">
+              <h3 class="content-headline__text">Описание</h3>
+            </div>
+            <div class="content-info__text">
+              <p>Жилищный комплекс «На Сенной» состоит из двух 8-ми этажных жилых домов в самом центре города. Комплекс расположен в тихом, уютном районе города. Разнообразие планировочных решений позволит каждому найти жилье на свой вкус. Рядом с домом находятся детский сад, общеобразовательная школа, магазины. Остановка общественного транспорта находится возле дома (2 минуты). ЖК «На Сенной» строится из красного кирпича с утеплением по всему фасаду. Кирпичные новостройки – элитная категория строительства: хорошая теплоемкость и звукоизоляция, удачные планировки и возможность перепланирования пространства. Далеко не каждая строительная компания возьмется за строительство из кирпича – дорогое и трудоемкое. В домах будут установлены современные лифты. </p>
+              <p>Стоимость квадратного метра в комплексе стартует от 16 000 грн и зависит от выбранной площади квартиры и этажа. Высота потолков в квартирах 2,70 м после отделки.</p>
+              <p>В стоимость квартиры включена максимальная комплектация от застройщика «под чистовую отделку»:</p>
+              <p>Цементная стяжка пола во всем жилом пространстве квартиры, кроме ванной и санузла.</p>
+              <p>Сплошное выравнивание несущих вертикальных поверхностей известковым раствором.</p>
+              <p>Черновая шпаклевка межкомнатных и межквартирных перегородок, кроме рабочей стены на кухне и ванной с санузлом.</p>
+              <p>становлены окна с двойными стеклопакетами и пятикамерным профилем.</p>
+              <p>Индивидуальный газовый котел, должным образом смонтированный и подключен к системе отопления. По всей квартире устанавливаются радиаторы и полотенцесушитель. Установлены индивидуальные счетчики для электроэнергии, газа, воды. Установлены входные двери металлические с МДФ-накладками.</p>
+            </div>
+            <p class="show-less">Свернуть</p>
+            <p class="show-more">Показать больше</p><a class="arrow-btn arrow-btn--left" href="#">
+              <div class="arrow-btn__icon">
+                <svg class="icon">
+                  <use xlink:href="images/main-page_icons-sprite.svg#arrow"></use>
+                </svg>
+              </div>
+              <p class="arrow-btn__text">Квартиры комплекса</p></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="galery">
+      <div class="container">
+        <div class="content-galery grid">
+          <div class="content-headline">
+            <h3 class="content-headline__text">Этапы строительства               </h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contact" id="info">
+      <div class="container">
+        <form class="grid contact-form" action="">
+          <h4 class="contact-form__headline">С удовольствием проконсультируем Вас!</h4>
+          <label class="contact-form__title" for="contact-username">Ваше имя
+            <input class="contact-form__field" id="contact-username" type="text" required="required"/><span class="alert__text contact__user-text">Ваше имя не указано</span>
+          </label>
+          <label class="contact-form__title" for="contact-tel">Телефон
+            <input class="contact-form__field" id="contact-tel" type="tel" required="required" placeholder="+380" pattern="[+]d{3}s[(]d{2}[)]sd{3}[-]d{2}[-]d{2}"/><span class="alert__text contact__tel-text">Телефон не указан</span>
+          </label>
+          <label class="contact-form__title" for="email">EMAIL (НЕ ОБЯЗАТЕЛЬНО)
+            <input class="contact-form__field" id="email" type="email"/>
+          </label>
+          <label class="contact-form__checkbox contact-form__title" for="contact-check">Я даю согласие на обработку моих персональных данных согласно 
+            <input class="contact-form__field" id="contact-check" type="checkbox" checked="checked"/>
+            <div class="contact-form__custom-check"></div><a class="contact-form__link" href="#">политике конфиденциальности </a><span class="alert__text contact__check-text">Обязательное поле </span>
+          </label>
+          <button class="btn contact-form__btn" type="submit">Отправить запрос</button>
+        </form>
+      </div>
+    </section>
+    <!--CONTENT END-->
+    <!--FOOTER START-->
+    <footer class="footer">
+      <div class="container">
+        <div class="grid">
+          <div class="footer-address">
+            <h5 class="footer-address__title">Наши офисы</h5><a class="footer-link" href="#">г.Полтава, ул. А.Кукоби, 12</a><a class="footer-link" href="#">г.Миргород, ул.Победы,10, оф.1</a><a class="footer-link" href="#">Время работы: 9:00 – 18:00</a>
+          </div>
+          <div class="footer-logo"><a class="link" href="#"> 
+              <svg>
+                <use xlink:href="images/main-page_icons-sprite.svg#logo"></use>
+              </svg></a></div>
+          <div class="footer-contacts"><a class="footer-link" href="mailto:angrobud@gmail.com"> angrobud@gmail.com</a><a class="footer-link" href="tel:+380509915883">+38(050) 991-58-83</a><a class="footer-link" href="tel:+380509915883">+38(050) 991-58-82</a></div>
+          <div class="footer-newsletter">
+            <!--FORM START-->
+            <form class="footer-newsletter__form" action="">
+              <h5 class="footer-newsletter__headline">Будьте в курсе спецпредложений   </h5>
+              <label class="footer-newsletter__title" for="newsletter">Ваш e-mail</label>
+              <input class="footer-newsletter__field" id="newsletter" type="text"/>
+              <button class="btn footer-newsletter__btn" type="submit">Хочу быть в курсе!</button>
+            </form>
+            <!--FORM END          -->
+          </div><a class="arrow-btn footer-btn" href="#">
+            <div class="arrow-btn__icon">
+              <svg class="icon">
+                <use xlink:href="images/main-page_icons-sprite.svg#arrow"></use>
+              </svg>
+            </div>
+            <p class="arrow-btn__text">Вверх</p></a>
+          <div class="footer-backcall">
+            <p class="footer-backcall__title">Мы предоставляем бесплатные консультации!</p><a class="btn">Закажите звонок!</a>
+          </div>
+          <div class="footer-social">
+            <h6 class="footer-social__title">МЫ В СОЦСЕТЯХ</h6>
+            <div class="footer-social__icons"><a class="footer-social__link" href="#">
+                <div class="svg-wrap">
+                  <svg>
+                    <use xlink:href="images/main-page_icons-sprite.svg#facebook icon"></use>
+                  </svg>
+                </div></a><a class="footer-social__link" href="#">
+                <div class="svg-wrap">
+                  <svg>
+                    <use xlink:href="images/main-page_icons-sprite.svg#telegram"></use>
+                  </svg>
+                </div></a><a class="footer-social__link" href="#">
+                <div class="svg-wrap">
+                  <svg>
+                    <use xlink:href="images/main-page_icons-sprite.svg#insta icon"></use>
+                  </svg>
+                </div></a></div>
+          </div>
+          <p class="footer-copyright">© 2020. www.angro.com.ua</p>
+        </div>
+      </div>
+    </footer>
+    <!--FOOTER END--><!-- modal -->
+    <div class="object-modal">
+      <div class="object-modal__content container">
+        <div class="object-modal__information">
+          <div class="object-modal__text">01.04.2020 г.</div>
+          <div class="object-modal__headline">Стоимость 1 кв.м в ЖК Остров с 01.04.2020</div>
+          <div class="object-modal__text">Цены за квартиры в Жилом комплексе «Остров» по ул. Гоголя-77 на сайте указаны по состоянию на 01 апреля 2020 года</div>
+          <div class="object-modal__price">
+            <p class="price__head">Вид квартиры                       </p>
+            <p class="price__head">Этаж              </p>
+            <p class="price__head">Стоимость 1 кв.м</p>
+            <p class="price__item">Однокомнатная                     </p>
+            <p class="price__item">2,7,8                   </p>
+            <p class="price__item">11500,00 грн</p>
+            <p class="price__item">Двухкомнатная                       </p>
+            <p class="price__item">2,7,8                   </p>
+            <p class="price__item">11500,00 грн</p>
+            <p class="price__item">Однокомнатная                      </p>
+            <p class="price__item">3-6                    </p>
+            <p class="price__item">12000,00 грн</p>
+            <p class="price__item">Двухкомнатная                       </p>
+            <p class="price__item">3-6                    </p>
+            <p class="price__item">12000,00 грн</p>
+            <p class="price__item">Трехкомнатная                       </p>
+            <p class="price__item">9-9+                   </p>
+            <p class="price__item">10000,00 грн</p>
+            <p class="price__item">Четырехкомнатная                </p>
+            <p class="price__item">9-9+                   </p>
+            <p class="price__item">10000,00 грн</p>
+          </div>
+        </div>
+        <div class="object-modal__photo"><img class="object-modal__img" src="images/objects/object_img4.jpg" alt="ЖК 'На Сенной'"/></div>
+        <div class="object-modal__btn"><a class="arrow-btn arrow-btn--left" href="#">
+            <div class="arrow-btn__icon">
+              <svg class="icon">
+                <use xlink:href="images/main-page_icons-sprite.svg#arrow"></use>
+              </svg>
+            </div>
+            <p class="arrow-btn__text">Подробнее</p></a></div>
+        <div class="object-modal__close">
+          <div class="close"></div>
+          <p>Закрыть</p>
+        </div>
+      </div>
+    </div><!-- modal end-->                  
+<!--build:js js/main.min.js -->
+    <script src="js/libs/jquery.min.js"></script>
+    <script src="js/libs/jquery-ui.js"></script>
+    <script src="js/libs/aos.js"></script>
+    <script src="js/libs/slick.min.js"></script>
+    <script src="js/main.js"></script><!--endbuild-->
+  </body>
+</html>

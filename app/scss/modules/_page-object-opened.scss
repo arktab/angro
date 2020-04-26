@@ -1,0 +1,201 @@
+.object-opened-body {
+    .object-content {
+        //background: #423C3A;
+        background: #514947;
+        color: white;
+        padding: 0 0 30px 0;
+        .grid {
+            grid-gap: 0;
+        }
+        .content-logo {
+            grid-column: 2/12;
+            grid-row: 1/2;
+            @media (min-width: 1025px) {
+                grid-column: 1/7;
+                grid-row: 1/2;
+            }
+        }
+        .content-picture {
+            grid-column: 1/13;
+            grid-row: 2/3;
+            @media (min-width: 1025px) {
+                grid-column: 7/13;
+                grid-row: 1/2;
+            }
+        }
+        .content-icons {
+            grid-column: 2/12;
+            grid-row: 3/4;
+            @media (min-width: 1025px) {
+                grid-column: 1/13;
+                grid-row: 2/3;
+            }
+        }
+        .content-info {
+            grid-column: 2/12;
+            grid-row: 4/5;
+            @media (min-width: 1025px) {
+                grid-column: 1/13;
+                grid-row: 3/4;
+            }
+        }
+        .content-galery {
+            grid-column: 1/13;
+            grid-row: 5/6;
+            @media (min-width: 1025px) {
+                grid-column: 1/13;
+                grid-row: 4/5;
+            }
+        }
+    }
+}
+
+.content-headline {
+    &__text {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 29px;
+        margin: 0 0 30px;
+        @media (min-width: 1025px) {
+            margin: 50px 0 30px;
+        }
+    }
+}
+
+.content-logo {
+    position: relative;
+    height: 334px;
+    text-align: center;
+    background: #423C3A;
+    @media (min-width: 1025px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+    }
+    .logo {
+        fill: #FFFFFF;
+        margin: 45px 0 0;
+        @media (min-width: 1025px) {
+            width: auto;
+            height: 250px;
+        }
+        &__text {
+            font-size: 18px;
+            line-height: 23px;
+            margin: 0;
+            @media (min-width: 1025px) {
+                font-size: 28px;
+                line-height: 35px;
+            }
+        }
+        &__title {
+            font-size: 36px;
+            line-height: 44px;
+            @media (min-width: 1025px) {
+                font-size: 64px;
+                line-height: 78px;
+            }
+        }
+        &__headline {
+            font-size: 19px;
+            line-height: 23px;
+            letter-spacing: 0.05em;
+            margin: 0 0 15px 0;
+            text-transform: uppercase;
+            @media (min-width: 1025px) {
+                font-size: 24px;
+                line-height: 29px;
+                //width: 40%;
+            }
+        }
+    }
+}
+
+.content-picture {
+    @media (min-width: 1025px) {
+        position: relative;
+        overflow: hidden;
+        height: 600px;
+    }
+    .item__img {
+        @media (min-width: 1025px) {
+            position: unset;
+            overflow: unset;
+        }
+    }
+}
+
+.content-icons {
+    @media (min-width: 1025px) {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 40px;
+        .content-headline {
+            grid-column: 1/5;
+            grid-row: 1/2;
+        }
+    }
+    .item__icon {
+        fill: transparent;
+        @media (min-width: 1025px) {
+            display: flex !important;
+        }
+        &:nth-child(n + 7) {
+            display: none;
+        }
+        align-items: center;
+        svg {
+            margin: 0 25px 0 0;
+        }
+    }
+    .icon-text {
+        width: 78%;
+        margin: 0;
+    }
+}
+
+.content-info {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 300;
+    p {
+        font-family: Bellota Text;
+    }
+    &__text {
+        margin: 0 0 16px 0;
+    }
+}
+
+.galery {
+    background: #FFFFFF;
+    color: #514947;
+    .content-headline {
+        grid-column: 2/12;
+        grid-row: 1/2;
+        @media (min-width: 1025px) {
+            grid-column: 1/13;
+            grid-row: 1/2;
+        }
+    }
+}
+
+//moble text 
+.show-more,
+.show-less {
+    text-decoration: underline;
+    color: #FFF3A6;
+    text-align: center;
+    display: none;
+}
+
+.shown-height {
+    height: 201px;
+    overflow: hidden;
+}
+
+.show-active {
+    display: block;
+    margin: 0 0 50px;
+}

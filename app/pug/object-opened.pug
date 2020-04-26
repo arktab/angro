@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="description" content="Starter")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Angro
+        link(rel="icon" href="images/favicon.png")
+        <!--build:css css/styles.min.css-->
+        link(rel="stylesheet" href="css/libs/aos.css")
+        link(rel="stylesheet" href="css/libs/slick.css")
+        link(rel="stylesheet" href="css/libs/slick-theme.css")
+        link(rel="stylesheet" href="css/global.min.css")
+        <!--endbuild-->
+        <!--[if lt IE 9]>
+        script(src="http://html5shiv.googlecode.com/svn/trunk/html5.js")
+        <![endif]-->
+    body.object-opened-body
+        //INFO START 
+        include object/object-info.pug
+        //INFO END
+        //SIDEBAR
+        include layout/sidebar.pug
+        //SIDEBAR END
+
+        //HEADER START 
+        header.object-header
+            .container
+                .grid
+                    //MOBILE LOGO
+                    a(href="#").mobile-logo              
+                            svg.mobile-logo__icon
+                                use(xlink:href="images/main-page_icons-sprite.svg#logo")
+                    //MOBILE LOGO END
+                    h2.title ЖК "На Сенной"
+                    //-h3.headline Город местонахождения строительства
+                    a.arrow-btn.arrow-btn--left(href="#")
+                        .arrow-btn__icon
+                            svg.icon
+                                use(xlink:href="images/main-page_icons-sprite.svg#arrow")
+                        p.arrow-btn__text Объекты
+        //HEADER END
+        //CONTENT START
+        section.object-content
+            .container
+                .content.grid
+                    .content-logo
+                        svg.logo
+                            use(xlink:href="images/main-page_icons-sprite.svg#logo-head")
+                        p.logo__text жилой комплекс
+                        h2.logo__title На Сенной
+                        h4.logo__headline Полтава ул. Сенная, 19
+                    .content-picture
+                        .item__img
+                                img(src="images/objects/object_img1.jpg", alt="ЖК 'На Сенной'")
+                                .item__icon-wrap
+                                    svg.icon
+                                        use(xlink:href="images/main-page_icons-sprite.svg#eye")
+                    .content-icons
+                        .content-headline
+                            h3.content-headline__text Преимущества жилого комплекса
+                        .item__icon
+                            svg
+                                use(xlink:href="images/main-page_icons-sprite.svg#stairs")
+                            .icon-text
+                                p.icon-text__headline Этажей
+                                p 8
+                                
+                        .item__icon
+                            svg
+                                use(xlink:href="images/main-page_icons-sprite.svg#wall")
+                            .icon-text
+                                p.icon-text__headline Год постройки
+                                p 2019
+
+                        .item__icon
+                            svg
+                                use(xlink:href="images/main-page_icons-sprite.svg#door")
+                            .icon-text
+                                p.icon-text__headline Входные двери
+                                p Металлические с МДФ-накладками
+                        .item__icon
+                            svg
+                                use(xlink:href="images/main-page_icons-sprite.svg#building")
+                            .icon-text
+                                p.icon-text__headline Конструктив
+                                p Монолитный каркас
+                        //second row
+                        .item__icon
+                            svg
+                                use(xlink:href="images/main-page_icons-sprite.svg#window")
+                            .icon-text
+                                p.icon-text__headline Окна
+                                p окна с двойным стеклопакетом
+                                
+                        .item__icon
+                            svg
+                                use(xlink:href="images/main-page_icons-sprite.svg#heating")
+                            .icon-text
+                                p.icon-text__headline отопление
+                                p Индивидуальный газовый котел
+
+                        .item__icon
+                            svg
+                                use(xlink:href="images/main-page_icons-sprite.svg#area")
+                            .icon-text
+                                p.icon-text__headline Высота помещений
+                                p 270см
+                        .item__icon
+                            svg
+                                use(xlink:href="images/main-page_icons-sprite.svg#safety")
+                            .icon-text
+                                p.icon-text__headline Контроль
+                                p Подьезд закрытого типа
+                        //third row
+                        .item__icon
+                            svg
+                                use(xlink:href="images/main-page_icons-sprite.svg#puzzle")
+                            .icon-text
+                                p.icon-text__headline Детсад
+                                p Детсад на расстоянии 300м                 
+                        .item__icon
+                            svg
+                                use(xlink:href="images/main-page_icons-sprite.svg#castle")
+                            .icon-text
+                                p.icon-text__headline Школа
+                                p Школа по близости
+
+                        .item__icon
+                            svg
+                                use(xlink:href="images/main-page_icons-sprite.svg#park")
+                            .icon-text
+                                p.icon-text__headline Парк
+                                p Парк на расстоянии 300м 
+                        .item__icon
+                            svg
+                                use(xlink:href="images/main-page_icons-sprite.svg#beach")
+                            .icon-text
+                                p.icon-text__headline Пляж
+                                p Зона отдыха в близости от дома
+                        //fourth row
+                        .item__icon
+                            svg
+                                use(xlink:href="images/main-page_icons-sprite.svg#marketplace")
+                            .icon-text
+                                p.icon-text__headline Магазины
+                                p Супермаркет в 100м от дома
+                                
+                        .item__icon
+                            svg
+                                use(xlink:href="images/main-page_icons-sprite.svg#apartament")
+                            .icon-text
+                                p.icon-text__headline курорт
+                                p Курорт 1000м от дома
+
+                        .item__icon
+                            svg
+                                use(xlink:href="images/main-page_icons-sprite.svg#market")
+                            .icon-text
+                                p.icon-text__headline Рынок
+                                p Рынок на расстоянии 1000м
+                        .item__icon
+                            svg
+                                use(xlink:href="images/main-page_icons-sprite.svg#playground")
+                            .icon-text
+                                p.icon-text__headline Детская площадка
+                                p Возле дома обустроена детская площадка
+
+                    .content-info
+                        .content-headline
+                            h3.content-headline__text Описание
+                        .content-info__text
+                            p Жилищный комплекс «На Сенной» состоит из двух 8-ми этажных жилых домов в самом центре города. Комплекс расположен в тихом, уютном районе города. Разнообразие планировочных решений позволит каждому найти жилье на свой вкус. Рядом с домом находятся детский сад, общеобразовательная школа, магазины. Остановка общественного транспорта находится возле дома (2 минуты). ЖК «На Сенной» строится из красного кирпича с утеплением по всему фасаду. Кирпичные новостройки – элитная категория строительства: хорошая теплоемкость и звукоизоляция, удачные планировки и возможность перепланирования пространства. Далеко не каждая строительная компания возьмется за строительство из кирпича – дорогое и трудоемкое. В домах будут установлены современные лифты. 
+                            p Стоимость квадратного метра в комплексе стартует от 16 000 грн и зависит от выбранной площади квартиры и этажа. Высота потолков в квартирах 2,70 м после отделки.
+                            p В стоимость квартиры включена максимальная комплектация от застройщика «под чистовую отделку»:
+                            p Цементная стяжка пола во всем жилом пространстве квартиры, кроме ванной и санузла.
+                            p Сплошное выравнивание несущих вертикальных поверхностей известковым раствором.
+                            p Черновая шпаклевка межкомнатных и межквартирных перегородок, кроме рабочей стены на кухне и ванной с санузлом.
+                            p становлены окна с двойными стеклопакетами и пятикамерным профилем.
+                            p Индивидуальный газовый котел, должным образом смонтированный и подключен к системе отопления. По всей квартире устанавливаются радиаторы и полотенцесушитель. Установлены индивидуальные счетчики для электроэнергии, газа, воды. Установлены входные двери металлические с МДФ-накладками.
+                        p.show-less Свернуть
+                        p.show-more Показать больше
+                        a.arrow-btn.arrow-btn--left(href="#")
+                            .arrow-btn__icon
+                                svg.icon
+                                    use(xlink:href="images/main-page_icons-sprite.svg#arrow")
+                            p.arrow-btn__text Квартиры комплекса
+            
+        section.galery
+            .container
+                .content-galery.grid
+                        .content-headline
+                            h3.content-headline__text Этапы строительства               
+        section#info.contact
+            include layout/section-contact.pug
+
+
+        //CONTENT END
+        //FOOTER START
+        footer.footer
+            include layout/footer.pug
+        //FOOTER END
+        <!-- modal -->
+        include object/object-modal.pug
+        <!-- modal end-->                  
+        
+        <!--build:js js/main.min.js -->
+        script(src="js/libs/jquery.min.js")
+        script(src="js/libs/jquery-ui.js")
+        script(src="js/libs/aos.js")
+        script(src="js/libs/slick.min.js")
+        script(src="js/main.js")
+        <!--endbuild-->

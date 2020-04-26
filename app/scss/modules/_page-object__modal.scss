@@ -5,6 +5,13 @@
     .container {
         padding: 0;
     }
+    .title {
+        @media (min-width: 1200px) {
+            font-size: 64px;
+            line-height: 78px;
+            text-align: right;
+        }
+    }
     display: none;
     position: fixed;
     z-index: 10;

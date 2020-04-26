@@ -107,7 +107,6 @@ AOS.init({
 
             }
         });
-        //.prop('disabled', true);
         //Form validation END
         var visible = new Boolean(false);
         $(".sidebar-menu__triger").click(function() {
@@ -172,7 +171,24 @@ AOS.init({
                 }, 100);
             }
         }
+        //OBJECKT START
+        if (width <= 1024) {
+            $(".content-info__text").addClass("shown-height");
+            $(".show-more").addClass("show-active");
 
+        }
+        $(".show-more").click(function() {
+            $(".content-info__text").toggleClass("shown-height");
+            $(".show-more").toggleClass("show-active");
+            $(".show-less").toggleClass("show-active");
+        });
+        $(".show-less").click(function() {
+            $(".content-info__text").toggleClass("shown-height");
+            $(".show-less").toggleClass("show-active");
+            $(".show-more").toggleClass("show-active");
+        });
+
+        //OBJECT END
         //MODAL SATRT
         $(".open-modal").click(function() {
             $(".modal").toggleClass("modal-is-shown");
