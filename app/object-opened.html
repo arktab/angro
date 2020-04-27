@@ -5,7 +5,7 @@
     <meta name="description" content="Starter"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>Angro</title>
+    <title>Объекты</title>
     <link rel="icon" href="images/favicon.png"/><!--build:css css/styles.min.css-->
     <link rel="stylesheet" href="css/libs/aos.css"/>
     <link rel="stylesheet" href="css/libs/slick.css"/>
@@ -57,7 +57,7 @@
         <li class="menu-item"><a href="object.html">Объекты</a></li>
         <li class="menu-item"><a href="#">Квартиры</a></li>
         <li class="menu-item"><a href="#">Галерея</a></li>
-        <li class="menu-item"><a href="#">Блог</a></li>
+        <li class="menu-item"><a href="blog.html">Блог</a></li>
       </ul>
       <!--MOBILE LANG-->
       <div class="mobile-menu__lang"><a class="mobile-menu__link link--active" href="#">UA</a><a class="mobile-menu__link" href="#">RU</a></div>
@@ -263,7 +263,7 @@
             </div>
             <div class="item__icon">
               <svg>
-                <use xlink:href="images/main-page_icons-sprite.svg#apartament"></use>
+                <use xlink:href="images/main-page_icons-sprite.svg#resort"></use>
               </svg>
               <div class="icon-text">
                 <p class="icon-text__headline">курорт</p>
@@ -402,36 +402,36 @@
     </footer>
     <!--FOOTER END--><!-- modal -->
     <div class="object-modal">
-      <div class="object-modal__content container">
-        <div class="object-modal__information">
-          <div class="object-modal__text">01.04.2020 г.</div>
-          <div class="object-modal__headline">Стоимость 1 кв.м в ЖК Остров с 01.04.2020</div>
-          <div class="object-modal__text">Цены за квартиры в Жилом комплексе «Остров» по ул. Гоголя-77 на сайте указаны по состоянию на 01 апреля 2020 года</div>
-          <div class="object-modal__price">
-            <p class="price__head">Вид квартиры                       </p>
-            <p class="price__head">Этаж              </p>
+      <div class="content container"> 
+        <div class="information">
+          <div class="date">01.04.2020 г.</div>
+          <div class="information__headline">Стоимость 1 кв.м в ЖК Остров с 01.04.2020</div>
+          <div class="text">Цены за квартиры в Жилом комплексе «Остров» по ул. Гоголя-77 на сайте указаны по состоянию на 01 апреля 2020 года</div>
+          <div class="price">
+            <p class="price__head">Вид квартиры</p>
+            <p class="price__head">Этаж </p>
             <p class="price__head">Стоимость 1 кв.м</p>
-            <p class="price__item">Однокомнатная                     </p>
-            <p class="price__item">2,7,8                   </p>
+            <p class="price__item">Однокомнатная</p>
+            <p class="price__item">2,7,8</p>
             <p class="price__item">11500,00 грн</p>
-            <p class="price__item">Двухкомнатная                       </p>
-            <p class="price__item">2,7,8                   </p>
+            <p class="price__item">Двухкомнатная</p>
+            <p class="price__item">2,7,8</p>
             <p class="price__item">11500,00 грн</p>
-            <p class="price__item">Однокомнатная                      </p>
-            <p class="price__item">3-6                    </p>
+            <p class="price__item">Однокомнатная</p>
+            <p class="price__item">3-6</p>
             <p class="price__item">12000,00 грн</p>
-            <p class="price__item">Двухкомнатная                       </p>
-            <p class="price__item">3-6                    </p>
+            <p class="price__item">Двухкомнатная</p>
+            <p class="price__item">3-6</p>
             <p class="price__item">12000,00 грн</p>
-            <p class="price__item">Трехкомнатная                       </p>
-            <p class="price__item">9-9+                   </p>
+            <p class="price__item">Трехкомнатная</p>
+            <p class="price__item">9-9+</p>
             <p class="price__item">10000,00 грн</p>
-            <p class="price__item">Четырехкомнатная                </p>
-            <p class="price__item">9-9+                   </p>
+            <p class="price__item">Четырехкомнатная</p>
+            <p class="price__item">9-9+</p>
             <p class="price__item">10000,00 грн</p>
           </div>
         </div>
-        <div class="object-modal__photo"><img class="object-modal__img" src="images/objects/object_img4.jpg" alt="ЖК 'На Сенной'"/></div>
+        <div class="photo"><img class="img" src="images/objects/object_img4.jpg" alt="ЖК 'На Сенной'"/></div>
         <div class="object-modal__btn"><a class="arrow-btn arrow-btn--left" href="#">
             <div class="arrow-btn__icon">
               <svg class="icon">
@@ -443,6 +443,30 @@
           <div class="close"></div>
           <p>Закрыть</p>
         </div>
+      </div>
+    </div>
+    <div class="modal">
+      <div class="modal__content">
+        <form class="modal__form grid container" action="">
+          <h4 class="modal__headline">Оставьте координаты, и мы с вами свяжемся</h4>
+          <label class="modal__label" for="modal-username">Ваше имя
+            <input class="modal__field" id="modal-username" type="text" required="required"/><span class="alert__text modal__user-text">Ваше имя не указано</span>
+          </label>
+          <label class="modal__label" for="modal-tel">Телефон
+            <input class="modal__field" id="modal-tel" type="tel" required="required" placeholder="+380" pattern="[+]d{3}s[(]d{2}[)]sd{3}[-]d{2}[-]d{2}"/><span class="alert__text modal__tel-text">Телефон не указан</span>
+          </label>
+          <label class="modal__label" for="modal-email">EMAIL (НЕ ОБЯЗАТЕЛЬНО)
+            <input class="modal__field" id="modal-email" type="email"/>
+          </label>
+          <label class="modal__checkbox" for="modal-check">Я даю согласие на обработку моих персональных данных согласно 
+            <input class="modal__check" id="modal-check" type="checkbox" checked="checked"/>
+            <div class="modal__custom-check"></div><a class="modal__link" href="#">политике конфиденциальности</a><span class="alert__text modal__check-text">Обязательное поле       </span>
+          </label>
+          <button class="btn modal__btn" type="submit">Отправить запрос</button>
+          <div class="modal__close">
+            <div class="close"></div>
+          </div>
+        </form>
       </div>
     </div><!-- modal end-->                  
 <!--build:js js/main.min.js -->

@@ -5,13 +5,6 @@
     .container {
         padding: 0;
     }
-    .title {
-        @media (min-width: 1200px) {
-            font-size: 64px;
-            line-height: 78px;
-            text-align: right;
-        }
-    }
     display: none;
     position: fixed;
     z-index: 10;
@@ -22,88 +15,6 @@
     overflow: auto;
     background: rgba(66, 60, 58, 1);
     color: #FFFFFF;
-    &__content {
-        display: grid;
-        @media (min-width: 1025px) {
-            grid-template-columns: 50% 50%;
-            grid-template-rows: 8fr 1fr 1fr;
-            @include pos($b: 52%, $l: 50%);
-            transform: translateX(-50%) translateY(50%);
-            width: 100%;
-        }
-    }
-    &__information {
-        padding: 15px 0;
-        @media (min-width: 1025px) {
-            grid-row: 1/2;
-            grid-column: 1/2;
-        }
-    }
-    &__text {
-        margin: 15px 0;
-        padding: 0 25px;
-        @media (min-width: 1025px) {
-            font-size: 19px;
-            line-height: 23px;
-            margin: 40px 0;
-        }
-    }
-    &__headline {
-        font-weight: bold;
-        font-size: 24px;
-        line-height: 29px;
-        padding: 0 25px;
-        @media (min-width: 1025px) {
-            font-size: 36px;
-            line-height: 44px;
-            margin: 0 0 40px 0;
-        }
-    }
-    &__price {
-        display: grid;
-        grid-template-columns: 40% 20% 40%;
-        grid-gap: 2px;
-        font-size: 14px;
-        line-height: 26px;
-        color: #423C3A;
-        background: #FFFFFF;
-        overflow: hidden;
-        p {
-            margin: 0;
-            padding: 0 0 0 5px;
-        }
-        @media (min-width: 1025px) {
-            margin: 0 25px;
-        }
-    }
-    .price__head {
-        font-weight: bold;
-        font-size: 14px;
-        background: #FFF3A6;
-    }
-    .price__item {
-        background: #FFF3A6;
-    }
-    &__photo {
-        margin: 20px 0 40px 0;
-        height: 260px;
-        position: relative;
-        overflow: hidden;
-        @media (min-width: 1025px) {
-            grid-row: 1/2;
-            grid-column: 2/3;
-            height: unset;
-            margin: 20px 50px;
-        }
-    }
-    &__img {
-        @include size(100%, auto);
-        @media (min-width: 1025px) {
-            @include pos($b: 50%, $l: 50%);
-            transform: translateX(-50%) translateY(50%);
-            @include size(115%, auto);
-        }
-    }
     &__close {
         display: flex;
         align-items: center;
@@ -194,6 +105,192 @@
                 padding-left: 65px;
                 font-size: 16px;
             }
+        }
+    }
+    .content {
+        display: grid;
+        @media (min-width: 1025px) {
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 8fr 1fr 1fr;
+            @include pos($b: 52%, $l: 50%);
+            transform: translateX(-50%) translateY(50%);
+            width: 100%;
+        }
+    }
+    .information {
+        padding: 15px 0;
+        @media (min-width: 1025px) {
+            grid-row: 1/2;
+            grid-column: 1/2;
+        }
+        &__headline {
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 29px;
+            padding: 0 25px;
+            @media (min-width: 1025px) {
+                font-size: 36px;
+                line-height: 44px;
+                margin: 0 0 40px 0;
+            }
+        }
+    }
+    .date {
+        margin: 15px 0;
+        padding: 0 25px;
+        @media (min-width: 1025px) {
+            font-size: 19px;
+            line-height: 23px;
+            margin: 40px 0;
+        }
+    }
+    .text {
+        margin: 15px 0;
+        padding: 0 25px;
+        font-family: Bellota Text;
+        font-style: italic;
+        @media (min-width: 1025px) {
+            font-size: 19px;
+            line-height: 23px;
+            margin: 40px 0;
+        }
+    }
+    .photo {
+        margin: 20px 0 40px 0;
+        height: 260px;
+        position: relative;
+        overflow: hidden;
+        @media (min-width: 1025px) {
+            grid-row: 1/2;
+            grid-column: 2/3;
+            height: 600px;
+            margin: 20px 50px;
+        }
+        .img {
+            @include size(100%, auto);
+            @media (min-width: 1025px) {
+                @include pos($b: 50%, $l: 50%);
+                transform: translateX(-50%) translateY(50%);
+                @include size(115%, auto);
+            }
+        }
+    }
+    .text {
+        margin: 15px 0;
+        padding: 0 25px;
+        font-family: Bellota Text;
+        font-style: italic;
+        @media (min-width: 1025px) {
+            font-size: 19px;
+            line-height: 23px;
+            margin: 40px 0;
+        }
+    }
+}
+
+.price {
+    display: grid;
+    grid-template-columns: 40% 20% 40%;
+    grid-gap: 2px;
+    font-size: 14px;
+    line-height: 26px;
+    color: #423C3A;
+    background: #FFFFFF;
+    overflow: hidden;
+    @media (min-width: 1025px) {
+        background: transparent;
+    }
+    p {
+        margin: 0;
+        padding: 0 0 0 5px;
+        background: #FFF3A6;
+        &:nth-child(-n+3) {
+            font-weight: bold;
+            font-size: 14px;
+        }
+    }
+    @media (min-width: 1025px) {
+        margin: 0 25px;
+    }
+}
+
+.information {
+    padding: 15px 0;
+    @media (min-width: 1025px) {
+        grid-row: 1/2;
+        grid-column: 1/2;
+    }
+    &__headline {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 29px;
+        padding: 0 25px;
+        @media (min-width: 1025px) {
+            font-size: 36px;
+            line-height: 44px;
+            margin: 0 0 40px 0;
+        }
+    }
+}
+
+.date {
+    margin: 15px 0;
+    padding: 0 25px;
+    @media (min-width: 1025px) {
+        font-size: 19px;
+        line-height: 23px;
+        margin: 40px 0;
+    }
+}
+
+.price {
+    display: grid;
+    grid-template-columns: 40% 20% 40%;
+    grid-gap: 2px;
+    font-size: 14px;
+    line-height: 26px;
+    color: #423C3A;
+    background: #FFFFFF;
+    overflow: hidden;
+    @media (min-width: 1025px) {
+        background: transparent;
+    }
+    p {
+        margin: 0;
+        padding: 0 0 0 5px;
+    }
+    @media (min-width: 1025px) {
+        margin: 0 25px;
+    }
+}
+
+.price__head {
+    font-weight: bold;
+    font-size: 14px;
+    background: #FFF3A6;
+}
+
+.price__item {
+    background: #FFF3A6;
+}
+
+.photo {
+    margin: 20px 0 40px 0;
+    height: 260px;
+    position: relative;
+    overflow: hidden;
+    @media (min-width: 1025px) {
+        grid-row: 1/2;
+        grid-column: 2/3;
+        height: 600px;
+        margin: 20px 50px;
+    }
+    .img {
+        @include size(100%, auto);
+        @media (min-width: 1025px) {
+            @include pos($b: 50%, $l: 50%);
+            transform: translateX(-50%) translateY(50%);
+            @include size(115%, auto);
         }
     }
 }

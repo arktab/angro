@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="description" content="Starter")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Блог
+        link(rel="icon" href="images/favicon.png")
+        <!--build:css css/styles.min.css-->
+        link(rel="stylesheet" href="css/libs/aos.css")
+        link(rel="stylesheet" href="css/libs/slick.css")
+        link(rel="stylesheet" href="css/libs/slick-theme.css")
+        link(rel="stylesheet" href="css/global.min.css")
+        <!--endbuild-->
+        <!--[if lt IE 9]>
+        script(src="http://html5shiv.googlecode.com/svn/trunk/html5.js")
+        <![endif]-->
+    body.blog-body
+        //INFO START 
+        include object/object-info.pug
+        //INFO END
+        //SIDEBAR
+        include layout/sidebar.pug
+        //SIDEBAR END
+
+        //HEADER START 
+        header.blog-header
+            .container
+                .grid
+                    //MOBILE LOGO
+                    a(href="#").mobile-logo              
+                            svg.mobile-logo__icon
+                                use(xlink:href="images/main-page_icons-sprite.svg#logo")
+                    //MOBILE LOGO END
+                    h2.title Блог
+                    h3.headline Важная информация со статьями и новостями от angro
+                    //- nav.pagination
+                    //-     ul.pagination__list
+                    //-         li.pagination__item
+                    //-             a(href="#").pagination__link 
+                    //-                 .arrow-btn.arrow-btn--left
+                    //-                     .arrow-btn__icon
+                    //-                         svg.icon
+                    //-                             use(xlink:href="images/main-page_icons-sprite.svg#arrow")
+                                        
+                    //-         li.pagination__item
+                    //-             a(href="#").pagination__link 1
+                    //-         li.pagination__item
+                    //-             a(href="#").pagination__link 2
+                    //-         li.pagination__item
+                    //-             a(href="#").pagination__link 3 
+                    //-         li.pagination__item
+                    //-             a(href="#").pagination__link
+                    //-                 .arrow-btn.arrow-btn--left
+                    //-                     .arrow-btn__icon
+                    //-                         svg.icon
+                    //-                             use(xlink:href="images/main-page_icons-sprite.svg#arrow")
+
+        //HEADER END
+        //CONTENT START
+        section.blog
+            
+                .blog-item
+                    .container
+                        .information
+                            .date 01.04.2020 г.
+                            .information__headline Стоимость 1 кв.м в ЖК Остров с 01.04.2020
+                            .text Цены за квартиры в Жилом комплексе «Остров» по ул. Гоголя-77 на сайте указаны по состоянию на 01 апреля 2020 года
+                            .price
+                                p Вид квартиры
+                                p Этаж 
+                                p Стоимость 1 кв.м
+                                p Однокомнатная
+                                p 2,7,8
+                                p 11500,00 грн
+                                p Двухкомнатная
+                                p 2,7,8
+                                p 11500,00 грн
+                                p Однокомнатная
+                                p 3-6
+                                p 12000,00 грн
+                                p Двухкомнатная
+                                p 3-6
+                                p 12000,00 грн
+                                p Трехкомнатная
+                                p 9-9+
+                                p 10000,00 грн
+                                p Четырехкомнатная
+                                p 9-9+
+                                p 10000,00 грн
+                        .photo
+                            img(src="images/objects/object_img4.jpg", alt="ЖК 'На Сенной'").img
+                        .information__btn
+                            a.arrow-btn.arrow-btn--left(href="arcticle.html")
+                                .arrow-btn__icon
+                                    svg.icon
+                                        use(xlink:href="images/main-page_icons-sprite.svg#arrow")
+                                p.arrow-btn__text Подробнее
+                .blog-item
+                    .container
+                        .information
+                            .date 16.10.2019 г.
+                            .information__headline Стоимость 1 кв.м в ЖК Остров (ноябрь 2019)
+                            .text Цены за квартиры в Жилом комплексе «Остров» по ул. Гоголя-77 на сайте указаны по состоянию на 01 ноября 2019 года
+                            .price
+                                p Вид квартиры
+                                p Этаж 
+                                p Стоимость 1 кв.м
+                                p Однокомнатная
+                                p 2,7,8
+                                p 11500,00 грн
+                                p Двухкомнатная
+                                p 2,7,8
+                                p 11500,00 грн
+                                p Однокомнатная
+                                p 3-6
+                                p 12000,00 грн
+                                p Двухкомнатная
+                                p 3-6
+                                p 12000,00 грн
+                                p Трехкомнатная
+                                p 9-9+
+                                p 10000,00 грн
+                                p Четырехкомнатная
+                                p 9-9+
+                                p 10000,00 грн
+                        .photo
+                            img(src="images/objects/object_img4.jpg", alt="ЖК 'На Сенной'").img
+                        .information__btn
+                            a.arrow-btn.arrow-btn--left(href="arcticle.html")
+                                .arrow-btn__icon
+                                    svg.icon
+                                        use(xlink:href="images/main-page_icons-sprite.svg#arrow")
+                                p.arrow-btn__text Подробнее
+                .blog-item
+                    .container
+                        .information
+                            .date 22.12.2018 г.
+                            .information__headline Надежный фундамент — залог комфортной жизни
+                            .text Строительство жилых домов сопряжено со множеством проблем. Но если безопасность надземной части зданий связана с качеством материалов и человеческим фактором, то подземная их часть подвергается гораздо большему числу рисков.
+                           
+                        .photo
+                            img(src="images/blog/dock.jpg", alt="Документ'").img
+                        .information__btn
+                            a.arrow-btn.arrow-btn--left(href="#")
+                                .arrow-btn__icon
+                                    svg.icon
+                                        use(xlink:href="images/main-page_icons-sprite.svg#arrow")
+                                p.arrow-btn__text Подробнее
+                .blog-item
+                    .container
+                        .information
+                            .date 03.12.2018 г.
+                            .information__headline Стоимость 1 кв.м в ЖК Остров (декабрь 2018)
+                            .text Цены за квартиры в Жилом комплексе «Остров» по ул. Гоголя-77 на сайте указаны по состоянию на 10 декабря 2018 года
+                            .price
+                                p Вид квартиры
+                                p Этаж 
+                                p Стоимость 1 кв.м
+                                p Однокомнатная
+                                p 2,7,8
+                                p 11500,00 грн
+                                p Двухкомнатная
+                                p 2,7,8
+                                p 11500,00 грн
+                                p Однокомнатная
+                                p 3-6
+                                p 12000,00 грн
+                                p Двухкомнатная
+                                p 3-6
+                                p 12000,00 грн
+                                p Трехкомнатная
+                                p 9-9+
+                                p 10000,00 грн
+                                p Четырехкомнатная
+                                p 9-9+
+                                p 10000,00 грн
+                        .photo
+                            img(src="images/objects/object_img4.jpg", alt="ЖК 'На Сенной'").img
+                        .information__btn
+                            a.arrow-btn.arrow-btn--left(href="arcticle.html")
+                                .arrow-btn__icon
+                                    svg.icon
+                                        use(xlink:href="images/main-page_icons-sprite.svg#arrow")
+                                p.arrow-btn__text Подробнее
+                
+                    
+        
+        //CONTENT END
+        //FOOTER START
+        footer.footer
+            include layout/footer.pug
+        //FOOTER END
+        <!-- modal -->
+        include object/object-modal.pug
+        include layout/modal.pug
+        <!-- modal end-->                  
+        
+        <!--build:js js/main.min.js -->
+        script(src="js/libs/jquery.min.js")
+        script(src="js/libs/jquery-ui.js")
+        script(src="js/libs/aos.js")
+        script(src="js/libs/slick.min.js")
+        script(src="js/main.js")
+        <!--endbuild-->

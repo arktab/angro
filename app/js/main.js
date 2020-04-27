@@ -10,6 +10,7 @@ AOS.init({
 (function($) {
     $(document).ready(function() {
         // Code
+        //TABS JQ
         $(".object-tabs").tabs();
         //Form validation
         var modalname = new String;
@@ -109,6 +110,27 @@ AOS.init({
         });
         //Form validation END
         var visible = new Boolean(false);
+        var scrolled = $(window).scrollTop();
+        $(window).scroll(function() {
+            scrolled = $(window).scrollTop();
+            if (scrolled => 50) {
+                visible = false;
+                $(".menu").addClass("menu--opacity");
+                setTimeout(function() {
+                    $(".menu").addClass("menu--is-hide");
+                }, 200);
+            }
+            // else {
+            //     visible = true;
+            //     $(".menu").toggleClass("menu--is-hide");
+
+            //     setTimeout(function() {
+            //         $(".menu").toggleClass("menu--opacity");
+
+            //     }, 200);
+            // }
+        });
+
         $(".sidebar-menu__triger").click(function() {
 
             if (visible == false) {
@@ -171,7 +193,7 @@ AOS.init({
                 }, 100);
             }
         }
-        //OBJECKT START
+        //OBJECT START
         if (width <= 1024) {
             $(".content-info__text").addClass("shown-height");
             $(".show-more").addClass("show-active");

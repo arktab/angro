@@ -320,13 +320,14 @@
         display: none;
         position: absolute;
         justify-content: space-between;
-        top: 45px;
+        top: 60px;
         left: 30px;
         z-index: 10;
         //background: red;
         width: 35px;
         height: 22px;
         padding: 10px 0 0 0;
+        filter: invert(1);
         &__icon {
             //@include size(55px);
             //fill: #FFFFFF;
@@ -342,7 +343,7 @@
                 left: -3px;
                 content: "";
                 background: #FFFFFF;
-                transition: all .3s;
+                transition: all .2s;
                 top: -10px;
                 left: 0;
             }
@@ -353,7 +354,7 @@
                 left: -3px;
                 content: "";
                 background: #FFFFFF;
-                transition: all .3s;
+                transition: all .2s;
                 top: 10px;
                 left: 0;
             }
@@ -386,7 +387,7 @@
         display: none;
         font-size: 22px;
         padding: 15px 0;
-        @include pos($t: 30px, $r: 30px);
+        @include pos($t: 45px, $r: 30px);
         @media (max-width: 576px) {
             display: block;
         }
