@@ -338,6 +338,37 @@ lightGallery(document.getElementById('lightgallery'));
                 }
             ]
         });
+        $('.object-opened-slider').slick({
+            dots: false,
+            infinite: true,
+            arrows: false,
+            speed: 500,
+            cssEase: 'linear',
+            draggable: true,
+            slidesToShow: 3,
+            centerMode: true,
+            centerPadding: '60px',
+            responsive: [{
+                    breakpoint: 1180,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                },
+                {
+                    breakpoint: 813,
+                    settings: {
+                        slidesToShow: 1,
+                        arrows: false
+                    }
+                },
+                {
+                    breakpoint: 576,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
         //slider button
     });
 })(jQuery);

@@ -187,11 +187,28 @@ html(lang="en")
                                     use(xlink:href="images/main-page_icons-sprite.svg#arrow")
                             p.arrow-btn__text Квартиры комплекса
             
-        section.galery
+        section.galery-section
             .container
                 .content-galery.grid
-                        .content-headline
-                            h3.content-headline__text Этапы строительства               
+                    .content-headline
+                        h3.content-headline__text Этапы строительства
+                .object-opened-slider
+                    //SLIDER TILE
+                    .object-opened__tile
+                        img(src="images/object/IMG_1.jpg")
+                    //SLIDER TILE
+                    .object-opened__tile
+                        img(src="images/object/IMG_2.jpg")
+                    //SLIDER TILE
+                    .object-opened__tile
+                        img(src="images/object/IMG_3.jpg")
+                    //SLIDER TILE
+                    .object-opened__tile
+                        img(src="images/object/IMG_1.jpg")
+                    //SLIDER TILE
+                    .object-opened__tile
+                        img(src="images/object/IMG_2.jpg")
+                            
         section#info.contact
             include layout/section-contact.pug
 
@@ -209,6 +226,7 @@ html(lang="en")
         <!--build:js js/main.min.js -->
         script(src="js/libs/jquery.min.js")
         script(src="js/libs/jquery-ui.js")
+        script(src="js/libs/lightgallery.js")
         script(src="js/libs/aos.js")
         script(src="js/libs/slick.min.js")
         script(src="js/main.js")

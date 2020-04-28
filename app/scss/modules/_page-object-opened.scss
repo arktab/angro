@@ -168,7 +168,7 @@
     }
 }
 
-.galery {
+.galery-section {
     background: #FFFFFF;
     color: #514947;
     .content-headline {
@@ -177,6 +177,20 @@
         @media (min-width: 1025px) {
             grid-column: 1/13;
             grid-row: 1/2;
+        }
+    }
+    .object-opened-slider {}
+    .object-opened__tile {
+        overflow: hidden;
+        margin: 0 10px;
+        height: 250px;
+        overflow: hidden;
+        img {
+            height: 100%;
+            width: auto;
+        }
+        @media (min-width: 1025px) {
+            height: 450px;
         }
     }
 }
