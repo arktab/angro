@@ -4,7 +4,7 @@ AOS.init({
     //duration: 800,
     //easing: 'ease-in-out-back'
 });
-
+lightGallery(document.getElementById('lightgallery'));
 
 //___________________________________
 (function($) {

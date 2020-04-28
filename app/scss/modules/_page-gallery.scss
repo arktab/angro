@@ -1,0 +1,95 @@
+.gallery-list {
+    display: flex;
+    flex-direction: column;
+    .container {
+        padding: 0;
+    }
+    &__item {
+        display: grid;
+        background: #423C3A;
+        color: #ffffff;
+        grid-template-rows: 1fr 1fr;
+        margin: 0 0 40px;
+        //height: 600px;
+        @media (min-width: 1025px) {
+            margin: 0;
+            height: 500px;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+            &:nth-child(2n) {
+                .logo {
+                    grid-column: 2/3;
+                    grid-row: 1/2;
+                }
+                .picture {
+                    grid-column: 1/2;
+                    grid-row: 1/2;
+                }
+            }
+        }
+    }
+    .logo {
+        height: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 0;
+        &__text {
+            font-size: 19px;
+            line-height: 24px;
+        }
+        &__title {
+            font-size: 36px;
+            line-height: 44px;
+        }
+        &__headline {
+            font-size: 16px;
+            line-height: 20px;
+        }
+        svg {
+            fill: #FFFFFF;
+        }
+        @media (min-width: 1025px) {
+            padding: 0;
+        }
+        .link {
+            font-size: 24px;
+            line-height: 30px;
+            font-family: Bellota Text;
+            @media (min-width: 1025px) {
+                margin: 75px 0 0 0;
+                //font-size: 36px;
+                font-size: 28px;
+                line-height: 45px;
+            }
+        }
+    }
+    .picture {
+        position: relative;
+        justify-content: center;
+        display: flex;
+        img {
+            @include size(130%, auto);
+        }
+        @include size(100%, auto);
+        overflow: hidden;
+        &__icon-wrap {
+            @include pos($t: 50%, $l: 50%);
+            border-radius: 50%;
+            background: #FFFFFF;
+            transform: translateX(-50%) translateY(-50%);
+            transition: all .3s;
+            &:hover {
+                filter: invert(1);
+            }
+            .icon {
+                @include size(40px);
+                @media (min-width: 1025px) {
+                    @include size(70px);
+                }
+            }
+        }
+    }
+}

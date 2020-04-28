@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="description" content="Starter")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Галерея
+        link(rel="icon" href="images/favicon.png")
+        <!--build:css css/styles.min.css-->
+        link(rel="stylesheet" href="css/libs/aos.css")
+        link(rel="stylesheet" href="css/libs/slick.css")
+        link(rel="stylesheet" href="css/libs/slick-theme.css")
+        link(rel="stylesheet" href="css/libs/lightgallery.css")
+        link(rel="stylesheet" href="css/global.min.css")
+        <!--endbuild-->
+        <!--[if lt IE 9]>
+        script(src="http://html5shiv.googlecode.com/svn/trunk/html5.js")
+        <![endif]-->
+    body.gallery-opened-body
+        //INFO START 
+        include object/object-info.pug
+        //INFO END
+        //SIDEBAR
+        include layout/sidebar.pug
+        //SIDEBAR END
+
+        //HEADER START 
+        header.gallery-opened-header
+            .container
+                .grid
+                    //MOBILE LOGO
+                    a(href="#").mobile-logo              
+                            svg.mobile-logo__icon
+                                use(xlink:href="images/main-page_icons-sprite.svg#logo")
+                    //MOBILE LOGO END
+                    h2.title галерея ЖК “На сенной”
+                    //h3.headline Галерея Жилых комплексов angro
+                    a.arrow-btn.arrow-btn--left(href="#")
+                        .arrow-btn__icon
+                            svg.icon
+                                use(xlink:href="images/main-page_icons-sprite.svg#arrow")
+                        p.arrow-btn__text Объекты
+        //HEADER END
+        //CONTENT START
+        section.gallery-opened-content
+            .container
+                #lightgallery
+                    a.lightgallery__item(href="images/gallery/IMG_1.jpg")
+                        img.img-responsive(src="images/gallery/IMG_1.jpg")
+                    a.lightgallery__item(href="images/gallery/IMG_2.jpg")
+                        img.img-responsive(src="images/gallery/IMG_2.jpg")
+                    a.lightgallery__item(href="images/gallery/IMG_3.jpg")
+                        img.img-responsive(src="images/gallery/IMG_3.jpg")
+                    a.lightgallery__item(href="images/gallery/IMG_4.jpg")
+                        img.img-responsive(src="images/gallery/IMG_4.jpg")
+                    a.lightgallery__item(href="images/gallery/IMG_5.jpg")
+                        img.img-responsive(src="images/gallery/IMG_5.jpg")
+                    a.lightgallery__item(href="images/gallery/IMG_6.jpg")
+                        img.img-responsive(src="images/gallery/IMG_6.jpg")
+                    a.lightgallery__item(href="images/gallery/IMG_7.jpg")
+                        img.img-responsive(src="images/gallery/IMG_7.jpg")
+                    a.lightgallery__item(href="images/gallery/IMG_8.jpg")
+                        img.img-responsive(src="images/gallery/IMG_8.jpg")
+                    a.lightgallery__item(href="images/gallery/IMG_9.jpg")
+                        img.img-responsive(src="images/gallery/IMG_9.jpg")
+                    a.lightgallery__item(href="images/gallery/IMG_10.jpg")
+                        img.img-responsive(src="images/gallery/IMG_10.jpg")
+                    
+
+
+
+        
+        //CONTENT END
+        //FOOTER START
+        footer.footer
+            include layout/footer.pug
+        //FOOTER END
+        <!-- modal -->
+        include object/object-modal.pug
+        include layout/modal.pug
+        <!-- modal end-->                  
+        
+        <!--build:js js/main.min.js -->
+        script(src="js/libs/jquery.min.js")
+        script(src="js/libs/jquery-ui.js")
+        script(src="js/libs/lightgallery.js")
+        script(src="js/libs/aos.js")
+        script(src="js/libs/slick.min.js")
+        script(src="js/main.js")
+        <!--endbuild-->

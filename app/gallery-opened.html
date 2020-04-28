@@ -5,16 +5,17 @@
     <meta name="description" content="Starter"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>Блог</title>
+    <title>Галерея</title>
     <link rel="icon" href="images/favicon.png"/><!--build:css css/styles.min.css-->
     <link rel="stylesheet" href="css/libs/aos.css"/>
     <link rel="stylesheet" href="css/libs/slick.css"/>
     <link rel="stylesheet" href="css/libs/slick-theme.css"/>
+    <link rel="stylesheet" href="css/libs/lightgallery.css"/>
     <link rel="stylesheet" href="css/global.min.css"/><!--endbuild-->
 <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   </head>
-  <body class="blog-body">
+  <body class="gallery-opened-body">
     <!--INFO START -->
     <div class="object-info">
       <div class="object-info__icon">
@@ -97,7 +98,7 @@
     </div>
     <!--SIDEBAR END-->
     <!--HEADER START -->
-    <header class="blog-header">
+    <header class="gallery-opened-header">
       <div class="container">
         <div class="grid">
           <!--MOBILE LOGO--><a class="mobile-logo" href="#">             
@@ -105,150 +106,22 @@
               <use xlink:href="images/main-page_icons-sprite.svg#logo"></use>
             </svg></a>
           <!--MOBILE LOGO END-->
-          <h2 class="title">Блог</h2>
-          <h3 class="headline">Важная информация со статьями и новостями от angro</h3>
+          <h2 class="title">галерея ЖК “На сенной”</h2>
+          <!--h3.headline Галерея Жилых комплексов angro--><a class="arrow-btn arrow-btn--left" href="#">
+            <div class="arrow-btn__icon">
+              <svg class="icon">
+                <use xlink:href="images/main-page_icons-sprite.svg#arrow"></use>
+              </svg>
+            </div>
+            <p class="arrow-btn__text">Объекты</p></a>
         </div>
       </div>
     </header>
     <!--HEADER END-->
     <!--CONTENT START-->
-    <section class="blog">
-      <div class="blog-item">
-        <div class="container">
-          <div class="information">
-            <div class="date">01.04.2020 г.</div>
-            <div class="information__headline">Стоимость 1 кв.м в ЖК Остров с 01.04.2020</div>
-            <div class="text">Цены за квартиры в Жилом комплексе «Остров» по ул. Гоголя-77 на сайте указаны по состоянию на 01 апреля 2020 года</div>
-            <div class="price">
-              <p>Вид квартиры</p>
-              <p>Этаж </p>
-              <p>Стоимость 1 кв.м</p>
-              <p>Однокомнатная</p>
-              <p>2,7,8</p>
-              <p>11500,00 грн</p>
-              <p>Двухкомнатная</p>
-              <p>2,7,8</p>
-              <p>11500,00 грн</p>
-              <p>Однокомнатная</p>
-              <p>3-6</p>
-              <p>12000,00 грн</p>
-              <p>Двухкомнатная</p>
-              <p>3-6</p>
-              <p>12000,00 грн</p>
-              <p>Трехкомнатная</p>
-              <p>9-9+</p>
-              <p>10000,00 грн</p>
-              <p>Четырехкомнатная</p>
-              <p>9-9+</p>
-              <p>10000,00 грн</p>
-            </div>
-          </div>
-          <div class="photo"><img class="img" src="images/objects/object_img4.jpg" alt="ЖК 'На Сенной'"/></div>
-          <div class="information__btn"><a class="arrow-btn arrow-btn--left" href="arcticle.html">
-              <div class="arrow-btn__icon">
-                <svg class="icon">
-                  <use xlink:href="images/main-page_icons-sprite.svg#arrow"></use>
-                </svg>
-              </div>
-              <p class="arrow-btn__text">Подробнее</p></a></div>
-        </div>
-      </div>
-      <div class="blog-item">
-        <div class="container">
-          <div class="information">
-            <div class="date">16.10.2019 г.</div>
-            <div class="information__headline">Стоимость 1 кв.м в ЖК Остров (ноябрь 2019)</div>
-            <div class="text">Цены за квартиры в Жилом комплексе «Остров» по ул. Гоголя-77 на сайте указаны по состоянию на 01 ноября 2019 года</div>
-            <div class="price">
-              <p>Вид квартиры</p>
-              <p>Этаж </p>
-              <p>Стоимость 1 кв.м</p>
-              <p>Однокомнатная</p>
-              <p>2,7,8</p>
-              <p>11500,00 грн</p>
-              <p>Двухкомнатная</p>
-              <p>2,7,8</p>
-              <p>11500,00 грн</p>
-              <p>Однокомнатная</p>
-              <p>3-6</p>
-              <p>12000,00 грн</p>
-              <p>Двухкомнатная</p>
-              <p>3-6</p>
-              <p>12000,00 грн</p>
-              <p>Трехкомнатная</p>
-              <p>9-9+</p>
-              <p>10000,00 грн</p>
-              <p>Четырехкомнатная</p>
-              <p>9-9+</p>
-              <p>10000,00 грн</p>
-            </div>
-          </div>
-          <div class="photo"><img class="img" src="images/objects/object_img4.jpg" alt="ЖК 'На Сенной'"/></div>
-          <div class="information__btn"><a class="arrow-btn arrow-btn--left" href="arcticle.html">
-              <div class="arrow-btn__icon">
-                <svg class="icon">
-                  <use xlink:href="images/main-page_icons-sprite.svg#arrow"></use>
-                </svg>
-              </div>
-              <p class="arrow-btn__text">Подробнее</p></a></div>
-        </div>
-      </div>
-      <div class="blog-item">
-        <div class="container">
-          <div class="information">
-            <div class="date">22.12.2018 г.</div>
-            <div class="information__headline">Надежный фундамент — залог комфортной жизни</div>
-            <div class="text">Строительство жилых домов сопряжено со множеством проблем. Но если безопасность надземной части зданий связана с качеством материалов и человеческим фактором, то подземная их часть подвергается гораздо большему числу рисков.</div>
-          </div>
-          <div class="photo"><img class="img" src="images/blog/dock.jpg" alt="Документ'"/></div>
-          <div class="information__btn"><a class="arrow-btn arrow-btn--left" href="#">
-              <div class="arrow-btn__icon">
-                <svg class="icon">
-                  <use xlink:href="images/main-page_icons-sprite.svg#arrow"></use>
-                </svg>
-              </div>
-              <p class="arrow-btn__text">Подробнее</p></a></div>
-        </div>
-      </div>
-      <div class="blog-item">
-        <div class="container">
-          <div class="information">
-            <div class="date">03.12.2018 г.</div>
-            <div class="information__headline">Стоимость 1 кв.м в ЖК Остров (декабрь 2018)</div>
-            <div class="text">Цены за квартиры в Жилом комплексе «Остров» по ул. Гоголя-77 на сайте указаны по состоянию на 10 декабря 2018 года</div>
-            <div class="price">
-              <p>Вид квартиры</p>
-              <p>Этаж </p>
-              <p>Стоимость 1 кв.м</p>
-              <p>Однокомнатная</p>
-              <p>2,7,8</p>
-              <p>11500,00 грн</p>
-              <p>Двухкомнатная</p>
-              <p>2,7,8</p>
-              <p>11500,00 грн</p>
-              <p>Однокомнатная</p>
-              <p>3-6</p>
-              <p>12000,00 грн</p>
-              <p>Двухкомнатная</p>
-              <p>3-6</p>
-              <p>12000,00 грн</p>
-              <p>Трехкомнатная</p>
-              <p>9-9+</p>
-              <p>10000,00 грн</p>
-              <p>Четырехкомнатная</p>
-              <p>9-9+</p>
-              <p>10000,00 грн</p>
-            </div>
-          </div>
-          <div class="photo"><img class="img" src="images/objects/object_img4.jpg" alt="ЖК 'На Сенной'"/></div>
-          <div class="information__btn"><a class="arrow-btn arrow-btn--left" href="arcticle.html">
-              <div class="arrow-btn__icon">
-                <svg class="icon">
-                  <use xlink:href="images/main-page_icons-sprite.svg#arrow"></use>
-                </svg>
-              </div>
-              <p class="arrow-btn__text">Подробнее</p></a></div>
-        </div>
+    <section class="gallery-opened-content">
+      <div class="container">
+        <div id="lightgallery"><a class="lightgallery__item" href="images/gallery/IMG_1.jpg"><img class="img-responsive" src="images/gallery/IMG_1.jpg"/></a><a class="lightgallery__item" href="images/gallery/IMG_2.jpg"><img class="img-responsive" src="images/gallery/IMG_2.jpg"/></a><a class="lightgallery__item" href="images/gallery/IMG_3.jpg"><img class="img-responsive" src="images/gallery/IMG_3.jpg"/></a><a class="lightgallery__item" href="images/gallery/IMG_4.jpg"><img class="img-responsive" src="images/gallery/IMG_4.jpg"/></a><a class="lightgallery__item" href="images/gallery/IMG_5.jpg"><img class="img-responsive" src="images/gallery/IMG_5.jpg"/></a><a class="lightgallery__item" href="images/gallery/IMG_6.jpg"><img class="img-responsive" src="images/gallery/IMG_6.jpg"/></a><a class="lightgallery__item" href="images/gallery/IMG_7.jpg"><img class="img-responsive" src="images/gallery/IMG_7.jpg"/></a><a class="lightgallery__item" href="images/gallery/IMG_8.jpg"><img class="img-responsive" src="images/gallery/IMG_8.jpg"/></a><a class="lightgallery__item" href="images/gallery/IMG_9.jpg"><img class="img-responsive" src="images/gallery/IMG_9.jpg"/></a><a class="lightgallery__item" href="images/gallery/IMG_10.jpg"><img class="img-responsive" src="images/gallery/IMG_10.jpg"/></a></div>
       </div>
     </section>
     <!--CONTENT END-->
@@ -378,6 +251,7 @@
 <!--build:js js/main.min.js -->
     <script src="js/libs/jquery.min.js"></script>
     <script src="js/libs/jquery-ui.js"></script>
+    <script src="js/libs/lightgallery.js"></script>
     <script src="js/libs/aos.js"></script>
     <script src="js/libs/slick.min.js"></script>
     <script src="js/main.js"></script><!--endbuild-->
