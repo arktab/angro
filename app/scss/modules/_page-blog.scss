@@ -1,6 +1,6 @@
 .blog-header {
     background: #F5F5F4;
-    padding: 0 0 40px;
+    padding: 0 0 40px 210px;
     .mobile-logo {
         top: 100px;
         @media (max-width: 576px) {
@@ -32,7 +32,7 @@
 }
 
 .blog {
-    padding: 0;
+    padding: 0 0 0 210px;
     background: #F5F5F4;
 }
 
@@ -78,15 +78,31 @@
         color: #423C3A;
         background: #FFFFFF;
         overflow: hidden;
+        width: 100%;
         @media (min-width: 1025px) {
-            display: grid;
+            //margin: 0 25px;
+            display: block;
             background: transparent;
-            width: 75%;
             line-height: 20px;
         }
-        p {
+        tr {
+            display: grid;
+            grid-template-columns: 40% 20% 40%;
+            grid-gap: 2px;
+            margin: 0 0 2px;
+            width: 100%;
+        }
+        th {
+            font-weight: bold;
+            font-size: 14px;
+            background: #FFF3A6;
+            text-align: left;
+            padding: 0 0 0 5px;
+        }
+        td {
             margin: 0;
             padding: 0 0 0 5px;
+            background: #FFF3A6;
         }
     }
     .photo {

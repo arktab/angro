@@ -3,7 +3,7 @@
         //background: #423C3A;
         background: #514947;
         color: white;
-        padding: 0 0 30px 0;
+        padding: 0 0 30px 210px;
         .grid {
             grid-gap: 0;
         }
@@ -114,10 +114,13 @@
 }
 
 .content-picture {
+    @media (min-width: 1366px) {
+        height: 495px;
+    }
     @media (min-width: 1025px) {
         position: relative;
         overflow: hidden;
-        height: 600px;
+        //height: 600px;
     }
     .item__img {
         @media (min-width: 1025px) {

@@ -12,7 +12,7 @@
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
+    //overflow: auto;
     background: rgba(66, 60, 58, 0.7);
     &__content {
         @include pos($t: 50%, $l: 50%);
@@ -28,6 +28,7 @@
         }
     }
     &__form {
+        margin: 0 auto;
         background: $light-bg;
         color: #423C3A;
         padding: 60px 100px 110px;
@@ -94,7 +95,7 @@
             grid-column: 9 / 12;
             grid-row: 4 / 5;
             @media (max-width: 576px) {
-                grid-column: 2 / 13;
+                grid-column: 1 / 13;
                 grid-row: 6 / 7;
             }
             @media (max-width: 812px) and (orientation: landscape) {
@@ -128,7 +129,7 @@
         display: flex;
         flex-direction: column;
         text-transform: uppercase;
-        font-size: 1.25rem;
+        font-size: 19px;
         position: relative;
         @media (max-width: 960px) {
             font-size: .8rem;
@@ -262,7 +263,7 @@
     }
     .close {
         @include pos($t: -25px, $r: -60px);
-        @include size(75px);
+        @include size(65px);
         background: #F5F5F4;
         border-radius: 50%;
         cursor: pointer;
@@ -279,14 +280,14 @@
         }
         &:before {
             content: '';
-            @include pos($t: 14px, $r: 36px);
+            @include pos($t: 10px, $r: 32px);
             @include size(2px, 45px);
             transform: rotate(45deg);
             background: #514947;
         }
         &:after {
             content: '';
-            @include pos($t: 14px, $r: 36px);
+            @include pos($t: 10px, $r: 32px);
             @include size(2px, 45px);
             transform: rotate(-45deg);
             background: #514947;

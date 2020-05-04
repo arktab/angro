@@ -8,7 +8,7 @@
         @include size(100%);
     }
     &-content {
-        @include pos($t: 0, $l: 0);
+        @include pos($t: 0, $l: 210px);
         padding: 100px 0 50px 0;
         @include size(100%);
         pointer-events: none;
@@ -39,9 +39,9 @@
     }
     &-tile {
         position: relative;
-        padding: 420px 0 300px 0;
+        padding: 420px 0 300px 210px;
         @media (max-width: 1366px) {
-            padding: 290px 0 200px 0;
+            padding: 290px 0 200px 210px;
         }
         @media (max-width: 576px) {
             padding: 250px 0 120px;

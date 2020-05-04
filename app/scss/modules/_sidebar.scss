@@ -100,20 +100,22 @@
             }
         }
         &-icons {
-            @include pos($b: 100px, $l: 70px);
+            @include pos($b: 5px, $l: 70px);
             display: flex;
             flex-direction: column;
             align-items: flex-end;
+            &__item {
+                margin-bottom: 30px;
+            }
             @media (max-width: 1366px) {
                 left: 60px;
-                bottom: 70px;
+                bottom: 5px;
             }
             &__icon {
                 width: 65px;
                 height: 60px;
                 fill: #ffffff;
                 transition: all .3s;
-                margin-bottom: 1em;
                 @media (max-width: 1366px) {
                     width: 45px;
                     height: 40px;
@@ -221,9 +223,11 @@
             }
         }
         &-footer {
-            @include pos($b: 140px, $l: 17rem);
+            @include pos($b: 25px, $l: 17rem);
+            line-height: 60px;
             @media (max-width: 1366px) {
-                bottom: 85px;
+                bottom: 25px;
+                line-height: 40px;
             }
             @media (max-width: 576px) {
                 display: none;

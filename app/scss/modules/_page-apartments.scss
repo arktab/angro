@@ -1,10 +1,6 @@
 .apartments-header {
     background: #F5F5F4;
-    padding: 0 0 30px 0;
-    @media (max-width: 768px) {
-        //background: #FFFFFF;
-        background: #F5F5F4;
-    }
+    padding: 0 0 30px 210px;
     .mobile-logo {
         top: 100px;
         @media (max-width: 576px) {
@@ -38,6 +34,7 @@
 .apartments-content {
     background: #F5F5F4;
     padding-bottom: 0;
+    overflow: hidden;
     .container {
         padding: 0 0 30px;
         height: 65vh;
@@ -46,20 +43,22 @@
 
 .chess_iframe {
     position: absolute !important;
-    top: 35vh !important;
+    top: calc(35vh + 80px)!important;
     right: unset !important;
-    left: 17vw !important;
+    left: 200px !important;
     margin: 0 20px !important;
     bottom: unset !important;
     max-width: 1250px !important;
     height: 65vh !important;
+    z-index: 7 !important;
     @media (max-width: 1366px) {
         width: 960px !important;
-        left: 12vw !important;
+        left: 200px !important;
+        height: 75vh !important;
     }
     @media (max-width: 1024px) {
         width: 756px !important;
-        left: 10vw !important;
+        //left: 10vw !important;
     }
     @media (max-width: 960px) {
         width: 680px !important;

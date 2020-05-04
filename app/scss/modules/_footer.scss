@@ -1,11 +1,11 @@
 .footer {
-    padding: 100px 0 50px 0;
-    background: linear-gradient(90deg, rgba(0, 0, 0, .1), hsla(0, 0%, 80%, 0) 40%), linear-gradient(270deg, rgba(0, 0, 0, .1), hsla(0, 0%, 50.2%, 0) 47.55%);
+    padding: 100px 0 50px 210px;
+    //background: linear-gradient(90deg, rgba(0, 0, 0, .1), hsla(0, 0%, 80%, 0) 40%), linear-gradient(270deg, rgba(0, 0, 0, .1), hsla(0, 0%, 50.2%, 0) 47.55%);
+    background: #f5f5f4;
     color: #0D0D0D;
     overflow: hidden;
     @media (max-width: 576px) {
         padding: 30px 0 50px 0;
-        //background: #FFFFFF;
         background: #E5E5E5;
     }
     @media (max-width: 812px) and (orientation: landscape) {
@@ -121,6 +121,7 @@
         grid-row: 2/3;
         justify-self: center;
         align-self: flex-end;
+        cursor: pointer;
         .arrow-btn__icon {
             &:hover {
                 &:after {
@@ -131,7 +132,7 @@
                 }
             }
             svg {
-                @include pos($t: -22px, $l: 30px);
+                @include pos($t: -22px, $l: 27px);
                 transform: rotate(90deg);
             }
             &:after {
@@ -140,7 +141,7 @@
         }
         p {
             color: #423C3A;
-            padding: 130px 0 0 10px;
+            padding: 130px 0 0 5px;
         }
         @media (max-width: 576px) {
             display: none;
@@ -170,6 +171,7 @@
             text-align: center;
             line-height: 50px;
             height: 50px;
+            cursor: pointer;
             @media (max-width: 960px) {
                 font-size: 14px;
                 padding: 0 1.3rem;
@@ -269,6 +271,10 @@
         grid-row: 3 / 4;
         justify-self: center;
         margin: 100px 0 0 0;
+        a {
+            font-size: inherit;
+            color: inherit;
+        }
         @media (max-width: 576px) {
             grid-column: 1 / 13;
             grid-row: 6 / 7;
@@ -373,6 +379,7 @@
             grid-row: 2/4;
             margin: 0 0 0 1rem;
             height: 50px;
+            cursor: pointer;
             @media (max-width: 576px) {
                 font-size: 16px;
                 line-height: 20px;
