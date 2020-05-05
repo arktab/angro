@@ -248,6 +248,16 @@ lightGallery(document.getElementById('lightgallery'));
             //$('body').removeClass('is-menu-shown');
         });
         //OBJECT MODAL END
+        // POLICY MODAL
+        $(".modal__link").click(function() {
+            $(".policy").toggleClass("policy-is-shown");
+            $('body').toggleClass('is-menu-shown');
+        });
+        $(".policy__close").click(function() {
+            $(".policy").toggleClass("policy-is-shown");
+            $('body').removeClass('is-menu-shown');
+        });
+        //POLICY MODAL END
         //MODAL END
 
         //MOBILE 
@@ -287,6 +297,7 @@ lightGallery(document.getElementById('lightgallery'));
             cssEase: 'linear',
             slidesToShow: 1,
             responsive: [{
+                adaptiveHeight: true,
                 breakpoint: 576,
                 settings: {
                     arrows: true

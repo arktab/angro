@@ -8,12 +8,13 @@
         @include size(100%);
     }
     &-content {
-        @include pos($t: 0, $l: 210px);
+        @include pos($t: 0, $l: 0);
         padding: 100px 0 50px 0;
         @include size(100%);
         pointer-events: none;
         @media (max-width: 576px) {
             padding: 40px 0;
+            left: unset;
         }
         .grid {
             grid-template-rows: auto auto 1fr auto;
@@ -39,12 +40,23 @@
     }
     &-tile {
         position: relative;
-        padding: 420px 0 300px 210px;
+        padding: 420px 0 300px 220px;
         @media (max-width: 1366px) {
             padding: 290px 0 200px 210px;
         }
+        @media (max-width: 1025px) {
+            padding: 290px 0 200px 180px;
+        }
         @media (max-width: 576px) {
-            padding: 250px 0 120px;
+            padding: 250px 0 120px 10px;
+        }
+        @media (max-width: 812px) and (orientation: landscape) {
+            padding: 250px 0 120px 70px;
+        }
+        .container {
+            margin: 0;
+            top: 0;
+            left: 0;
         }
     }
     &-tile__title {
@@ -119,6 +131,9 @@
         transform: rotate(180deg);
         fill: #FFF3A6;
         transition: all .3s;
+        @media (max-width: 1025px) {
+            right: -90px;
+        }
         &:hover {
             fill: #FFFFFF;
         }

@@ -1,0 +1,120 @@
+.policy {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(66, 60, 58, 0.7);
+    overflow: auto;
+    &-is-shown {
+        display: block;
+    }
+    &__content {
+        width: 100%;
+        height: 100%;
+        @include pos($t: 0, $l: 0);
+        transform: none;
+        @media (min-width: 1025px) {
+            @include pos($t: 50%, $l: 50%);
+            transform: translateX(-50%) translateY(-50%);
+        }
+    }
+    .container {
+        margin: 0 auto;
+        background: #ffffff;
+        padding: 100px 40px 200px;
+    }
+    p {
+        line-height: 20px;
+    }
+    ul {
+        margin: 0 0 1rem;
+        //counter-reset: list 0;
+        li {
+            line-height: 20px;
+            margin: 0 30px 1rem 33px;
+            position: relative;
+            list-style-type: none;
+            @media (min-width: 1025px) {
+                margin: 0 30px 1rem 70px;
+            }
+            &::after {
+                content: '';
+                @include pos($t: 5px, $l: -30px);
+                @include size(15px);
+                background: #423C3A;
+                border-radius: 50%;
+                //z-index: 1;
+                @media (min-width: 1025px) {
+                    @include size(18px);
+                    left: -40px;
+                }
+            }
+        }
+    }
+    &__close {
+        float: right;
+        margin: 50px 75px 0;
+        @include size(40px);
+        position: relative;
+        //@include pos($t: 50px, $r: 50px);
+        background: #F5F5F4;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: all .3s;
+        &:hover {
+            background: #514947;
+            &:before,
+            &:after {
+                background: #F5F5F4;
+            }
+        }
+        &:active {
+            background: #423C3A;
+        }
+        &:before {
+            content: '';
+            @include size(1px, 25px);
+            @include pos($t: 7px, $r: 20px);
+            transform: rotate(45deg);
+            background: #514947;
+        }
+        &:after {
+            content: '';
+            @include size(1px, 25px);
+            @include pos($t: 7px, $r: 20px);
+            transform: rotate(-45deg);
+            background: #514947;
+        }
+        @media (min-width: 1025px) {
+            @include size(65px);
+            margin: 50px 100px 0;
+            &:before {
+                @include pos($t: 10px, $r: 32px);
+                @include size(2px, 45px);
+            }
+            &:after {
+                @include pos($t: 10px, $r: 32px);
+                @include size(2px, 45px);
+            }
+        }
+        // @media (max-width: 960px) {
+        //     @include pos($t: -25px, $r: -45px);
+        // }
+        p {
+            line-height: 40px;
+            padding: 0 0 0 50px;
+            &:hover {
+                color: #828282;
+                text-decoration: underline;
+            }
+            @media (min-width: 1025px) {
+                font-size: 20px;
+                line-height: 65px;
+                padding: 0 0 0 80px;
+            }
+        }
+    }
+}

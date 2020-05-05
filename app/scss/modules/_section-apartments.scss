@@ -74,14 +74,9 @@
         &__wrap {
             @include pos($t: 100px, $l: 50%);
             width: 55vw;
-            // &:before {
-            //     content: '';
-            //     display: block;
-            //     @include pos($t: 0, $l: 0);
-            //     @include size(350px, 100%);
-            //     background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 21.79%);
-            //     z-index: 2;
-            // }
+            @media (max-width: 1025px) {
+                left: 65%;
+            }
             &:after {
                 content: '';
                 display: block;
