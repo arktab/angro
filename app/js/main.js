@@ -18,36 +18,62 @@ lightGallery(document.getElementById('lightgallery'));
         $("#modal-username")
             .focusout(function() {
                 modalname = $("#modal-username").val();
-                if (modalname == '') {
+                modaltel = $("#modal-tel").val();
+                if (modalname.length < 3) {
                     $(".modal__user-text").addClass("alert__text-red");
                     $(".modal__btn").prop('disabled', true);
                     $(".modal__btn").addClass("btn__disabled");
                     $("#modal-username").addClass("modal__field--red");
-                } else {
+                }
+                if (modaltel.length < 13) {
+                    $(".modal__tel-text").addClass("alert__text-red");
+                    $(".modal__btn").prop('disabled', true);
+                    $(".modal__btn").addClass("btn__disabled");
+                    $("#modal-tel").addClass("modal__field--red");
+                }
+                if (modalname.length >= 3) {
                     $(".modal__user-text").removeClass("alert__text-red");
-                    $(".modal__btn").prop('disabled', false);
-                    $(".modal__btn").removeClass("btn__disabled");
                     $("#modal-username").removeClass("modal__field--red");
+                }
+                if (modalname.length >= 3 && modaltel.length == 13) {
+                    if ($("#modal-check").prop("checked") == true) {
+                        $(".modal__btn").prop('disabled', false);
+                        $(".modal__btn").removeClass("btn__disabled");
+                    }
                 }
             })
             .keyup();
         $("#modal-tel")
             .focusout(function() {
+                modalname = $("#modal-username").val();
                 modaltel = $("#modal-tel").val();
-                if (modaltel == '') {
+                if (modalname.length < 3) {
+                    $(".modal__user-text").addClass("alert__text-red");
+                    $(".modal__btn").prop('disabled', true);
+                    $(".modal__btn").addClass("btn__disabled");
+                    $("#modal-username").addClass("modal__field--red");
+                }
+                if (modaltel.length < 13) {
                     $(".modal__tel-text").addClass("alert__text-red");
                     $(".modal__btn").prop('disabled', true);
                     $(".modal__btn").addClass("btn__disabled");
                     $("#modal-tel").addClass("modal__field--red");
-                } else {
-                    $("modal__tel-text").removeClass("alert__text-red");
-                    $(".modal__btn").prop('disabled', false);
-                    $(".modal__btn").removeClass("btn__disabled");
+                }
+                if (modaltel.length == 13) {
+                    $(".modal__tel-text").removeClass("alert__text-red");
                     $("#modal-tel").removeClass("modal__field--red");
+                }
+                if (modalname.length >= 3 && modaltel.length == 13) {
+                    if ($("#modal-check").prop("checked") == true) {
+                        $(".modal__btn").prop('disabled', false);
+                        $(".modal__btn").removeClass("btn__disabled");
+                    }
                 }
             })
             .keyup();
         $("#modal-check").click(function() {
+            modalname = $("#modal-username").val();
+            modaltel = $("#modal-tel").val();
             if ($(this).prop("checked") == false) {
                 $(".modal__check-text").addClass("alert__text-red");
                 $(".modal__btn").prop('disabled', true);
@@ -55,47 +81,78 @@ lightGallery(document.getElementById('lightgallery'));
 
             } else if ($(this).prop("checked") == true) {
                 $(".modal__check-text").removeClass("alert__text-red");
-                $(".modal__btn").prop('disabled', false);
-                $(".modal__btn").removeClass("btn__disabled");
+                if (modalname.length >= 3 && modaltel.length == 13) {
+                    if ($("#modal-check").prop("checked") == true) {
+                        $(".modal__btn").prop('disabled', false);
+                        $(".modal__btn").removeClass("btn__disabled");
+                    }
+                }
 
             }
         });
         //CONTACT
         var contactname = new String;
         var contacttel = new String;
-        $("#contact-username")
-            .focusout(function() {
+        $(".contact-form__btn").prop('disabled', true);
+        $(".contact-form__btn").addClass("btn__disabled");
+        $("#contact-username").focusout(function() {
                 contactname = $("#contact-username").val();
-                if (contactname == '') {
+                contacttel = $("#contact-tel").val();
+                if (contactname.length < 3) {
                     $(".contact__user-text").addClass("alert__text-red");
                     $(".contact-form__btn").prop('disabled', true);
                     $(".contact-form__btn").addClass("btn__disabled");
                     $("#contact-username").addClass("contact-form__field--red");
-                } else {
-                    $(".contact__user-text").removeClass("alert__text-red");
-                    $(".contact-form__btn").prop('disabled', false);
-                    $(".contact-form__btn").removeClass("btn__disabled");
-                    $("#contact-username").removeClass("contact-form__field--red");
                 }
-            })
-            .keyup();
-        $("#contact-tel")
-            .focusout(function() {
-                contacttel = $("#contact-tel").val();
-                if (contacttel == '') {
+                if (contacttel.length < 13) {
                     $(".contact__tel-text").addClass("alert__text-red");
                     $(".contact-form__btn").prop('disabled', true);
                     $(".contact-form__btn").addClass("btn__disabled");
                     $("#contact-tel").addClass("contact-form__field--red");
-                } else {
-                    $(".contact__tel-text").removeClass("alert__text-red");
-                    $(".contact-form__btn").prop('disabled', false);
-                    $(".contact-form__btn").removeClass("btn__disabled");
-                    $("#contact-tel").removeClass("contact-form__field--red");
+                }
+                if (contactname.length >= 3) {
+                    $(".contact__user-text").removeClass("alert__text-red");
+                    $("#contact-username").removeClass("contact-form__field--red");
+                }
+                if (contactname.length >= 3 && contacttel.length == 13) {
+                    if ($("#contact-check").prop("checked") == true) {
+                        $(".contact-form__btn").removeClass("btn__disabled");
+                        $(".contact-form__btn").prop('disabled', false);
+                    }
                 }
             })
             .keyup();
+        $("#contact-tel").focusout(function() {
+            contactname = $("#contact-username").val();
+            contacttel = $("#contact-tel").val();
+            if (contactname.length < 3) {
+                $(".contact__user-text").addClass("alert__text-red");
+                $(".contact-form__btn").prop('disabled', true);
+                $(".contact-form__btn").addClass("btn__disabled");
+                $("#contact-username").addClass("contact-form__field--red");
+            }
+            if (contacttel.length < 13) {
+                $(".contact__tel-text").addClass("alert__text-red");
+                $(".contact-form__btn").prop('disabled', true);
+                $(".contact-form__btn").addClass("btn__disabled");
+                $("#contact-tel").addClass("contact-form__field--red");
+            }
+            if (contacttel.length == 13) {
+                $(".contact__tel-text").removeClass("alert__text-red");
+                $("#contact-tel").removeClass("contact-form__field--red");
+
+            }
+            if (contactname.length >= 3 && contacttel.length == 13) {
+                if ($("#contact-check").prop("checked") == true) {
+                    $(".contact-form__btn").removeClass("btn__disabled");
+                    $(".contact-form__btn").prop('disabled', false);
+                }
+            }
+        }).keyup();
+
         $("#contact-check").click(function() {
+            contactname = $("#contact-username").val();
+            contacttel = $("#contact-tel").val();
             if ($(this).prop("checked") == false) {
                 $(".contact__check-text").addClass("alert__text-red");
                 $(".contact-form__btn").prop('disabled', true);
@@ -103,11 +160,29 @@ lightGallery(document.getElementById('lightgallery'));
 
             } else if ($(this).prop("checked") == true) {
                 $(".contact__check-text").removeClass("alert__text-red");
-                $(".contact-form__btn").prop('disabled', false);
-                $(".contact-form__btn").removeClass("btn__disabled");
+                if (contactname.length >= 3 && contacttel.length == 13) {
+                    $(".contact-form__btn").prop('disabled', false);
+                    $(".contact-form__btn").removeClass("btn__disabled");
+                }
 
             }
         });
+        //FOOTER EMAIL BUTTON
+        $(".footer-newsletter__btn").prop('disabled', true);
+        $(".footer-newsletter__btn").addClass("btn__disabled");
+        var footer__email = new String;
+        $(".footer-newsletter__field").focusout(function() {
+            footer__email = $(".footer-newsletter__field").val();
+            if (footer__email.length >= 5) {
+                $(".footer-newsletter__btn").removeClass("btn__disabled");
+                $(".footer-newsletter__btn").prop('disabled', false);
+            }
+            if (footer__email.length < 5) {
+                $(".footer-newsletter__btn").prop('disabled', true);
+                $(".footer-newsletter__btn").addClass("btn__disabled");
+            }
+        }).keyup();
+        //FOOTER EMAIL BUTTON END
         //Form validation END
         var visible = new Boolean(false);
         var scrolled = $(window).scrollTop();
@@ -232,7 +307,7 @@ lightGallery(document.getElementById('lightgallery'));
         //CLOSE MODAL
         $(".close").click(function() {
             $(".modal").toggleClass("modal-is-shown");
-            //$('body').removeClass('is-menu-shown');
+            $('body').removeClass('is-menu-shown');
         });
         $(".modal-video__close").click(function() {
             $(".modal-video").toggleClass("modal-video-is-shown");
@@ -245,7 +320,7 @@ lightGallery(document.getElementById('lightgallery'));
         });
         $(".object-modal__close").click(function() {
             $(".object-modal").toggleClass("object-modal-is-shown");
-            //$('body').removeClass('is-menu-shown');
+            $('body').removeClass('is-menu-shown');
         });
         //OBJECT MODAL END
         // POLICY MODAL
@@ -256,6 +331,10 @@ lightGallery(document.getElementById('lightgallery'));
         $(".policy__close").click(function() {
             $(".policy").toggleClass("policy-is-shown");
             $('body').removeClass('is-menu-shown');
+        });
+        $(".contact-form__link").click(function() {
+            $(".policy").toggleClass("policy-is-shown");
+            $('body').toggleClass('is-menu-shown');
         });
         //POLICY MODAL END
         //MODAL END

@@ -230,9 +230,10 @@
     &__link {
         color: inherit;
         text-decoration: underline;
+        transition: all .3s;
         &:hover {
-            //color: #514947;
-            color: $link-default;
+            color: #828282;
+            text-decoration: underline;
         }
     }
     &__btn {

@@ -177,6 +177,11 @@
         display: inline;
         width: 100%;
         text-decoration: underline;
+        transition: all .3s;
+        &:hover {
+            color: #828282;
+            text-decoration: underline;
+        }
     }
     &__btn {
         grid-column: 9 / 12;
