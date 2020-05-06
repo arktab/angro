@@ -1,6 +1,6 @@
 .apartments-header {
     background: #F5F5F4;
-    padding: 0 0 30px 210px;
+    padding: 0 0 30px 0;
     .mobile-logo {
         top: 100px;
         @media (max-width: 576px) {
@@ -36,20 +36,40 @@
     padding-bottom: 0;
     overflow: hidden;
     .container {
-        padding: 0 0 30px;
-        height: 65vh;
+        padding: 0 30px;
+        height: 80vh;
+        @media (min-width: 1025px) {
+            padding: 0 20px 30px;
+        }
+    }
+    iframe {
+        display: none;
+    }
+    .arrow-btn {
+        color: #423C3A;
+        &__text {
+            line-height: 40px;
+        }
+        &__icon {
+            &:after {
+                top: 0;
+            }
+        }
+        .icon {
+            top: 11px;
+        }
     }
 }
 
 .chess_iframe {
     position: absolute !important;
-    top: calc(35vh + 80px)!important;
+    top: calc(22vh + 80px)!important;
     right: unset !important;
     left: 200px !important;
     margin: 0 20px !important;
     bottom: unset !important;
     max-width: 1250px !important;
-    height: 65vh !important;
+    height: 75vh !important;
     z-index: 7 !important;
     @media (max-width: 1366px) {
         width: 960px !important;
@@ -65,10 +85,13 @@
     }
     @media (max-width: 768px) {}
     @media (max-width: 576px) {
-        width: 100%;
-        padding: 0 20px;
+        left: 0 !important;
+        top: calc(25vh + 80px)!important;
+        width: 100% !important;
     }
 }
+
+.chess-wrapper {}
 
 .chess_close_btn {
     // position: absolute !important;

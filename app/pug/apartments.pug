@@ -45,7 +45,13 @@ html(lang="en")
         //CONTENT START
         section.apartments-content
             .container
-                iframe(src="", frameborder="0", onload="create_chess('P3XQb0g7V0zAg1G');return false;") ЖК Первый
+                    a.arrow-btn.arrow-btn--left(href="#", frameborder="0", onclick="create_chess('P3XQb0g7V0zAg1G');return false;")
+                            .arrow-btn__icon
+                                svg.icon
+                                    use(xlink:href="images/main-page_icons-sprite.svg#arrow")
+                            p.arrow-btn__text ЖК Первый
+                    iframe(src="autostart=1",frameborder="0", onload="create_chess('P3XQb0g7V0zAg1G');return false;") ЖК Первый 
+                   
              
         //CONTENT END
         //FOOTER START
@@ -55,6 +61,9 @@ html(lang="en")
         <!-- modal -->
         include object/object-modal.pug
         include layout/modal.pug
+        //policy SATRT
+        include layout/confidentiality-policy.pug
+        //policy END
         <!-- modal end-->                  
         
         <!--build:js js/main.min.js -->

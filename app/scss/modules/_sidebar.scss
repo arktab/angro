@@ -166,7 +166,7 @@
             @include size(calc(100vw - 40rem), 100vh);
             position: fixed;
             z-index: 9;
-            background: rgba(66, 60, 58, 0.7);
+            background: rgba(66, 60, 58, 0.5);
             pointer-events: none;
             transition: all .3s;
             @media (min-width: 768px) and (orientation: portrait) {
