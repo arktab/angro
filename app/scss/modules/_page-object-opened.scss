@@ -1,9 +1,12 @@
 .object-opened-body {
     .object-content {
         //background: #423C3A;
-        background: #514947;
+        background: #F5F5F4;
+        .content {
+            background: #514947;
+        }
         color: white;
-        padding: 0 0 30px 210px;
+        padding: 0 0 30px 0;
         .grid {
             grid-gap: 0;
         }
@@ -45,6 +48,20 @@
             @media (min-width: 1025px) {
                 grid-column: 1/13;
                 grid-row: 4/5;
+            }
+        }
+    }
+}
+
+.object-header {
+    .arrow-btn--left {
+        color: #423C3A;
+        margin: 20px 0 20px;
+        .icon {
+            left: 25px;
+            transform: rotate(-360deg);
+            @media (max-width: 768px) {
+                left: 16px;
             }
         }
     }
@@ -132,6 +149,7 @@
 
 .content-icons {
     @media (min-width: 1025px) {
+        padding: 0 70px;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-gap: 40px;
@@ -151,6 +169,9 @@
         align-items: center;
         svg {
             margin: 0 25px 0 0;
+            path {
+                fill: #514947;
+            }
         }
     }
     .icon-text {
@@ -163,23 +184,41 @@
     font-size: 16px;
     line-height: 26px;
     font-weight: 300;
+    @media (min-width: 1025px) {
+        padding: 0 70px;
+    }
     p {
         font-family: Bellota Text;
     }
     &__text {
         margin: 0 0 16px 0;
     }
+    .arrow-btn--left {
+        margin: 30px 0 50px 0;
+        justify-content: flex-end;
+    }
 }
 
 .galery-section {
-    background: #FFFFFF;
+    background: #F5F5F4;
     color: #514947;
+    @media (min-width: 1025px) {
+        padding: 0 0 75px;
+    }
     .content-headline {
         grid-column: 2/12;
         grid-row: 1/2;
         @media (min-width: 1025px) {
             grid-column: 1/13;
             grid-row: 1/2;
+            font-size: 36px;
+            line-height: 44px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            padding: 0 0 0 50px;
+            &__text {
+                margin: 50px 0 60px;
+            }
         }
     }
     .object-opened-slider {}

@@ -18,6 +18,9 @@
             background: inherit;
             mix-blend-mode: exclusion;
             transition: all .3s;
+            @media (max-width: 1600px) {
+                padding: 50px 40px 47vh;
+            }
             @media (max-width: 1366px) {
                 padding: 50px 40px 45vh;
             }
@@ -141,7 +144,6 @@
     .menu {
         @include pos($t: 0, $l: 0);
         @include size(40rem, 100vh);
-        z-index: 1;
         padding: 50px 0;
         transition: all .3s;
         display: block;

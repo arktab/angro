@@ -1,7 +1,18 @@
 .gallery-opened-body {
     .gallery-header {
         background: #F5F5F4;
-        padding: 0 0 30px 210px;
+        padding: 0 0 30px 0;
+        .arrow-btn--left {
+            color: #423C3A;
+            margin: 20px 0 20px;
+            .icon {
+                left: 25px;
+                transform: rotate(-360deg);
+                @media (max-width: 768px) {
+                    left: 16px;
+                }
+            }
+        }
         @media (max-width: 768px) {
             //background: #FFFFFF;
             background: #F5F5F4;
@@ -39,7 +50,7 @@
 
 .gallery-opened-content {
     background: #F5F5F4;
-    padding-bottom: 0;
+    padding: 0;
     .container {
         padding: 0 0 30px;
     }

@@ -430,6 +430,8 @@ lightGallery(document.getElementById('lightgallery'));
             ]
         });
         $('.object-opened-slider').slick({
+            autoplay: true,
+            autoplaySpeed: 3000,
             dots: false,
             infinite: true,
             arrows: false,

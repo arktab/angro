@@ -29,13 +29,26 @@
             line-height: 23px;
         }
     }
+    .arrow-btn--left {
+        color: #423C3A;
+        margin: 20px 0 20px;
+        .icon {
+            left: 25px;
+            transform: rotate(-360deg);
+            @media (max-width: 768px) {
+                left: 16px;
+            }
+        }
+    }
 }
 
 .article-content {
-    background: #FFFFFF;
     box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.15);
     .container {
-        padding: 0;
+        @media (min-width: 1025px) {
+            padding: 60px 70px;
+        }
+        background: #FFFFFF;
     }
     .date {
         font-size: 16px;

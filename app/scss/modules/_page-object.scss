@@ -22,7 +22,7 @@
 
 .object-header {
     background: #F5F5F4;
-    padding: 0 0 30px 210px;
+    padding: 0 0 30px 0;
     @media (max-width: 768px) {
         //background: #FFFFFF;
         background: #F5F5F4;
@@ -60,9 +60,9 @@
 .object-content {
     background: rgba(229, 229, 229, .5);
     @media (max-width: 768px) {
-        background: #FFFFFF;
+        background: #F5F5F4;
     }
-    padding: 0 0 0 210px;
+    padding: 0;
     .container {
         padding: 0;
         @media (min-width: 1025px) {
@@ -85,7 +85,7 @@
                 @include pos($b: -2px, $l: 0);
                 @include size(100%, 2px);
                 background: #828282;
-                //z-index: -1;
+                z-index: 2;
                 @media (min-width: 1025px) {
                     bottom: -42px;
                 }
@@ -132,7 +132,7 @@
             @include pos($b: -1px, $l: -20px);
             @include size(120%, 1px);
             background: #BDBDBD;
-            z-index: -1;
+            z-index: 1;
             @media (min-width: 1025px) {
                 @include size(100%, 1px);
                 left: 0;
@@ -153,7 +153,7 @@
     }
     @media (min-width: 1200px) {}
     @media (min-width: 1366px) {
-        min-height: 500px;
+        min-height: 470px;
     }
     &__headline {
         font-style: normal;
@@ -168,7 +168,7 @@
             font-size: 30px;
             text-align: left;
             width: 100%;
-            padding: 0 0 0 30px;
+            padding: 0 0 0 40px;
             margin: 50px 0 15px;
         }
         // @media (min-width: 1200px) {
@@ -193,7 +193,7 @@
             font-size: 20px;
             text-align: left;
             width: 100%;
-            padding: 0 30px 0;
+            padding: 0 40px 0;
             margin: 0 0 40px;
         }
         // @media (min-width: 1200px) {
@@ -214,7 +214,7 @@
         @media (min-width: 1025px) {
             grid-column: 1/2;
             grid-row: 3/4;
-            margin: 0 30px 50px;
+            margin: 0 40px 50px;
             font-size: 14px;
         }
     }
@@ -228,19 +228,19 @@
             grid-column: 1/2;
             grid-row: 4/5;
             width: 100%;
-            margin: 0 0 50px 30px;
+            margin: 0 0 50px 65px;
             .arrow-btn {
                 height: unset;
                 margin: 0;
                 font-size: 18px;
                 &:first-child {
-                    margin-bottom: 37px;
+                    margin-bottom: 60px;
                 }
                 &__icon {
                     &::after {
-                        @include size(50px);
-                        top: -25px;
-                        left: 11px;
+                        @include size(65px);
+                        top: -32.5px;
+                        left: 1px;
                     }
                 }
                 &__text {
@@ -271,15 +271,15 @@
             }
         }
         .icon {
-            margin: 6px 0 0 6px;
-            @include size(38px);
+            margin: 7.5px 0 0 7.5px;
+            @include size(50px);
             fill: #FFF;
         }
     }
     &__icon-wrap {
         @include pos($b: 50%, $l: 50%);
         transform: translateX(-50%) translateY(50%);
-        @include size(50px);
+        @include size(65px);
         background: #FFFFFF;
         border-radius: 50%;
         transition: all .3s;
@@ -310,7 +310,7 @@
             align-items: center;
             &:last-child {
                 svg {
-                    width: 100px;
+                    width: 90px;
                 }
             }
         }
@@ -319,7 +319,7 @@
             @include size(45px);
             margin: 0 17px 0 0;
             @media (min-width: 1025px) {
-                @include size(70px);
+                @include size(65px);
             }
         }
         .icon-text {

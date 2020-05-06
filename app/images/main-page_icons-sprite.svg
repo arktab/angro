@@ -223,7 +223,7 @@
 
    <symbol viewBox="0 0 91 106"  xmlns="http://www.w3.org/2000/svg" id="door">
     <path stroke="#FFF3A6" stroke-width="1.5" d="M15.75 8.75h58.5v88.5h-58.5zM0 97.25h91"></path>
-    <path d="M25.75 95.221V10.78L65.25.96v104.082l-39.5-9.82z" fill="#423C3A" stroke="#FFF3A6" stroke-width="1.5"></path>
+    <path d="M25.75 95.221V10.78L65.25.96v104.082l-39.5-9.82z"  stroke="#FFF3A6" stroke-width="1.5"></path>
     <path d="M56 47c-1.43 4.251-1.495 6.651 0 11" stroke="#FFF3A6"></path>
   </symbol>
   <symbol viewBox="0 0 89 73"  xmlns="http://www.w3.org/2000/svg" id="wall">
