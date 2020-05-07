@@ -1,35 +1,36 @@
 'use strict';
 //Animation lib AOS
-AOS.init({
-    //duration: 800,
-    //easing: 'ease-in-out-back'
-});
+AOS.init({});
 lightGallery(document.getElementById('lightgallery'));
+//lightGallery(document.getElementById('object-opened-slider'));
 
 //___________________________________
 (function($) {
     $(document).ready(function() {
         // Code
+
         //TABS JQ
         $(".object-tabs").tabs();
         //Form validation
         var modalname = new String;
         var modaltel = new String;
+        $(".modal__btn").prop('disabled', true);
+        $(".modal__btn").addClass("btn__disabled");
         $("#modal-username")
             .focusout(function() {
                 modalname = $("#modal-username").val();
                 modaltel = $("#modal-tel").val();
                 if (modalname.length < 3) {
                     $(".modal__user-text").addClass("alert__text-red");
+                    $("#modal-username").addClass("modal__field--red");
                     $(".modal__btn").prop('disabled', true);
                     $(".modal__btn").addClass("btn__disabled");
-                    $("#modal-username").addClass("modal__field--red");
                 }
                 if (modaltel.length < 13) {
                     $(".modal__tel-text").addClass("alert__text-red");
+                    $("#modal-tel").addClass("modal__field--red");
                     $(".modal__btn").prop('disabled', true);
                     $(".modal__btn").addClass("btn__disabled");
-                    $("#modal-tel").addClass("modal__field--red");
                 }
                 if (modalname.length >= 3) {
                     $(".modal__user-text").removeClass("alert__text-red");
@@ -49,15 +50,15 @@ lightGallery(document.getElementById('lightgallery'));
                 modaltel = $("#modal-tel").val();
                 if (modalname.length < 3) {
                     $(".modal__user-text").addClass("alert__text-red");
+                    $("#modal-username").addClass("modal__field--red");
                     $(".modal__btn").prop('disabled', true);
                     $(".modal__btn").addClass("btn__disabled");
-                    $("#modal-username").addClass("modal__field--red");
                 }
                 if (modaltel.length < 13) {
                     $(".modal__tel-text").addClass("alert__text-red");
+                    $("#modal-tel").addClass("modal__field--red");
                     $(".modal__btn").prop('disabled', true);
                     $(".modal__btn").addClass("btn__disabled");
-                    $("#modal-tel").addClass("modal__field--red");
                 }
                 if (modaltel.length == 13) {
                     $(".modal__tel-text").removeClass("alert__text-red");
@@ -290,7 +291,7 @@ lightGallery(document.getElementById('lightgallery'));
         });
         //CLOSE MODAL
         $(".close").click(function() {
-            $(".modal").toggleClass("modal-is-shown");
+            $(".modal").removeClass("modal-is-shown");
             $('body').removeClass('is-menu-shown');
         });
         $(".modal-video__close").click(function() {
@@ -303,7 +304,7 @@ lightGallery(document.getElementById('lightgallery'));
             $('body').toggleClass('is-menu-shown');
         });
         $(".object-modal__close").click(function() {
-            $(".object-modal").toggleClass("object-modal-is-shown");
+            $(".object-modal").removeClass("object-modal-is-shown");
             $('body').removeClass('is-menu-shown');
         });
         //OBJECT MODAL END
@@ -313,7 +314,7 @@ lightGallery(document.getElementById('lightgallery'));
             $('body').toggleClass('is-menu-shown');
         });
         $(".policy__close").click(function() {
-            $(".policy").toggleClass("policy-is-shown");
+            $(".policy").removeClass("policy-is-shown");
             $('body').removeClass('is-menu-shown');
         });
         $(".contact-form__link").click(function() {
