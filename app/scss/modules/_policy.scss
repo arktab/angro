@@ -25,6 +25,7 @@
         margin: 0 auto;
         background: #ffffff;
         padding: 100px 40px 200px;
+        position: relative;
     }
     p {
         line-height: 20px;
@@ -55,11 +56,8 @@
         }
     }
     &__close {
-        float: right;
-        margin: 50px 75px 0;
         @include size(40px);
         position: relative;
-        //@include pos($t: 50px, $r: 50px);
         background: #F5F5F4;
         border-radius: 50%;
         cursor: pointer;
@@ -90,7 +88,6 @@
         }
         @media (min-width: 1025px) {
             @include size(65px);
-            margin: 50px 100px 0;
             &:before {
                 @include pos($t: 10px, $r: 32px);
                 @include size(2px, 45px);
@@ -100,9 +97,6 @@
                 @include size(2px, 45px);
             }
         }
-        // @media (max-width: 960px) {
-        //     @include pos($t: -25px, $r: -45px);
-        // }
         p {
             line-height: 40px;
             padding: 0 0 0 50px;
@@ -115,6 +109,13 @@
                 line-height: 65px;
                 padding: 0 0 0 80px;
             }
+        }
+    }
+    .btn-policy__close {
+        @include pos($t: 45px, $r: 100px);
+        @media (min-width: 1025px) {
+            @include pos($t: 65px, $r: 125px);
+            transform: translateX(-50%) translateY(-50%);
         }
     }
 }
