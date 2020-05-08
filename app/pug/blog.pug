@@ -35,28 +35,7 @@ html(lang="en")
                     //MOBILE LOGO END
                     h2.title Блог
                     h3.headline Важная информация со статьями и новостями от angro
-                    //- nav.pagination
-                    //-     ul.pagination__list
-                    //-         li.pagination__item
-                    //-             a(href="#").pagination__link 
-                    //-                 .arrow-btn.arrow-btn--left
-                    //-                     .arrow-btn__icon
-                    //-                         svg.icon
-                    //-                             use(xlink:href="images/main-page_icons-sprite.svg#arrow")
-                                        
-                    //-         li.pagination__item
-                    //-             a(href="#").pagination__link 1
-                    //-         li.pagination__item
-                    //-             a(href="#").pagination__link 2
-                    //-         li.pagination__item
-                    //-             a(href="#").pagination__link 3 
-                    //-         li.pagination__item
-                    //-             a(href="#").pagination__link
-                    //-                 .arrow-btn.arrow-btn--left
-                    //-                     .arrow-btn__icon
-                    //-                         svg.icon
-                    //-                             use(xlink:href="images/main-page_icons-sprite.svg#arrow")
-
+                    
         //HEADER END
         //CONTENT START
         section.blog
@@ -204,8 +183,8 @@ html(lang="en")
                                     svg.icon
                                         use(xlink:href="images/main-page_icons-sprite.svg#arrow")
                                 p.arrow-btn__text Подробнее
-                
-                    
+                include object/paginationWP.pug
+                            
         
         //CONTENT END
         //FOOTER START

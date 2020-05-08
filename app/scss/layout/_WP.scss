@@ -71,3 +71,52 @@ p {
     width: 100%;
     height: auto;
 }
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    .page-numbers {
+        font-family: Century Gothic;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 29px;
+        line-height: 36px;
+        text-transform: uppercase;
+        color: #828282;
+        margin: 0 11px;
+    }
+    .current {
+        color: #423C3A;
+    }
+    .prev,
+    .next {
+        margin: 0 11px;
+        font-size: 0;
+        @include size(45px);
+        background: #FFF3A6;
+        border-radius: 50%;
+        position: relative;
+        &:before,
+        &:after {
+            content: '';
+            @include pos($t: 45%, $l: 50%);
+            @include size(2px, 14px);
+            transform: translateY(-50%) translateY(50%) rotate(-45deg);
+            background: #423c3a;
+        }
+        &:after {
+            top: calc(45% - 2px);
+            transform: translateY(-50%) rotate(45deg);
+        }
+    }
+    .next {
+        &:after {
+            transform: translateY(-50%) rotate(-45deg);
+        }
+        &:before {
+            transform: rotate(45deg);
+        }
+    }
+}

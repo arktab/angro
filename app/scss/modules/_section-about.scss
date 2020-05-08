@@ -127,14 +127,11 @@
         }
         .arrow-btn {
             .icon {
-                left: 13px;
-                transform: rotate(0);
-                width: 40px;
-                @media (max-width: 576px) {
-                    left: 0;
-                }
-                @media (max-width: 812px) and (orientation: landscape) {
-                    left: 0;
+                left: 50%;
+                transform: translateX(-50%) translateY(-50%) rotate(0);
+                width: 28px;
+                @media (min-width: 1025px) {
+                    width: 40px;
                 }
             }
         }

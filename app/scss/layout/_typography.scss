@@ -63,10 +63,13 @@ a {
     text-decoration: none;
     color: $tw;
     &__text {
-        padding-left: 95px;
         font-size: 19px;
         line-height: 23px;
         letter-spacing: 0.05em;
+        padding-left: 15px;
+        @media (min-width: 1025px) {
+            padding-left: 35px;
+        }
     }
     &:hover {
         .arrow-btn__icon {
@@ -88,21 +91,30 @@ a {
     &__icon {
         position: relative;
         transition: all .3s;
+        @include size(40px);
+        @media (min-width: 1025px) {
+            @include size(65px);
+        }
         svg {
-            @include pos($t: -16px, $l: 27px);
-            transform: rotate(-90deg);
+            @include pos($t: 50%, $l: 50%);
+            transform: translateX(-50%) translateY(-50%) rotate(-90deg);
             @include size(13px, 35px);
             z-index: 2;
             fill: #423C3A;
         }
         &:after {
             content: '';
-            @include pos($t: -32.5px, $l: 0);
-            @include size(65px);
+            @include size(40px);
+            @include pos($t: 50%, $l: 0);
+            transform: translateY(-50%);
             background: $button-default-color;
             border-radius: 50%;
             z-index: 1;
             transition: all .5s;
+            @media (min-width: 1025px) {
+                @include pos($t: 50%, $l: 0);
+                @include size(65px);
+            }
             &:hover {
                 background: $active-button-t-color;
             }
@@ -116,59 +128,14 @@ a {
     }
     &--left {
         .arrow-btn__icon {
-            &__text {
-                @media (max-width: 576px) {
-                    font-size: 16px;
-                    line-height: 20px;
-                    //letter-spacing: 0.001em;
-                }
-            }
             .icon {
-                top: -17.5px;
-                left: 30px;
-                transform: rotate(-180deg);
-                @media (max-width: 576px) {
-                    top: -10px;
-                    left: 18px;
+                top: 50%;
+                left: 50%;
+                transform: translateY(-50%) rotate(-180deg);
+                @media (min-width: 1025px) {
+                    top: 50%;
+                    left: 30px;
                 }
-                @media (max-width: 812px) and (orientation: landscape) {
-                    top: -10px;
-                    left: 18px;
-                }
-            }
-        }
-    }
-    @media (max-width: 576px) {
-        height: 40px;
-        &__text {
-            padding-left: 55px;
-        }
-        &__icon {
-            svg {
-                @include size(8px, 16px);
-                top: -9px;
-                left: 15px;
-            }
-            &:after {
-                @include size(40px);
-                top: -22px;
-            }
-        }
-    }
-    @media (max-width: 812px) and (orientation: landscape) {
-        height: 40px;
-        &__text {
-            padding-left: 55px;
-        }
-        &__icon {
-            svg {
-                @include size(8px, 16px);
-                top: -9px;
-                left: 17px;
-            }
-            &:after {
-                @include size(40px);
-                top: -22px;
             }
         }
     }
@@ -288,7 +255,8 @@ footer {
 .object-header,
 .gallery-header,
 .blog-header,
-.article-header {
+.article-header,
+.apartments-header {
     padding: 0 0 30px 0;
     @media (min-width: 1025px) {
         padding: 0 0 30px 170px;

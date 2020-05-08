@@ -52,6 +52,11 @@ button::-moz-focus-inner {
     margin: 0 auto;
     padding: 0 10px;
     max-width: 1250px;
+    @media (min-width: 1367px) {
+        width: calc(100% - 260px);
+        max-width: unset;
+        margin: 0 180px 80px;
+    }
     @media (max-width: 1366px) {
         max-width: 960px;
     }

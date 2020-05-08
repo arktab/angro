@@ -32,22 +32,47 @@
     .arrow-btn--left {
         color: #423C3A;
         margin: 20px 0 20px;
-        .icon {
-            left: 25px;
-            transform: rotate(-360deg);
-            @media (max-width: 768px) {
-                left: 16px;
+        .arrow-btn__icon {
+            // @include size(40px);
+            // &::after {
+            //     top: 50%;
+            //     transform: translateY(-50%);
+            // }
+            // @media (min-width: 1025px) {}
+            @include size(40px);
+            @media (min-width: 1025px) {
+                @include size(65px);
             }
         }
+        // .arrow-btn__text {
+        //     padding-left: 15px;
+        // }
+        .icon {
+            left: 16px;
+            height: 20px;
+            transform: rotate(-360deg) translateY(-50%);
+            @media (min-width: 1025px) {
+                top: 50%;
+                left: 25px;
+            }
+        }
+    }
+    .container {
+        margin-bottom: 0;
     }
 }
 
 .article-content {
     background: #F5F5F4;
+    @media (min-width: 1025px) {
+        padding-top: 0;
+    }
     .container {
         @media (min-width: 1025px) {
             padding-top: 60px;
             padding-bottom: 70px;
+            padding-left: 70px;
+            padding-right: 70px;
         }
         background: #FFFFFF;
         box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.15);
@@ -59,6 +84,7 @@
         @media (min-width: 1025px) {
             font-size: 19px;
             line-height: 23px;
+            margin-bottom: 35px;
             padding: 0;
         }
     }
@@ -72,6 +98,7 @@
             @media (min-width: 1025px) {
                 font-size: 36px;
                 line-height: 44px;
+                margin-bottom: 60px;
                 padding: 0;
             }
         }
@@ -105,17 +132,18 @@
     }
     .text__headlide {
         padding: 0 25px;
-        font-style: italic;
+        //font-style: italic;
         font-weight: normal;
         font-size: 16px;
         line-height: 20px;
         @media (min-width: 1025px) {
             font-family: Bellota Text;
-            font-style: italic;
+            //font-style: italic;
             font-weight: normal;
             font-size: 24px;
             line-height: 30px;
             padding: 0;
+            margin-bottom: 45px;
         }
     }
     .price {
@@ -124,10 +152,16 @@
         color: #423C3A;
         background: #FFFFFF;
         overflow: hidden;
-        width: 100%;
+        width: calc(100% + 40px);
+        margin: 0 -20px 20px;
         @media (min-width: 1025px) {
             //margin: 0 25px;
             background: transparent;
+            line-height: 32px;
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 30px;
+            width: 50%;
         }
         tr {
             display: grid;
@@ -137,9 +171,7 @@
         }
         th {
             font-weight: bold;
-            font-size: 14px;
             background: #FFF3A6;
-            text-align: left;
             padding: 0 0 0 5px;
         }
         td {
@@ -151,8 +183,13 @@
     img {
         width: 100%;
         margin: 0 0 1rem;
+        width: calc(100% + 40px);
+        margin: 0 -20px 20px;
         @media (min-width: 1025px) {
-            @include size(500px, auto);
+            max-width: 500px;
+            height: auto;
+            width: unset;
+            margin: 0;
         }
     }
     .float-left {

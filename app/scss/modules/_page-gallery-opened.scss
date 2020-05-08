@@ -5,11 +5,19 @@
         .arrow-btn--left {
             color: #423C3A;
             margin: 20px 0 20px;
+            .arrow-btn__icon {
+                @include size(40px);
+                @media (min-width: 1025px) {
+                    @include size(65px);
+                }
+            }
             .icon {
-                left: 25px;
-                transform: rotate(-360deg);
-                @media (max-width: 768px) {
-                    left: 16px;
+                left: 16px;
+                height: 20px;
+                transform: rotate(-360deg) translateY(-50%);
+                @media (min-width: 1025px) {
+                    top: 50%;
+                    left: 25px;
                 }
             }
         }
