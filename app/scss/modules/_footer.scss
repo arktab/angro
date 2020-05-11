@@ -134,6 +134,7 @@
         justify-self: center;
         align-self: flex-end;
         cursor: pointer;
+        position: relative;
         .arrow-btn__icon {
             &:hover {
                 &:after {
@@ -144,16 +145,22 @@
                 }
             }
             svg {
-                @include pos($t: -22px, $l: 27px);
-                transform: rotate(90deg);
+                // @include pos($t: 50%, $l: 27px);
+                top: 0;
+                transform: translateX(-50%) translateY(-50%) rotate(90deg);
             }
             &:after {
                 @include pos($t: -37px, $l: 0);
+                top: 0;
             }
         }
         p {
             color: #423C3A;
-            padding: 130px 0 0 5px;
+            padding: 0;
+            position: absolute;
+            top: 45px;
+            width: 100%;
+            text-align: center;
         }
         @media (max-width: 576px) {
             display: none;

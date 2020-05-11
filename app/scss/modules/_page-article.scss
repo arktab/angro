@@ -33,20 +33,11 @@
         color: #423C3A;
         margin: 20px 0 20px;
         .arrow-btn__icon {
-            // @include size(40px);
-            // &::after {
-            //     top: 50%;
-            //     transform: translateY(-50%);
-            // }
-            // @media (min-width: 1025px) {}
             @include size(40px);
             @media (min-width: 1025px) {
                 @include size(65px);
             }
         }
-        // .arrow-btn__text {
-        //     padding-left: 15px;
-        // }
         .icon {
             left: 16px;
             height: 20px;
@@ -127,6 +118,17 @@
             padding: 0 25px;
             @media (min-width: 1025px) {
                 padding: 0;
+            }
+        }
+        li {
+            a {
+                color: #423C3A;
+                font-weight: bold;
+                text-decoration: underline;
+                &:hover {
+                    color: #828282;
+                    text-decoration: underline;
+                }
             }
         }
     }

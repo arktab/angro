@@ -2,6 +2,9 @@
     .gallery-header {
         padding-bottom: 40px;
         background: #F5F5F4;
+        .container {
+            margin-bottom: 0;
+        }
         .arrow-btn--left {
             color: #423C3A;
             margin: 20px 0 20px;
@@ -39,11 +42,11 @@
         }
         .title {
             font-size: 36px;
-            margin: 160px 0 20px;
+            margin: 50px 0 20px;
             @media (min-width: 1200px) {
                 font-size: 64px;
                 line-height: 78px;
-                margin: 160px 0 20px;
+                margin: 50px 0 20px;
             }
         }
         .headline {
@@ -111,18 +114,15 @@
             width: 14px;
             height: 2px;
             background: #423c3a;
-            transform: rotate(-45deg);
-            @include pos($t: 15px, $r: 15px);
+            transform: translateX(50%) translateY(-50%) rotate(-45deg);
+            position: absolute;
+            top: calc(38% - 1px);
+            right: calc(55% - 1px);
             @media (min-width: 1025px) {
                 width: 22.5px;
                 top: 38%;
-                right: 45%;
+                right: 55%;
             }
-            // @media (min-width: 1025px) {
-            //     @include pos($b: 50%, $l: 50%);
-            //     transform: translateX(-50%) translateY(50%);
-            //     @include size(125%, auto);
-            // }
         }
         &::after {
             content: "" !important;
@@ -130,18 +130,15 @@
             width: 14px;
             height: 2px;
             background: #423c3a;
-            transform: rotate(45deg);
-            @include pos($t: 24px, $r: 15px);
+            transform: translateX(50%) translateY(-50%) rotate(45deg);
+            position: absolute;
+            top: 58%;
+            right: calc(55% - 1px);
             @media (min-width: 1025px) {
                 width: 22.5px;
                 top: 58%;
-                right: 45%;
+                right: 55%;
             }
-            // @media (min-width: 1025px) {
-            //     @include pos($b: 50%, $l: 50%);
-            //     transform: translateX(-50%) translateY(50%);
-            //     @include size(125%, auto);
-            // }
         }
     }
     .lg-next {
@@ -158,12 +155,14 @@
             width: 14px;
             height: 2px;
             background: #423c3a;
-            transform: rotate(45deg);
-            @include pos($t: 15px, $l: 15px);
+            transform: translateX(-50%) translateY(-50%) rotate(45deg);
+            position: absolute;
+            top: calc(38% - 1px);
+            left: calc(55% - 1px);
             @media (min-width: 1025px) {
                 width: 22.5px;
                 top: 38%;
-                left: 45%;
+                left: 55%;
             }
             // @media (min-width: 1025px) {
             //     @include pos($b: 50%, $l: 50%);
@@ -177,12 +176,14 @@
             width: 14px;
             height: 2px;
             background: #423c3a;
-            transform: rotate(-45deg);
-            @include pos($t: 24px, $l: 15px);
+            transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+            position: absolute;
+            top: 58%;
+            left: calc(55% - 1px);
             @media (min-width: 1025px) {
                 width: 22.5px;
                 top: 58%;
-                left: 45%;
+                left: 55%;
             }
             // @media (min-width: 1025px) {
             //     @include pos($b: 50%, $l: 50%);
@@ -252,4 +253,9 @@
     // &:nth-child(3) {
     //     height: 315px;
     // }
+}
+
+//gallery openeed top bar
+.lg-toolbar {
+    background: transparent;
 }
