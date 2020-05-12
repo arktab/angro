@@ -1,17 +1,62 @@
 .container
-    form(action="").grid.contact-form
-        h4.contact-form__headline С удовольствием проконсультируем Вас!
-        label( for="contact-username").contact-form__title Ваше имя
-            input#contact-username(type="text" required).contact-form__field
-            span.alert__text.contact__user-text Ваше имя не указано
-        label( for="contact-tel" ).contact-form__title Телефон
-            input#contact-tel(type="tel" required value="+380" minlength="13" pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}").contact-form__field
-            span.alert__text.contact__tel-text Телефон не указан
-        label( for="email").contact-form__title EMAIL (НЕ ОБЯЗАТЕЛЬНО)
-            input#email(type="email").contact-form__field
-        label( for="contact-check").contact-form__checkbox.contact-form__title Я даю согласие на обработку моих персональных данных согласно 
-            input#contact-check(type="checkbox" checked).contact-form__field 
-            .contact-form__custom-check
-            .contact-form__link политике конфиденциальности 
-            span.alert__text.contact__check-text Обязательное поле 
-        button(type="submit").btn.contact-form__btn Отправить запрос
+    //- form(action="").grid.contact-form.wpcf7-form
+    //-     h4.contact-form__headline С удовольствием проконсультируем Вас!
+    //-     label( for="contact-username").contact-form__title Ваше имя
+    //-         input#contact-username(type="text" required).contact-form__field
+    //-         span.alert__text.contact__user-text Ваше имя не указано
+    //-     label( for="contact-tel" ).contact-form__title Телефон
+    //-         input#contact-tel(type="tel" required value="+380" minlength="13" pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}").contact-form__field
+    //-         span.alert__text.contact__tel-text Телефон не указан
+    //-     label( for="email").contact-form__title EMAIL (НЕ ОБЯЗАТЕЛЬНО)
+    //-         input#email(type="email").contact-form__field
+    //-     label( for="contact-check").contact-form__checkbox.contact-form__title Я даю согласие на обработку моих персональных данных согласно 
+    //-         input#contact-check(type="checkbox" checked).contact-form__field 
+    //-         .contact-form__custom-check
+    //-         .contact-form__link политике конфиденциальности 
+    //-         span.alert__text.contact__check-text Обязательное поле 
+    //-     button(type="submit").btn.contact-form__btn Отправить запрос
+
+    <div class="grid contact-form">
+        <h4 class="contact-form__headline">С удовольствием проконсультируем Вас!</h4>
+        <div role="form" class="wpcf7" id="wpcf7-f2305-o1" lang="ru-RU" dir="ltr">
+            <div class="screen-reader-response"></div>
+                <form action="/#wpcf7-f2305-o1" method="post" class="wpcf7-form" novalidate="novalidate" style="">
+                    <div style="display: none;">
+                    <input type="hidden" name="_wpcf7" value="2305">
+                    <input type="hidden" name="_wpcf7_version" value="5.1.7">
+                    <input type="hidden" name="_wpcf7_locale" value="ru_RU">
+                    <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f2305-o1">
+                    <input type="hidden" name="_wpcf7_container_post" value="0">
+                    </div>
+                    <label class="contact-form__title" for="username">Ваше имя
+                        <span class="wpcf7-form-control-wrap username">
+                            <input type="text" name="username" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required contact-form__field" id="username" aria-required="true" aria-invalid="false"></span>    
+                    </label>
+                    <label class="contact-form__title" for="tel">Телефон
+                        <span class="wpcf7-form-control-wrap tel">
+                            <input type="tel" name="tel" value="+380978812200" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel contact-form__field" id="tel" aria-required="true" aria-invalid="false">
+                        </span>
+                    </label>
+                    <label class="contact-form__title" for="email">EMAIL (НЕ ОБЯЗАТЕЛЬНО)
+                        <span class="wpcf7-form-control-wrap email-136">
+                            <input type="email" name="email-136" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email contact-form__field" id="email" aria-invalid="false">
+                        </span>
+                    </label>
+                    <div class="contact-form__checkbox">
+                        <span class="wpcf7-form-control-wrap checkbox-672">
+                            <span class="wpcf7-form-control wpcf7-checkbox contact-form__title" id="check">
+                                <span class="wpcf7-list-item first last">
+                                    <input type="checkbox" name="checkbox-672[]" value="Я даю согласие на обработку моих персональных данных согласно">
+                                    <span class="wpcf7-list-item-label">Я даю согласие на обработку моих персональных данных согласно</span>
+                                </span>
+                            </span>
+                        </span> 
+                        <div class="contact-form__link">политике конфиденциальности</div>
+                    </div>
+                    <input type="submit" value="Отправить запрос" class="wpcf7-form-control wpcf7-submit">
+                    <span class="ajax-loader">
+                        </span><div class="wpcf7-response-output wpcf7-display-none">
+                    </div>
+                </form>
+            </div>
+    </div>
