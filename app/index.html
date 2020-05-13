@@ -559,7 +559,7 @@
 </label>
 <label class="contact-form__title" for="tel">Телефон
 <span class="wpcf7-form-control-wrap tel">
-<input type="tel" name="tel" value="+380978812200" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel contact-form__field" id="tel" aria-required="true" aria-invalid="false">
+<input type="tel" name="tel" value="+380" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel contact-form__field" id="tel" aria-required="true" aria-invalid="false">
 </span>
 </label>
 <label class="contact-form__title" for="email">EMAIL (НЕ ОБЯЗАТЕЛЬНО)
@@ -602,13 +602,28 @@
           <div class="footer-contacts"><a class="footer-link" href="mailto:angrobud@gmail.com"> angrobud@gmail.com</a><a class="footer-link" href="tel:+380509915883">+38(050) 991-58-83</a><a class="footer-link" href="tel:+380509915882">+38(050) 991-58-82</a><a class="footer-link" href="tel:+380509915880">+38(050) 991-58-80</a></div>
           <div class="footer-newsletter">
             <!--FORM START-->
-            <form class="footer-newsletter__form" action="">
-              <h5 class="footer-newsletter__headline">Будьте в курсе спецпредложений   </h5>
-              <label class="footer-newsletter__title" for="newsletter">Ваш e-mail</label>
-              <input class="footer-newsletter__field" id="newsletter" type="email"/>
-              <button class="btn footer-newsletter__btn" type="submit">Хочу быть в курсе!</button>
-            </form>
-            <!--FORM END          -->
+            <!--FORM END--><div class="footer-newsletter__form">
+<h5 class="footer-newsletter__headline">Будьте в курсе спецпредложений</h5>
+<div role="form" class="wpcf7" id="wpcf7-f2445-o2" lang="ru-RU" dir="ltr">
+<form action="/#wpcf7-f2445-o2" method="post" class="wpcf7-form invalid" novalidate="novalidate">
+<div style="display: none;">
+<input type="hidden" name="_wpcf7" value="2445">
+<input type="hidden" name="_wpcf7_version" value="5.1.7">
+<input type="hidden" name="_wpcf7_locale" value="ru_RU">
+<input type" value="wpcf7-f2445-o2">
+<input type="hidden" name="_wpcf7_container_post" value="0">
+</div>
+<label class="footer-newsletter__title"> Ваш e-mail
+<span class="wpcf7-form-control-wrap your-email">
+<input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email footer-newsletter__field wpcf7-not-valid" aria-required="true" aria-invalid="true">
+<span role="alert" class="wpcf7-not-valid-tip">Неверно введён электронный адрес.</span>
+</span> 
+</label>
+<input type="submit" value="Хочу быть в курсе!" class="wpcf7-form-control wpcf7-submit btn">
+<span class="ajax-loader"></span>
+</form>
+</div>
+</div>        
           </div><a class="arrow-btn footer-btn" href="#">
             <div class="arrow-btn__icon">
               <svg class="icon">
@@ -644,27 +659,51 @@
     </footer>
     <!--FOOTER END--><!-- modal -->
     <div class="modal">
-      <div class="modal__content">
-        <form class="modal__form grid container" action="">
-          <h4 class="modal__headline">Оставьте координаты, и мы с вами свяжемся</h4>
-          <label class="modal__label" for="modal-username">Ваше имя
-            <input class="modal__field" id="modal-username" type="text" required="required"/><span class="alert__text modal__user-text">Ваше имя не указано</span>
-          </label>
-          <label class="modal__label" for="modal-tel">Телефон
-            <input class="modal__field" id="modal-tel" type="tel" required="required" placeholder="+380" pattern="[+]d{3}s[(]d{2}[)]sd{3}[-]d{2}[-]d{2}"/><span class="alert__text modal__tel-text">Телефон не указан</span>
-          </label>
-          <label class="modal__label" for="modal-email">EMAIL (НЕ ОБЯЗАТЕЛЬНО)
-            <input class="modal__field" id="modal-email" type="email"/>
-          </label>
-          <label class="modal__checkbox" for="modal-check">Я даю согласие на обработку моих персональных данных согласно 
-            <input class="modal__check" id="modal-check" type="checkbox" checked="checked"/>
-            <div class="modal__custom-check"></div><a class="modal__link" href="#">политике конфиденциальности</a><span class="alert__text modal__check-text">Обязательное поле       </span>
-          </label>
-          <button class="btn modal__btn" type="submit">Отправить запрос</button>
-          <div class="modal__close">
-            <div class="close"></div>
-          </div>
-        </form>
+      <div class="modal__content"><div class="modal__form grid container" id="popupForm">
+<h4 class="modal__headline">Оставьте координаты, и мы с вами свяжемся</h4>
+<div role="form" class="wpcf7" id="wpcf7-f2305-o3" lang="ru-RU" dir="ltr">
+<div class="screen-reader-response"></div>
+<form action="/#wpcf7-f2305-o3" method="post" class="wpcf7-form" novalidate="novalidate">
+<div style="display: none;">
+<input type="hidden" name="_wpcf7" value="2305">
+<input type="hidden" name="_wpcf7_version" value="5.1.7">
+<input type="hidden" name="_wpcf7_locale" value="ru_RU">
+<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f2305-o3">
+<input type="hidden" name="_wpcf7_container_post" value="0">
+</div>
+<label class="contact-form__title" for="username">Ваше имя
+<span class="wpcf7-form-control-wrap username">
+<input type="text" name="username" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required contact-form__field" id="username" aria-required="true" aria-invalid="false">
+</span>    
+</label>
+<label class="contact-form__title" for="tel">Телефон
+<span class="wpcf7-form-control-wrap tel">
+<input type="tel" name="tel" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel contact-form__field" id="tel" aria-required="true" aria-invalid="false">
+</span>
+</label>
+<label class="contact-form__title" for="email">EMAIL (НЕ ОБЯЗАТЕЛЬНО)
+<span class="wpcf7-form-control-wrap email-136"><input type="email" name="email-136" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email contact-form__field" id="email" aria-invalid="false"></span>
+</label>
+<div class="contact-form__checkbox">
+<span class="wpcf7-form-control-wrap checkbox-672">
+<span class="wpcf7-form-control wpcf7-checkbox contact-form__title" id="check">
+<span class="wpcf7-list-item first last">
+<input type="checkbox" name="checkbox-672[]" value="Я даю согласие на обработку моих персональных данных согласно">
+<span class="wpcf7-list-item-label">Я даю согласие на обработку моих персональных данных согласно</span>
+</span>
+</span>
+</span>
+<div class="contact-form__link">политике конфиденциальности </div>
+</div>
+<input type="submit" value="Отправить запрос" class="wpcf7-form-control wpcf7-submit">
+<span class="ajax-loader"></span>
+<div class="wpcf7-response-output wpcf7-display-none"></div>
+</form>
+</div>
+<div class="modal__close">
+<div class="close"></div>
+</div>
+</div>
       </div>
     </div>
     <div class="modal-video">

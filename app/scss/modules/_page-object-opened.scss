@@ -30,7 +30,7 @@
                     grid-gap: 0;
                 }
                 .content-logo {
-                    grid-column: 2/12;
+                    grid-column: 1/13;
                     grid-row: 1/2;
                     @media (min-width: 1025px) {
                         grid-column: 1/7;
@@ -73,9 +73,12 @@
         }
         
         .object-header {
+            .title {
+                margin-top: 150px;
+            }
             .arrow-btn--left {
                 color: #423C3A;
-                margin: 20px 0 20px;
+                margin: 20px 0 50px;
                 .arrow-btn__icon {
                     @include size(40px);
                     @media (min-width: 1025px) {
@@ -108,7 +111,7 @@
         
         .content-logo {
             position: relative;
-            height: 334px;
+            padding: 40px 0 50px;
             text-align: center;
             background: #423C3A;
             @media (min-width: 1025px) {
@@ -117,18 +120,22 @@
                 align-items: center;
                 justify-content: center;
                 height: auto;
+                padding: 200px 0 120px;
             }
             .logo {
                 fill: #FFFFFF;
-                margin: 45px 0 0;
+                margin: 5px 0 0;
                 @media (min-width: 1025px) {
                     width: auto;
-                    height: 250px;
+                    height: 200px;
                 }
                 &__text {
                     font-size: 18px;
                     line-height: 23px;
                     margin: 0;
+                    font-family: Bellota Text;
+                    font-style: normal;
+                    font-weight: normal;
                     @media (min-width: 1025px) {
                         font-size: 28px;
                         line-height: 35px;
@@ -137,6 +144,10 @@
                 &__title {
                     font-size: 36px;
                     line-height: 44px;
+                    font-family: Century Gothic;
+                    font-style: normal;
+                    font-weight: normal;
+                    text-align: center;
                     @media (min-width: 1025px) {
                         font-size: 64px;
                         line-height: 78px;
@@ -148,9 +159,16 @@
                     letter-spacing: 0.05em;
                     margin: 0 0 15px 0;
                     text-transform: uppercase;
+                    font-family: Century Gothic;
+                    font-style: normal;
+                    font-weight: normal;
+                    text-align: center;
+                    letter-spacing: 0.05em;
+                    text-transform: uppercase;
                     @media (min-width: 1025px) {
                         font-size: 24px;
                         line-height: 29px;
+                        margin: 0;
                         //width: 40%;
                     }
                 }
@@ -158,18 +176,21 @@
         }
         
         .content-picture {
-            @media (min-width: 1366px) {
-                height: 495px;
-            }
+            // @media (min-width: 1366px) {
+            //     height: 495px;
+            // }
+            height: 100%;
             @media (min-width: 1025px) {
                 position: relative;
                 overflow: hidden;
                 //height: 600px;
             }
             .item__img {
+                transition: all 1s cubic-bezier(.04, .5, .68, 1.04);
                 @media (min-width: 1025px) {
                     position: unset;
                     overflow: unset;
+                    height: 100%;
                 }
             }
         }
@@ -221,6 +242,22 @@
             .arrow-btn--left {
                 margin: 30px 0 50px 0;
                 justify-content: flex-end;
+                font-family: Century Gothic;
+                font-style: normal;
+                font-weight: normal;
+                letter-spacing: 0.05em;
+                text-transform: uppercase;
+                .icon {
+                    top: 50%;
+                    left: 55%;
+                    -webkit-transform: translateY(-50%) rotate(-180deg);
+                    transform: translateY(-50%) translateX(-50%) rotate(-180deg);
+                    height: 20px;
+                }
+                @media (min-width: 1025px) {
+                    font-size: 17px;
+                    margin: 70px 0 50px 0;
+                }
             }
         }
         

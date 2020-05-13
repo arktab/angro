@@ -520,7 +520,8 @@ lightGallery(document.getElementById('lightgallery'));
             draggable: true,
             slidesToShow: 3,
             centerMode: true,
-            centerPadding: '60px',
+            variableWidth: true
+                //centerPadding: '60px',
             responsive: [{
                     breakpoint: 1180,
                     settings: {

@@ -166,7 +166,10 @@
         @include pos($t: 50%, $r: -100px);
         top: calc(50% - 52px);
         transform: rotate(180deg);
-        right: -90px;
+        right: -70px;
+        @media (max-width: 1366px) {
+            right: -53px;
+        }
         @media (max-width: 576px) {
             right: 5px;
             top: 35%;

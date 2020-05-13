@@ -19,12 +19,51 @@
             a(href="tel:+380509915880").footer-link +38(050) 991-58-80
         .footer-newsletter
             //FORM START
-            form(action="").footer-newsletter__form
-                h5.footer-newsletter__headline Будьте в курсе спецпредложений   
-                label( for="newsletter").footer-newsletter__title Ваш e-mail
-                input#newsletter(type="email").footer-newsletter__field
-                button(type="submit").btn.footer-newsletter__btn Хочу быть в курсе!
-            //FORM END          
+            //- form(action="").footer-newsletter__form
+            //-     h5.footer-newsletter__headline Будьте в курсе спецпредложений   
+            //-     label( for="newsletter").footer-newsletter__title Ваш e-mail
+            //-     input#newsletter(type="email").footer-newsletter__field
+            //-     button(type="submit").btn.footer-newsletter__btn Хочу быть в курсе!
+            //FORM END
+            <div class="footer-newsletter__form">
+                <h5 class="footer-newsletter__headline">Будьте в курсе спецпредложений</h5>
+                <div role="form" class="wpcf7" id="wpcf7-f2445-o2" lang="ru-RU" dir="ltr">
+                    //- <div class="screen-reader-response" role="alert">Одно или несколько полей содержат ошибочные данные. Пожалуйста, проверьте их и попробуйте ещё раз.
+                    //-     <ul>
+                    //-         <li>Неверно введён электронный адрес.</li>
+                    //-     </ul>
+                    //- </div>
+                    <form action="/#wpcf7-f2445-o2" method="post" class="wpcf7-form invalid" novalidate="novalidate">
+                        <div style="display: none;">
+                        <input type="hidden" name="_wpcf7" value="2445">
+                        <input type="hidden" name="_wpcf7_version" value="5.1.7">
+                        <input type="hidden" name="_wpcf7_locale" value="ru_RU">
+                        <input type" value="wpcf7-f2445-o2">
+                        <input type="hidden" name="_wpcf7_container_post" value="0">
+                        </div>
+                        <label class="footer-newsletter__title"> Ваш e-mail
+                            <span class="wpcf7-form-control-wrap your-email">
+                                <input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email footer-newsletter__field wpcf7-not-valid" aria-required="true" aria-invalid="true">
+                                <span role="alert" class="wpcf7-not-valid-tip">Неверно введён электронный адрес.</span>
+                            </span> 
+                        </label>
+                        <input type="submit" value="Хочу быть в курсе!" class="wpcf7-form-control wpcf7-submit btn">
+                        <span class="ajax-loader"></span>
+                        //-<div class="wpcf7-response-output wpcf7-display-none wpcf7-validation-errors" style="display: block;" role="alert">Одно или несколько полей содержат ошибочные данные. Пожалуйста, проверьте их и попробуйте ещё раз.</div>
+                    </form>
+                </div>
+            </div>        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         a.arrow-btn.footer-btn(href="#")
             .arrow-btn__icon
                 svg.icon

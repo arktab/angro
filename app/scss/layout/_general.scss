@@ -59,13 +59,16 @@ button::-moz-focus-inner {
         margin: 0 180px 80px;
     }
     @media (max-width: 1366px) {
-        max-width: 960px;
+        max-width: unset;
+        width: calc(100% - 220px);
+        margin: 0 170px 50px;
     }
-    @media (max-width: 1200px) {
-        max-width: 880px;
-    }
+    // @media (max-width: 1200px) {
+    //     max-width: 880px;
+    // }
     @media (max-width: 1024px) {
         max-width: 680px;
+        margin: 0 auto;
     }
     @media (max-width: 768px) {}
     @media (max-width: 576px) {
