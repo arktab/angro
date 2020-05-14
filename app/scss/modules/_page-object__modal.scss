@@ -4,32 +4,40 @@
     }
     .container {
         padding: 0;
+        max-width: unset;
+        @media (min-width: 1025px) {
+            margin: 90px 180px 70px;
+            width: calc(100% - 360px);
+            height: calc(100% - 160px);
+        }
     }
     display: none;
     position: fixed;
     z-index: 10;
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     overflow: auto;
     //background: rgba(66, 60, 58, 0.7);
     background: rgb(123, 119, 117);
-    ;
     color: #FFFFFF;
     &__close {
         grid-column: 1/3;
         grid-row: 4/5;
         display: flex;
         align-items: center;
-        margin: 0 0 40px 50px;
+        margin: 0 0 40px 48px;
+        transition: all .3s;
         @media (min-width: 1025px) {
             grid-row: 2/3;
             grid-column: 1/2;
-            margin: 0 0 0 30px;
+            margin: 10px 0 0;
             align-items: center;
+            width: 165px;
         }
         @media (min-width: 1366px) {
+            margin: 0;
             grid-row: 3/4;
         }
         .close {
@@ -70,10 +78,18 @@
             text-transform: uppercase;
             padding: 15px;
         }
+        &:hover {
+            .close {
+                filter: invert(1);
+            }
+            p {
+                color: #FFF3A6;
+            }
+        }
     }
     &__btn {
         //margin: 0 0 15px 50px;
-        margin: 0 0 15px 39px;
+        margin: 0 0 15px 48px;
         @media (min-width: 1025px) {
             grid-row: 2/3;
             grid-column: 2/3;
@@ -81,9 +97,10 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            margin: 0 0 0 30px;
+            margin: 10px 0 0;
         }
         @media (min-width: 1366px) {
+            margin: 0;
             grid-row: 3/4;
         }
     }
@@ -98,25 +115,21 @@
         font-size: 18px;
         grid-column: 1/3;
         grid-row: 3/4;
-        @media (max-width: 1025px) {
-            &__icon {
-                svg {
-                    width: 15px;
-                    height: 18px;
-                }
-                .icon {
-                    top: -13px;
-                    left: 26px;
-                }
-                &::after {
-                    @include size(40px);
-                    top: -25px;
-                    left: 11px;
-                }
-            }
-            &__text {
-                padding-left: 65px;
-                font-size: 16px;
+        .icon {
+            top: 50%;
+            left: calc(50% - 4px);
+            width: 11px;
+        }
+        &::after {
+            top: 50%;
+        }
+        &__text {
+            font-size: 16px;
+            padding: 0 0 0 15px;
+        }
+        @media (min-width: 1025px) {
+            .icon {
+                width: 13px;
             }
         }
     }
@@ -125,9 +138,8 @@
         @media (min-width: 1025px) {
             grid-template-columns: 50% 50%;
             grid-template-rows: 8fr 1fr 1fr;
-            @include pos($b: 52%, $l: 50%);
-            transform: translateX(-50%) translateY(50%);
-            width: 100%;
+            // @include pos($b: 52%, $l: 50%);
+            // transform: translateX(-50%) translateY(50%);
         }
     }
     .information {
@@ -140,17 +152,27 @@
             grid-column: 1/2;
         }
         &__headline {
-            font-weight: bold;
             font-size: 24px;
             line-height: 29px;
             margin: 0 25px;
-            @media (min-width: 1025px) {
-                font-family: Century Gothic;
-                font-style: normal;
-                font-weight: bold;
+            font-family: Century Gothic;
+            font-style: normal;
+            font-weight: bold;
+            @media (min-width: 1025px) {}
+            @media (min-width: 1200px) {
+                font-size: 18px;
+                line-height: 24px;
+                margin: 0 0 16px;
+            }
+            @media (min-width: 1450px) {
+                font-size: 24px;
+                line-height: 28px;
+                margin: 0 0 36px;
+            }
+            @media (min-width: 1650px) {
                 font-size: 36px;
                 line-height: 44px;
-                margin: 0 0 40px;
+                margin: 0 0 56px;
             }
         }
         p {
@@ -166,23 +188,45 @@
         }
         .text {
             margin: 50px 25px 30px;
+            font-family: Bellota Text;
+            font-style: italic;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 20px;
             @media (min-width: 1025px) {
-                font-family: Bellota Text;
-                font-style: italic;
-                font-weight: normal;
+                margin: 0 0 30px;
+            }
+            @media (min-width: 1200px) {
+                font-size: 16px;
+                line-height: 22px;
+            }
+            @media (min-width: 1450px) {
+                font-size: 18px;
+                line-height: 24px;
+            }
+            @media (min-width: 1650px) {
                 font-size: 24px;
                 line-height: 30px;
-                margin: 0 0 30px;
             }
         }
     }
     .date {
         margin: 30px 25px;
-        @media (min-width: 1025px) {
-            margin: 40px 0;
-            font-family: Century Gothic;
-            font-style: normal;
-            font-weight: normal;
+        font-family: Century Gothic;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 20px;
+        @media (min-width: 1200px) {
+            margin: 10px 0 20px;
+        }
+        @media (min-width: 1450px) {
+            margin: 20px 0 30px;
+            font-size: 19px;
+            line-height: 23px;
+        }
+        @media (min-width: 1650px) {
+            margin: 30px 0 40px;
             font-size: 19px;
             line-height: 23px;
         }
@@ -198,18 +242,19 @@
             grid-row: 1/2;
             grid-column: 2/3;
             height: 100%;
-            margin: 0 50px;
-            align-self: flex-end;
+            margin: 0 0 0 150px;
+            align-self: flex-start;
             display: flex;
-            align-items: flex-end;
+            align-items: flex-strat;
         }
         .img {
             @include size(100%, auto);
-            // @media (min-width: 1025px) {
-            //     @include pos($b: 50%, $l: 50%);
-            //     transform: translateX(-50%) translateY(50%);
-            //     @include size(125%, auto);
-            // }
+            @media (min-width: 1025px) {
+                @include size(auto, 100%);
+                // @include pos($b: 50%, $l: 50%);
+                // transform: translateX(-50%) translateY(50%);
+                // @include size(125%, auto);
+            }
         }
     }
     .price {
@@ -219,19 +264,34 @@
         //background: #FFFFFF;
         overflow: hidden;
         width: 100%;
+        background: transparent;
+        text-align: center;
         @media (min-width: 1025px) {
-            background: transparent;
+            background: #423C3A;
             font-family: Bellota Text;
             font-style: normal;
-            font-weight: 400;
+            //font-weight: bold;
+        }
+        @media (min-width: 1200px) {
+            font-size: 16px;
+            line-height: 22px;
+        }
+        @media (min-width: 1450px) {
+            font-size: 18px;
+            line-height: 28px;
+        }
+        @media (min-width: 1650px) {
             font-size: 24px;
-            line-height: 41px;
+            line-height: 38px;
         }
         tr {
             display: grid;
             grid-template-columns: 40% 20% 40%;
             grid-gap: 2px;
             margin: 0 0 2px;
+            &:last-child {
+                margin: 0 0 -2px;
+            }
         }
         th {
             font-weight: bold;
@@ -239,12 +299,22 @@
             background: #FFF3A6;
             text-align: left;
             padding: 0 0 0 5px;
-            @media (min-width: 1025px) {
-                font-family: Bellota Text;
-                font-style: normal;
-                font-weight: bold;
+            text-align: center;
+            font-family: Bellota Text;
+            font-style: normal;
+            font-weight: bold;
+            @media (min-width: 1025px) {}
+            @media (min-width: 1200px) {
+                font-size: 16px;
+                line-height: 22px;
+            }
+            @media (min-width: 1450px) {
+                font-size: 18px;
+                line-height: 28px;
+            }
+            @media (min-width: 1650px) {
                 font-size: 24px;
-                line-height: 41px;
+                line-height: 38px;
             }
         }
         td {

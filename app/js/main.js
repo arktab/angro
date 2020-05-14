@@ -1,8 +1,8 @@
 'use strict';
 //Animation lib AOS
 AOS.init({});
-lightGallery(document.getElementById('lightgallery'));
-//lightGallery(document.getElementById('object-opened-slider'));
+// lightGallery(document.getElementById('lightgallery'));
+//lightGallery(document.getElementById('object-opened-slider'),{});
 
 //___________________________________
 (function($) {
@@ -408,6 +408,22 @@ lightGallery(document.getElementById('lightgallery'));
 
 
 
+        $('.object-opened-slider').lightGallery({
+            thumbnail: false,
+            download: false,
+            zoom: false,
+            share: false,
+            fullScreen: false,
+            autoplayControls: false
+        });
+        $('#lightgallery').lightGallery({
+            thumbnail: false,
+            download: false,
+            zoom: false,
+            share: false,
+            fullScreen: false,
+            autoplayControls: false
+        });
 
 
 
@@ -489,39 +505,27 @@ lightGallery(document.getElementById('lightgallery'));
             speed: 500,
             slidesToShow: 3,
             responsive: [{
-                    breakpoint: 1180,
-                    settings: {
-                        slidesToShow: 2
-                    }
-                },
-                {
-                    breakpoint: 813,
-                    settings: {
-                        slidesToShow: 1,
-                        arrows: false
-                    }
-                },
-                {
-                    breakpoint: 576,
-                    settings: {
-                        slidesToShow: 1
-                    }
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 1
                 }
-            ]
+            }]
         });
         $('.object-opened-slider').slick({
+            nextArrow: $('.slider-icon__next'),
+            prevArrow: $('.slider-icon__prev'),
             autoplay: true,
             autoplaySpeed: 3000,
             dots: false,
             infinite: true,
-            arrows: false,
+            arrows: true,
             speed: 500,
             cssEase: 'linear',
             draggable: true,
             slidesToShow: 3,
             centerMode: true,
-            variableWidth: true
-                //centerPadding: '60px',
+            variableWidth: true,
+            //centerPadding: '60px',
             responsive: [{
                     breakpoint: 1180,
                     settings: {

@@ -9,6 +9,7 @@ html(lang="en")
         link(rel="icon" href="images/favicon.png")
         <!--build:css css/styles.min.css-->
         link(rel="stylesheet" href="css/libs/aos.css")
+        link(rel="stylesheet" href="css/libs/lightgallery.css")
         link(rel="stylesheet" href="css/libs/slick.css")
         link(rel="stylesheet" href="css/libs/slick-theme.css")
         link(rel="stylesheet" href="css/global.min.css")
@@ -189,32 +190,37 @@ html(lang="en")
                             p.arrow-btn__text Квартиры комплекса
             
         section.galery-section
+            //SLIDER BUTTON START
+            svg.slider-icon.slider-icon__prev
+                use(xlink:href="images/main-page_icons-sprite.svg#arrow") 
+            svg.slider-icon.slider-icon__next
+                use(xlink:href="images/main-page_icons-sprite.svg#arrow")
+            //SLIDER BUTTON END 
             .container
                 .content-galery.grid
                     .content-headline
                         h3.content-headline__text Этапы строительства
                 .object-opened-slider#object-opened-slider
                     //SLIDER TILE
-                    a(href="images/object/IMG_1.jpg").object-opened__tile
+                    a.object-opened__tile(href="images/object/IMG_1.jpg")
                         img.tile__thumb(src="images/object/IMG_1.jpg")
                     //SLIDER TILE
-                    a(href="images/object/IMG_2.jpg").object-opened__tile
+                    a.object-opened__tile(href="images/object/IMG_2.jpg")
                         img.tile__thumb(src="images/object/IMG_2.jpg")
                     //SLIDER TILE
-                    a(href="images/object/IMG_3.jpg").object-opened__tile
+                    a.object-opened__tile(href="images/object/IMG_3.jpg")
                         img.tile__thumb(src="images/object/IMG_3.jpg")
                     //SLIDER TILE
-                    a(href="images/object/IMG_1.jpg").object-opened__tile
+                    a.object-opened__tile(href="images/object/IMG_1.jpg")
                         img.tile__thumb(src="images/object/IMG_1.jpg")
                     //SLIDER TILE
-                    a(href="images/object/IMG_2.jpg").object-opened__tile
+                    a.object-opened__tile(href="images/object/IMG_2.jpg")
                         img.tile__thumb(src="images/object/IMG_2.jpg")
                             
         section#info.contact
             include layout/section-contact.pug
-
-
         //CONTENT END
+       
         //FOOTER START
         footer.footer
             include layout/footer.pug
@@ -230,8 +236,8 @@ html(lang="en")
         <!--build:js js/main.min.js -->
         script(src="js/libs/jquery.min.js")
         script(src="js/libs/jquery-ui.js")
-        script(src="js/libs/lightgallery.js")
-        script(src="js/libs/aos.js")
+        script(src="js/libs/lightgallery-all.min.js")
         script(src="js/libs/slick.min.js")
+        script(src="js/libs/aos.js")
         script(src="js/main.js")
         <!--endbuild-->

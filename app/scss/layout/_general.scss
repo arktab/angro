@@ -67,10 +67,13 @@ button::-moz-focus-inner {
     //     max-width: 880px;
     // }
     @media (max-width: 1024px) {
-        max-width: 680px;
+        //  max-width: 680px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    @media (max-width: 768px) {
         margin: 0 auto;
     }
-    @media (max-width: 768px) {}
     @media (max-width: 576px) {
         width: 100%;
         padding: 0 20px;
