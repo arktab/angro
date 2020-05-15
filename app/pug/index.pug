@@ -2,6 +2,15 @@
 html(lang="en")
     include layout/head.pug
     body
+        //PRELOADER START
+        .preloader
+            .wrap
+                .icon
+                    svg.logo
+                        use(xlink:href="images/main-page_icons-sprite.svg#preloder_logo")
+                    span.logo__top
+                    span.logo__bottom
+        //PRELOADER END
         //POPUP START
         include layout/info.pug
         //POPUP END
@@ -18,8 +27,8 @@ html(lang="en")
                         svg.mobile-logo__icon
                             use(xlink:href="images/main-page_icons-sprite.svg#logo")
                 //MOBILE LOGO END
-                h1(data-aos="fade-left").header-content__title Современное <br> жилье в Полтаве и <br> Миргороде
-                p(data-aos="fade-right").header-content__text Новые квартиры от застройщика в престижном <br> районе Полтавы и Миргорода
+                h1(data-aos="fade-left" data-aos-delay="1750" data-aos-duration="1500").header-content__title Современное <br> жилье в Полтаве и <br> Миргороде
+                p(data-aos="fade-right" data-aos-delay="1750" data-aos-duration="1500").header-content__text Новые квартиры от застройщика в престижном <br> районе Полтавы и Миргорода
 
                 a.arrow-btn(href="#about")
                     .arrow-btn__icon

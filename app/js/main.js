@@ -1,96 +1,107 @@
 'use strict';
 //Animation lib AOS
 AOS.init({});
-// lightGallery(document.getElementById('lightgallery'));
-//lightGallery(document.getElementById('object-opened-slider'),{});
 
 //___________________________________
 (function($) {
     $(document).ready(function() {
         // Code
 
+        setTimeout(function() {
+            var preloader = $(".preloader");
+            if (!preloader.hasClass("preloader--is-hide")) {
+                preloader.addClass("preloader--slide-out");
+                $(".wrap").addClass("wrap--slide-out");
+
+                setTimeout(function() {
+                    $(".preloader").addClass("preloader--is-hide");
+                    //$(".preloader").remove();
+                }, 1000);
+            }
+        }, 1500);
+
         //TABS JQ
         $(".object-tabs").tabs();
         //Form validation
-        var modalname = new String;
-        var modaltel = new String;
-        $(".modal__btn").prop('disabled', true);
-        $(".modal__btn").addClass("btn__disabled");
-        $("#modal-username")
-            .focusout(function() {
-                modalname = $("#modal-username").val();
-                modaltel = $("#modal-tel").val();
-                if (modalname.length < 3) {
-                    $(".modal__user-text").addClass("alert__text-red");
-                    $("#modal-username").addClass("modal__field--red");
-                    $(".modal__btn").prop('disabled', true);
-                    $(".modal__btn").addClass("btn__disabled");
-                }
-                if (modaltel.length < 13) {
-                    $(".modal__tel-text").addClass("alert__text-red");
-                    $("#modal-tel").addClass("modal__field--red");
-                    $(".modal__btn").prop('disabled', true);
-                    $(".modal__btn").addClass("btn__disabled");
-                }
-                if (modalname.length >= 3) {
-                    $(".modal__user-text").removeClass("alert__text-red");
-                    $("#modal-username").removeClass("modal__field--red");
-                }
-                if (modalname.length >= 3 && modaltel.length == 13) {
-                    if ($("#modal-check").prop("checked") == true) {
-                        $(".modal__btn").prop('disabled', false);
-                        $(".modal__btn").removeClass("btn__disabled");
-                    }
-                }
-            })
-            .keyup();
-        $("#modal-tel")
-            .focusout(function() {
-                modalname = $("#modal-username").val();
-                modaltel = $("#modal-tel").val();
-                if (modalname.length < 3) {
-                    $(".modal__user-text").addClass("alert__text-red");
-                    $("#modal-username").addClass("modal__field--red");
-                    $(".modal__btn").prop('disabled', true);
-                    $(".modal__btn").addClass("btn__disabled");
-                }
-                if (modaltel.length < 13) {
-                    $(".modal__tel-text").addClass("alert__text-red");
-                    $("#modal-tel").addClass("modal__field--red");
-                    $(".modal__btn").prop('disabled', true);
-                    $(".modal__btn").addClass("btn__disabled");
-                }
-                if (modaltel.length == 13) {
-                    $(".modal__tel-text").removeClass("alert__text-red");
-                    $("#modal-tel").removeClass("modal__field--red");
-                }
-                if (modalname.length >= 3 && modaltel.length == 13) {
-                    if ($("#modal-check").prop("checked") == true) {
-                        $(".modal__btn").prop('disabled', false);
-                        $(".modal__btn").removeClass("btn__disabled");
-                    }
-                }
-            })
-            .keyup();
-        $("#modal-check").click(function() {
-            modalname = $("#modal-username").val();
-            modaltel = $("#modal-tel").val();
-            if ($(this).prop("checked") == false) {
-                $(".modal__check-text").addClass("alert__text-red");
-                $(".modal__btn").prop('disabled', true);
-                $(".modal__btn").addClass("btn__disabled");
+        // var modalname = new String;
+        // var modaltel = new String;
+        // $(".modal__btn").prop('disabled', true);
+        // $(".modal__btn").addClass("btn__disabled");
+        // $("#modal-username")
+        //     .focusout(function() {
+        //         modalname = $("#modal-username").val();
+        //         modaltel = $("#modal-tel").val();
+        //         if (modalname.length < 3) {
+        //             $(".modal__user-text").addClass("alert__text-red");
+        //             $("#modal-username").addClass("modal__field--red");
+        //             $(".modal__btn").prop('disabled', true);
+        //             $(".modal__btn").addClass("btn__disabled");
+        //         }
+        //         if (modaltel.length < 13) {
+        //             $(".modal__tel-text").addClass("alert__text-red");
+        //             $("#modal-tel").addClass("modal__field--red");
+        //             $(".modal__btn").prop('disabled', true);
+        //             $(".modal__btn").addClass("btn__disabled");
+        //         }
+        //         if (modalname.length >= 3) {
+        //             $(".modal__user-text").removeClass("alert__text-red");
+        //             $("#modal-username").removeClass("modal__field--red");
+        //         }
+        //         if (modalname.length >= 3 && modaltel.length == 13) {
+        //             if ($("#modal-check").prop("checked") == true) {
+        //                 $(".modal__btn").prop('disabled', false);
+        //                 $(".modal__btn").removeClass("btn__disabled");
+        //             }
+        //         }
+        //     })
+        //     .keyup();
+        // $("#modal-tel")
+        //     .focusout(function() {
+        //         modalname = $("#modal-username").val();
+        //         modaltel = $("#modal-tel").val();
+        //         if (modalname.length < 3) {
+        //             $(".modal__user-text").addClass("alert__text-red");
+        //             $("#modal-username").addClass("modal__field--red");
+        //             $(".modal__btn").prop('disabled', true);
+        //             $(".modal__btn").addClass("btn__disabled");
+        //         }
+        //         if (modaltel.length < 13) {
+        //             $(".modal__tel-text").addClass("alert__text-red");
+        //             $("#modal-tel").addClass("modal__field--red");
+        //             $(".modal__btn").prop('disabled', true);
+        //             $(".modal__btn").addClass("btn__disabled");
+        //         }
+        //         if (modaltel.length == 13) {
+        //             $(".modal__tel-text").removeClass("alert__text-red");
+        //             $("#modal-tel").removeClass("modal__field--red");
+        //         }
+        //         if (modalname.length >= 3 && modaltel.length == 13) {
+        //             if ($("#modal-check").prop("checked") == true) {
+        //                 $(".modal__btn").prop('disabled', false);
+        //                 $(".modal__btn").removeClass("btn__disabled");
+        //             }
+        //         }
+        //     })
+        //     .keyup();
+        // $("#modal-check").click(function() {
+        //     modalname = $("#modal-username").val();
+        //     modaltel = $("#modal-tel").val();
+        //     if ($(this).prop("checked") == false) {
+        //         $(".modal__check-text").addClass("alert__text-red");
+        //         $(".modal__btn").prop('disabled', true);
+        //         $(".modal__btn").addClass("btn__disabled");
 
-            } else if ($(this).prop("checked") == true) {
-                $(".modal__check-text").removeClass("alert__text-red");
-                if (modalname.length >= 3 && modaltel.length == 13) {
-                    if ($("#modal-check").prop("checked") == true) {
-                        $(".modal__btn").prop('disabled', false);
-                        $(".modal__btn").removeClass("btn__disabled");
-                    }
-                }
+        //     } else if ($(this).prop("checked") == true) {
+        //         $(".modal__check-text").removeClass("alert__text-red");
+        //         if (modalname.length >= 3 && modaltel.length == 13) {
+        //             if ($("#modal-check").prop("checked") == true) {
+        //                 $(".modal__btn").prop('disabled', false);
+        //                 $(".modal__btn").removeClass("btn__disabled");
+        //             }
+        //         }
 
-            }
-        });
+        //     }
+        // });
         //CONTACT
         $(".contact-form__checkbox").append("<div class='contact-form__custom-check'></div><div class='contact-form__custom-icon'></div>");
         $(".first").children("input").attr('checked', 'checked');

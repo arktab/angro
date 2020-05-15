@@ -89,3 +89,91 @@ button::-moz-focus-inner {
 .is-menu-shown {
     overflow: hidden;
 }
+
+.preloader {
+    &--slide-out {
+        top: -100vh;
+    }
+    &--is-hide {
+        display: none;
+    }
+    transition: all 1s;
+    @include pos($t: 0, $l: 0);
+    position: fixed;
+    @include size(100%, 100vh);
+    background: #f5f5f4;
+    z-index: 100;
+    .wrap {
+        @include pos($t: 50%, $l: 50%);
+        position: fixed;
+        transform: translateX(-50%) translateY(-50%);
+        @include size(150px);
+        z-index: 101;
+        transition: all 1s;
+        &--slide-out {
+            top: -50vh;
+        }
+    }
+    .icon {
+        position: relative;
+        overflow: hidden;
+    }
+    .logo {
+        display: block;
+        fill: #423C3A;
+        @include size(150px, 100%);
+        margin: 0 auto;
+    }
+    .logo__top {
+        &:after,
+        &:before {
+            content: '';
+            @include pos($t: calc(50% + 15px), $l: 0);
+            @include size(150px, 3px);
+            background: #423C3A;
+        }
+    }
+    .logo__bottom {
+        &:after,
+        &:before {
+            content: '';
+            @include pos($t: calc(50% + 66px), $l: 0);
+            @include size(150px, 3px);
+            background: #423C3A;
+        }
+    }
+    .logo__bottom {
+        &:after {
+            left: 140%;
+            animation: slidein 1.5s linear infinite;
+        }
+        &:before {
+            animation: slideout 1.5s linear infinite;
+        }
+    }
+    .logo__top {
+        &:after {
+            left: -140%;
+            animation: slidein 1.5s linear infinite;
+        }
+        &:before {
+            animation: slideright 1.5s linear infinite;
+            //animation: name duration timing-function delay iteration-count direction fill-mode;
+        }
+    }
+    @keyframes slidein {
+        to {
+            left: 0;
+        }
+    }
+    @keyframes slideright {
+        to {
+            left: 140%;
+        }
+    }
+    @keyframes slideout {
+        to {
+            left: -140%;
+        }
+    }
+}
