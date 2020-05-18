@@ -64,7 +64,8 @@
             margin: 0 0 2px 0;
             transition: all .3s;
             position: relative;
-            &::before {
+            &::before,
+            &::after {
                 content: '';
                 display: block;
                 @include pos($b: -2px, $l: 0);

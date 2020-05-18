@@ -61,6 +61,8 @@
     input {
         // color: #423C3A;
         // border-bottom: 2px solid #423C3A;
+        -webkit-border-radius: 0;
+        border-radius: 0;
     }
     @media (min-width: 1025px) {
         font-size: 18px;

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="description" content="Starter")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Квартиры
+        link(rel="icon" href="images/favicon.png")
+        <!--build:css css/styles.min.css-->
+        link(rel="stylesheet" href="css/libs/aos.css")
+        link(rel="stylesheet" href="css/libs/slick.css")
+        link(rel="stylesheet" href="css/libs/slick-theme.css")
+        link(rel="stylesheet" href="css/libs/lightgallery.css")
+        link(rel="stylesheet" href="css/global.min.css")
+        <!--endbuild-->
+        <!--[if lt IE 9]>
+        script(src="http://html5shiv.googlecode.com/svn/trunk/html5.js")
+        <![endif]-->
+    body.apartments-body
+        //INFO START 
+        include object/object-info.pug
+        //INFO END
+        //SIDEBAR
+        include layout/sidebar.pug
+        //SIDEBAR END
+
+        //HEADER START 
+        header.apartments-header
+            .container
+                .grid
+                    //MOBILE LOGO
+                    a(href="#").mobile-logo              
+                            svg.mobile-logo__icon
+                                use(xlink:href="images/main-page_icons-sprite.svg#logo")
+                    //MOBILE LOGO END
+                    h2.title Страница не найдена
+                    h3.headline неправильно набран адрес или такой страницы не существует
+                    //- a.arrow-btn.arrow-btn--left(href="#")
+                    //-     .arrow-btn__icon
+                    //-         svg.icon
+                    //-             use(xlink:href="images/main-page_icons-sprite.svg#arrow")
+                    //-     p.arrow-btn__text Объекты
+        //HEADER END
+        //CONTENT START
+        <section class="error-page">
+            <div class="container container--error">
+                <h1 class="error-page__title">404</h1>
+                <h4 class="error-page__subtitle">Упс...Похоже что вы потерялись.</h4>
+                <a class="btn" href="/">Вернуться на главную</a>
+            </div>
+        </section>
+                   
+             
+        //CONTENT END
+        //FOOTER START
+        footer.footer
+            include layout/footer.pug
+        //FOOTER END
+        <!-- modal -->
+        include object/object-modal.pug
+        include layout/modal.pug
+        //policy SATRT
+        include layout/confidentiality-policy.pug
+        //policy END
+        <!-- modal end-->                  
+        
+        <!--build:js js/main.min.js -->
+        script(src="js/libs/jquery.min.js")
+        script(src="js/libs/jquery-ui.js")
+        script(src="js/libs/lightgallery-all.min.js")
+        script(src="js/libs/slick.min.js")
+        script(src="js/libs/aos.js")
+        include layout/flatris.html
+        script(src="js/main.js")
+        <!--endbuild-->
