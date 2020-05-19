@@ -99,7 +99,11 @@ html(lang="en")
                             svg.icon
                                 use(xlink:href="images/main-page_icons-sprite.svg#eye")
                 // OBJECT END
-        include object/paginationWP.pug
+            <div class="container pagination">
+                <span aria-current="page" class="page-numbers current">1</span>
+                <a class="page-numbers" href="http://1test.website/gallery/page/2/">2</a>
+                <a class="next page-numbers" href="http://1test.website/gallery/page/2/">Далее →</a>
+            </div>
 
 
         

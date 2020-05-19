@@ -395,7 +395,7 @@ AOS.init({});
         var width = $(window).width();
         $(".apartments-content .arrow-btn").css("display", "none");
         if (width <= 1024) {
-            $(".apartments-content .arrow-btn").css("display", "block");
+            $(".apartments-content .arrow-btn").css("display", "flex");
             $(".apartments-content iframe").remove();
         }
 
@@ -534,7 +534,7 @@ AOS.init({});
             cssEase: 'linear',
             draggable: true,
             slidesToShow: 3,
-            centerMode: true,
+            //centerMode: true,
             variableWidth: true,
             //centerPadding: '60px',
             responsive: [{
