@@ -55,12 +55,12 @@
     }
     &-slider {
         &__nextbtn {
-            @include pos($r: 13px, $t: 50%);
+            @include pos($r: 8px, $t: 50%);
             z-index: 3;
             fill: #FFF3A6;
-            transform: translateX(50%) rotate(180deg);
+            transform: rotate(180deg);
             @media (min-width: 1024px) {
-                @include pos($r: 35px, $t: 50%);
+                @include pos($r: 33px, $t: 50%);
             }
         }
         &__prevbtn {
@@ -68,7 +68,7 @@
             z-index: 3;
             fill: #FFF3A6;
             @media (min-width: 1024px) {
-                @include pos($l: 33%, $t: 50%);
+                @include pos($l: 39%, $t: 50%);
             }
         }
         &__wrap {
@@ -118,6 +118,9 @@
         color: $tw;
         display: grid !important;
         min-width: 196px;
+        @media (min-width: 1024px) {
+            min-height: 888px;
+        }
         &__name {
             padding: 15px 0 5px;
             height: auto;

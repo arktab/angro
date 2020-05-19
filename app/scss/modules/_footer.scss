@@ -1,6 +1,4 @@
 .footer {
-    //padding: 100px 0 50px 0;
-    //background: linear-gradient(90deg, rgba(0, 0, 0, .1), hsla(0, 0%, 80%, 0) 40%), linear-gradient(270deg, rgba(0, 0, 0, .1), hsla(0, 0%, 50.2%, 0) 47.55%);
     background: #f5f5f4;
     color: #0D0D0D;
     overflow: hidden;
@@ -66,11 +64,14 @@
                 margin: 0 0 10px 0;
             }
         }
-        @media (max-width: 960px) {
-            font-size: 13px;
-        }
+        // @media (max-width: 960px) {
+        //     font-size: 9px;
+        // }
         @media (max-width: 1025px) {
-            font-size: 13px;
+            font-size: 14px;
+        }
+        @media (max-width: 769px) {
+            font-size: 9px;
         }
     }
     &-logo {
@@ -121,11 +122,11 @@
             line-height: 20px;
             padding: 0;
         }
-        @media (max-width: 960px) {
-            font-size: 16px;
-        }
         @media (max-width: 1025px) {
-            font-size: 18px;
+            font-size: 14px;
+        }
+        @media (max-width: 769px) {
+            font-size: 12px;
         }
     }
     &-btn {
@@ -219,9 +220,16 @@
                 margin-bottom: 30px;
             }
         }
-        // @media (max-width: 960px) {
-        //     grid-column: 7 / 10;
-        // }
+        @media (max-width: 1025px) {}
+        @media (max-width: 769px) {
+            &__title {
+                font-size: 12px;
+                //margin: 0 10px 0 0;
+            }
+            .btn {
+                font-size: 10px;
+            }
+        }
     }
     &-social {
         grid-column: 11 / 13;
@@ -285,6 +293,12 @@
                 margin-bottom: 20px;
             }
         }
+        @media (max-width: 769px) {
+            &__title {
+                font-size: 12px;
+                line-height: 16px;
+            }
+        }
         // @media (max-width: 960px) {
         //     grid-column: 10 / 13;
         // }
@@ -318,7 +332,7 @@
     .footer-newsletter {
         grid-column: 1 / 13;
         grid-row: 5 / 6;
-        margin-top: 50px;
+        //margin-top: 50px;
         @media (min-width: 635px) {
             grid-column: 1 / 6;
             grid-row: 2 / 3;
@@ -392,6 +406,12 @@
                 margin: 0 0 30px 0;
                 padding: .5rem 0;
             }
+            @media (max-width: 1025px) {
+                width: 100%;
+            }
+            @media (max-width: 769px) {
+                width: 100%;
+            }
             // @media (max-width: 960px) {
             //     grid-row: 5/6;
             // }
@@ -407,6 +427,9 @@
                 cursor: pointer;
                 font-size: 14px;
                 padding: 0 .5rem;
+            }
+            @media (max-width: 769px) {
+                margin: 10px auto 0;
             }
         }
         .wpcf7-not-valid-tip {

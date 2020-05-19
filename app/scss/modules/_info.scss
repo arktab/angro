@@ -58,6 +58,14 @@
                 font-size: .5rem;
             }
         }
+        @media (max-width: 1029px) and (orientation: landscape) {
+            .info-text {
+                font-size: 1.1rem;
+            }
+            .info-link {
+                font-size: .8rem;
+            }
+        }
     }
     &-right {
         justify-content: center;

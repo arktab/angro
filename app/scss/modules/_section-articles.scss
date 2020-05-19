@@ -6,6 +6,10 @@
     .container {
         position: relative;
         @include size(100%);
+        @media (min-width: 1025px) {
+            width: unset;
+            height: calc(100% - 80px);
+        }
     }
     &-content {
         @include pos($t: 0, $l: 0);
@@ -43,24 +47,9 @@
         //padding: 250px 0 120px 10px;
         min-height: 775px;
         @media (min-width: 1025px) {
-            //padding: 420px 0 300px 280px;
             min-height: 1000px;
         }
-        // @media (max-width: 1366px) {
-        //     padding: 290px 0 200px 210px;
-        // }
-        // @media (max-width: 1025px) {
-        //     padding: 290px 0 200px 180px;
-        // }
-        // @media (max-width: 812px) and (orientation: landscape) {
-        //     padding: 250px 0 120px 70px;
-        // }
         .container {
-            // margin: 0;
-            // position: absolute;
-            // transform: translateY(-50%);
-            // left: 0;
-            // top: 80%;
             padding-top: 235px;
             padding-bottom: 120px;
             @media (min-width: 576px) and (orientation: portrait) {
@@ -122,8 +111,6 @@
         position: absolute;
         top: -15px;
         left: -3px;
-        // right: 0;
-        // bottom: 0;
         @include size(105%);
         z-index: -1;
     }
