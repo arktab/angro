@@ -6,7 +6,13 @@ AOS.init({});
 (function($) {
     $(document).ready(function() {
         // Code
-
+        // Youtube pause button start
+        $('.modal-video__close').click(function() {
+            $('#video').each(function() {
+                this.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*')
+            });
+        });
+        // Youtube pause button end
         setTimeout(function() {
             var preloader = $(".preloader");
             if (!preloader.hasClass("preloader--is-hide")) {

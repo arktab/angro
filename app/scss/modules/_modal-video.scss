@@ -10,25 +10,31 @@
     width: 100%;
     height: 100%;
     overflow: auto;
-    background: rgba(66, 60, 58, 0.7);
+    background: rgba(66, 60, 58, 0.95);
     &__content {
         @include pos($t: 50%, $l: 50%);
         transform: translateX(-50%) translateY(-50%);
-        @include size(80vw, 80vh);
-        @media (max-width: 576px) {
-            @include size(100vw, 56vw);
+        @include size(100vw, 56vw);
+        @media (min-width: 1024px) {
+            @include size(80vw, 80vh);
             //padding: 50px 25px;
         }
         @media (max-width: 812px) and (orientation: landscape) {
-            @include size(80vw, 45vw);
+            @include size(79vw, 100vh);
         }
         iframe {
             @include size(100%);
         }
+        @media (min-width: 1366px) {
+            @include size(960px, 540px);
+        }
+        @media (min-width: 1600px) {
+            @include size(1280px, 720px);
+        }
     }
     &__close {
-        @include pos($t: 70px, $r: 25px);
-        @include size(75px);
+        @include size(40px);
+        @include pos($t: -60px, $r: 20px);
         background: #F5F5F4;
         border-radius: 50%;
         cursor: pointer;
@@ -45,40 +51,31 @@
         }
         &:before {
             content: '';
-            @include pos($t: 14px, $r: 36px);
-            @include size(2px, 45px);
+            @include size(1px, 25px);
+            @include pos($t: 7px, $r: 20px);
             transform: rotate(45deg);
             background: #514947;
         }
         &:after {
             content: '';
-            @include pos($t: 14px, $r: 36px);
-            @include size(2px, 45px);
+            @include size(1px, 25px);
+            @include pos($t: 7px, $r: 20px);
             transform: rotate(-45deg);
             background: #514947;
         }
-        @media (max-width: 576px) {
-            @include size(40px);
-            @include pos($t: -50px, $r: 10px);
-            &:before {
-                @include size(1px, 25px);
-                @include pos($t: 7px, $r: 20px);
-            }
-            &:after {
-                @include size(1px, 25px);
-                @include pos($t: 7px, $r: 20px);
-            }
-        }
         @media (max-width: 812px) and (orientation: landscape) {
-            @include size(40px);
             @include pos($t: 13px, $r: -55px);
+        }
+        @media (min-width: 1024px) {
+            @include pos($t: 10px, $r: -80px);
+            @include size(60px);
             &:before {
-                @include size(1px, 25px);
-                @include pos($t: 7px, $r: 20px);
+                @include pos($t: 7px, $r: 29px);
+                @include size(2px, 45px);
             }
             &:after {
-                @include size(1px, 25px);
-                @include pos($t: 7px, $r: 20px);
+                @include pos($t: 7px, $r: 29px);
+                @include size(2px, 45px);
             }
         }
     }

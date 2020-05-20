@@ -222,15 +222,15 @@
             }
             &:before {
                 content: '';
-                @include pos($t: 50%, $l: -24px);
-                transform: translateY(-50%);
+                @include pos($t: 50%, $l: -20px);
+                transform: translateY(-50%) translateX(-50%);
                 counter-increment: list;
                 content: counter(list) "";
                 color: #FFF3A6;
                 z-index: 2;
                 @media (min-width: 1025px) {
                     //top: 8.5px;
-                    left: -44px;
+                    left: -40px;
                 }
             }
             &::after {
@@ -274,6 +274,13 @@
                     left: -60px;
                 }
             }
+        }
+    }
+    a {
+        color: #423c3a;
+        text-decoration: underline;
+        &:hover {
+            color: #828282;
         }
     }
 }

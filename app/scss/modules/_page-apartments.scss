@@ -31,11 +31,27 @@
     }
 }
 
+.apartments-list {
+    .arrow-btn {
+        color: #423C3A;
+        margin-bottom: 40px;
+        &:hover {
+            .arrow-btn__text {
+                color: #828282;
+            }
+        }
+    }
+}
+
+.apartments-wrap {
+    background: #f5f5f4;
+}
+
 .apartments-content {
-    background: #F5F5F4;
     padding-bottom: 0;
     overflow: hidden;
     .container {
+        background: #f5f5f4;
         padding: 0 30px;
         height: 80vh;
         @media (min-width: 1025px) {

@@ -62,8 +62,13 @@
             &__link {
                 padding: 0 .5rem;
             }
-            .link--active {
+            .link--active,
+            .current-lang {
+                color: #FFF3A6;
                 text-decoration: underline;
+                a {
+                    color: #FFF3A6;
+                }
             }
         }
         &-menu {
@@ -392,6 +397,9 @@
         }
         @media (max-width: 812px) and (orientation: landscape) {
             display: block;
+        }
+        .lang-item {
+            padding: 0 7px;
         }
     }
     
