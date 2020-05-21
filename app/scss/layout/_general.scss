@@ -72,11 +72,14 @@ button::-moz-focus-inner {
         padding-right: 40px;
     }
     @media (max-width: 768px) {
-        margin: 0 auto;
-    }
-    @media (max-width: 576px) {
         width: 100%;
+        margin: 0 auto;
         padding: 0 20px;
+    }
+    @media (max-width: 812px) and (orientation: landscape) {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 40px;
     }
 }
 

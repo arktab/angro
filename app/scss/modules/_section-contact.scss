@@ -5,6 +5,21 @@
     background-attachment: fixed;
     background-position: center;
     color: $tw;
+    .wpcf7-response-output {
+        grid-column: 1/13;
+        border: none;
+        margin: 15px 0 0;
+        padding: 0;
+        text-align: center;
+        font-size: 19px;
+        color: #fff3a6;
+        text-decoration: underline;
+        @media (min-width: 1025px) {
+            grid-row: 3/4;
+            grid-column: 4/10;
+            margin: 30px 0 0;
+        }
+    }
 }
 
 .alert__text {
@@ -58,6 +73,9 @@
     line-height: 20px;
     position: relative;
     margin-bottom: 30px;
+    .wpcf7-list-item {
+        display: inline;
+    }
     input {
         // color: #423C3A;
         // border-bottom: 2px solid #423C3A;
@@ -92,7 +110,7 @@
     color: #FFFFFF;
     position: relative;
     &--red {
-        border-color: #EB5757;
+        border-color: #EB5757 !important;
     }
     @media (max-width: 576px) {
         padding: 0;
@@ -100,33 +118,6 @@
     @media (max-width: 812px) and (orientation: landscape) {
         padding: 0;
     }
-}
-
-.contact-form__custom-check {
-    cursor: pointer;
-    @include pos($t: 50%, $l: -30px);
-    @include size(20px);
-    transform: translateY(-50%);
-    background: #FFFFFF;
-    border: 1px solid #828282;
-    border-radius: 3px;
-    transition: all .3s;
-    z-index: 2;
-}
-
-.contact-form__custom-icon {
-    //content: "";
-    display: none;
-    @include pos($t: 50%, $l: -22px);
-    border: solid #828282;
-    border-width: 0 3px 3px 0;
-    @include size(5px, 10px);
-    transform: translateY(-50%) rotate(45deg);
-    z-index: 3;
-}
-
-.active__check {
-    background: $link-pressed;
 }
 
 .contact-form__checkbox {

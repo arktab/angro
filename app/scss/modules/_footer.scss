@@ -2,7 +2,7 @@
     background: #f5f5f4;
     color: #0D0D0D;
     overflow: hidden;
-    @media (max-width: 576px) {
+    @media (max-width: 768px) {
         padding: 30px 0 50px 0;
         //background: #E5E5E5;
     }
@@ -37,7 +37,7 @@
         &__title {
             text-transform: uppercase;
         }
-        @media (max-width: 576px) {
+        @media (max-width: 768px) {
             grid-column: 1 / 13;
             grid-row: 1 / 2;
             text-align: center;
@@ -67,12 +67,6 @@
         // @media (max-width: 960px) {
         //     font-size: 9px;
         // }
-        @media (max-width: 1025px) {
-            font-size: 14px;
-        }
-        @media (max-width: 769px) {
-            font-size: 9px;
-        }
     }
     &-logo {
         grid-column: 6 / 8;
@@ -88,7 +82,7 @@
                 fill: #828282;
             }
         }
-        @media (max-width: 576px) {
+        @media (max-width: 768px) {
             display: none;
         }
         @media (max-width: 812px) and (orientation: landscape) {
@@ -104,7 +98,7 @@
         justify-content: flex-start;
         padding: 1.5rem 0 0 0;
         font-size: 20px;
-        @media (max-width: 576px) {
+        @media (max-width: 768px) {
             grid-column: 1 / 13;
             grid-row: 2 / 3;
             text-align: center;
@@ -121,12 +115,6 @@
             font-size: 19px;
             line-height: 20px;
             padding: 0;
-        }
-        @media (max-width: 1025px) {
-            font-size: 14px;
-        }
-        @media (max-width: 769px) {
-            font-size: 12px;
         }
     }
     &-btn {
@@ -163,7 +151,7 @@
             width: 100%;
             text-align: center;
         }
-        @media (max-width: 576px) {
+        @media (max-width: 768px) {
             display: none;
         }
         @media (max-width: 768px) {
@@ -188,6 +176,15 @@
         justify-content: space-between;
         &__title {
             font-size: 1rem;
+            @media (max-width: 768px) {
+                font-size: 19px;
+                line-height: 23px;
+            }
+            @media (max-width: 812px) and (orientation: landscape) {
+                font-size: 19px;
+                line-height: 23px;
+                margin-bottom: 30px;
+            }
         }
         .btn {
             display: block;
@@ -195,38 +192,28 @@
             vertical-align: middle;
             line-height: 50px;
             height: 50px;
-            font-size: 16px;
+            font-size: 18px;
             line-height: 50px;
             cursor: pointer;
             min-width: 150px;
-            @media (min-width: 1024px) {
-                cursor: pointer;
-                font-size: 14px;
-                padding: 0 .5rem;
+            padding: 0 1rem;
+            cursor: pointer;
+            @media (max-width: 812px) and (orientation: landscape) {
+                font-size: 16px;
             }
-        }
-        @media (max-width: 576px) {
-            grid-column: 2 / 12;
-            grid-row: 3 / 4;
-            margin: 0 0 40px 0;
-            &__title {
-                font-size: 19px;
-                line-height: 23px;
+            @media (max-width: 768px) {
+                font-size: 16px;
             }
         }
         @media (max-width: 768px) {
-            grid-column: 7 / 11;
-            grid-row: 2 / 3;
+            grid-column: 2 / 12;
+            grid-row: 3 / 4;
+            margin: 0 0 40px 0;
         }
         @media (max-width: 812px) and (orientation: landscape) {
             grid-column: 2 / 12;
             grid-row: 3 / 4;
             margin: 0 0 50px 0;
-            &__title {
-                font-size: 19px;
-                line-height: 23px;
-                margin-bottom: 30px;
-            }
         }
     }
     &-social {
@@ -242,7 +229,7 @@
         &__icons {
             display: flex;
             justify-content: space-between;
-            padding: 0 1rem 0.5rem;
+            padding: 0 20px 10px;
         }
         &__link {
             &:hover {
@@ -269,8 +256,8 @@
                 padding: 0 0 0.5rem;
             }
         }
-        @media (max-width: 576px) {
-            grid-column: 3 / 11;
+        @media (max-width: 768px) {
+            grid-column: 5 / 9;
             grid-row: 4 / 5;
             &__title {
                 font-size: 24px;
@@ -278,7 +265,8 @@
                 margin: 0 0 20px 0;
             }
             &__icons {
-                padding: 0 1rem .5rem;
+                padding: 0 20px 10px;
+                margin-bottom: 40px;
             }
         }
         @media (max-width: 812px) and (orientation: landscape) {
@@ -291,11 +279,8 @@
                 margin-bottom: 20px;
             }
         }
-        @media (max-width: 769px) {
-            &__title {
-                font-size: 12px;
-                line-height: 16px;
-            }
+        @media (max-width: 576px) {
+            grid-column: 3 / 11;
         }
         // @media (max-width: 960px) {
         //     grid-column: 10 / 13;
@@ -310,7 +295,7 @@
             font-size: inherit;
             color: inherit;
         }
-        @media (max-width: 576px) {
+        @media (max-width: 768px) {
             grid-column: 1 / 13;
             grid-row: 6 / 7;
             margin: 15px 0 0;
@@ -328,16 +313,32 @@
         // }
     }
     .footer-newsletter {
-        grid-column: 1 / 13;
-        grid-row: 5 / 6;
+        grid-column: 1 / 6;
+        grid-row: 2 / 3;
         //margin-top: 50px;
-        @media (min-width: 635px) {
-            grid-column: 1 / 6;
-            grid-row: 2 / 3;
+        @media (max-width: 768px) {
+            grid-column: 1 / 13;
+            grid-row: 5 / 6;
+            margin-bottom: 50px;
         }
-        // @media (min-width: 768px) {
-        //     grid-column: 1 / 7;
-        // }
+        @media (max-width: 812px) and (orientation: landscape) {
+            grid-column: 1 / 13;
+            grid-row: 5 / 6;
+        }
+        .wpcf7-response-output {
+            border: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            text-decoration: underline;
+            color: #828282;
+            position: absolute;
+            bottom: -40px;
+            width: 90%;
+            @media (max-width: 768px) {
+                bottom: -45px;
+            }
+        }
         &__form {
             display: flex;
             flex-direction: column;
@@ -365,7 +366,7 @@
             @media (max-width: 1366px) {
                 font-size: 18px;
             }
-            @media (max-width: 576px) {
+            @media (max-width: 768px) {
                 margin: 0 0 30px 0;
                 text-align: center;
                 font-size: 24px;
@@ -374,9 +375,6 @@
             @media (max-width: 812px) and (orientation: landscape) {
                 margin: 0 0 30px 0;
                 text-align: center;
-            }
-            @media (max-width: 1025px) {
-                font-size: 14px;
             }
         }
         &__title {
@@ -387,7 +385,7 @@
             flex-direction: column;
             position: relative;
             @media (max-width: 1025px) {
-                font-size: 14px;
+                font-size: 16px;
             }
         }
         &__field {
@@ -396,10 +394,12 @@
             border-bottom: 1px solid #828282;
             padding: .1rem 0;
             color: #514947;
-            width: 100%;
-            @media (max-width: 576px) {
-                margin: 0 0 30px 0;
-                padding: .5rem 0;
+            width: 90%;
+            @media (max-width: 768px) {
+                margin: 10px 0 30px 0;
+                padding: .1rem 0;
+                font-size: 16px;
+                line-height: 20px;
             }
             @media (max-width: 812px) and (orientation: landscape) {
                 margin: 0 0 30px 0;
@@ -407,29 +407,26 @@
             }
             @media (max-width: 1025px) {
                 width: 100%;
+                margin-bottom: 10px;
             }
-            @media (max-width: 769px) {
-                width: 100%;
-            }
-            // @media (max-width: 960px) {
-            //     grid-row: 5/6;
-            // }
         }
         .btn {
             height: 50px;
-            font-size: 16px;
-            line-height: 20px;
+            cursor: pointer;
+            font-size: 18px;
+            line-height: 22px;
             margin: 0 50px 0 0;
             text-transform: unset;
+            padding: 0 .5rem;
             //align-self: flex-end;
-            @media (min-width: 1025px) {
-                margin: 0 0 0 1rem;
-                cursor: pointer;
-                font-size: 14px;
-                padding: 0 .5rem;
-            }
             @media (max-width: 769px) {
                 margin: 10px auto 0;
+            }
+        }
+        .wpcf7-submit {
+            @media (max-width: 812px) and (orientation: landscape) {
+                align-self: center;
+                margin: 20px 0 0 0;
             }
         }
         .wpcf7-not-valid-tip {
