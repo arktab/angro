@@ -127,6 +127,7 @@
         color: $tw;
         display: grid !important;
         min-width: 196px;
+        overflow: hidden;
         @media (min-width: 1024px) {
             min-height: 888px;
         }
@@ -173,12 +174,12 @@
                 @media (max-width: 576px) {
                     min-height: calc(100% - 30px);
                     width: calc(100% - 30px);
-                    margin: 15px;
+                    margin: 15px 0;
                 }
                 @media (max-width: 812px) and (orientation: landscape) {
                     min-height: calc(80% - 30px);
                     //width: calc(80% - 30px);
-                    margin: 15px;
+                    margin: 15px 0;
                 }
             }
         }

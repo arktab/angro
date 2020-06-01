@@ -46,30 +46,6 @@ AOS.init({});
         $(".contact-form__checkbox").append("<div class='custom-checkbox active__check'></div><div class='custom-checkbox__icon'></div>");
         $(".first").children("input").attr('checked', 'checked');
 
-        // $(".custom-checkbox").click(function() {
-        //     if (modalCheck.prop("checked") == true) {
-        //         //modalInput.prop("checked", false);
-        //         if (modalCheck.prop("checked", false)) {
-        //             $(".custom-checkbox__icon").css('display', 'none');
-        //             //modalCheck.prop("checked", true);
-        //         } else {
-
-        //             modalCheck.addClass("active__check");
-        //             $(".custom-checkbox__icon").css('display', 'block');
-        //         }
-
-        //     } else if (modalCheck.prop("checked") == false) {
-        //         modalCheck.prop("checked", true);
-        //         if (modalCheck.prop("checked") == true) {
-        //             $(".custom-checkbox").addClass("active__check");
-        //             $(".custom-checkbox__icon").css('display', 'block');
-        //         } else {
-
-        //             $(".custom-checkbox").removeClass("active__check");
-        //             $(".custom-checkbox__icon").css('display', 'none');
-        //         }
-        //     }
-        // });
         modalCheckLabel.click(function() { //lABEL FOR CHECK
             modalname = modalUsername.val();
             modaltel = modalTel.val();
@@ -109,7 +85,6 @@ AOS.init({});
                 }
             }
         });
-
 
         modalUsername.focusout(function() {
                 modalname = modalUsername.val();
@@ -476,16 +451,6 @@ AOS.init({});
 
 
 
-
-
-
-
-
-
-
-
-
-
         //SLIDER__________________________________
         $('.about-slider').slick({
             nextArrow: $('.about-slider__next'),
@@ -493,23 +458,16 @@ AOS.init({});
             dots: false,
             infinite: true,
             arrows: true,
-            speed: 500,
-            cssEase: 'linear',
+            //speed: 500,
+            //cssEase: 'linear',
             draggable: false,
             slidesToShow: 3,
             responsive: [{
-                    breakpoint: 813,
-                    settings: {
-                        slidesToShow: 1
-                    }
-                },
-                {
-                    breakpoint: 576,
-                    settings: {
-                        slidesToShow: 1
-                    }
+                breakpoint: 813,
+                settings: {
+                    slidesToShow: 1
                 }
-            ]
+            }]
         });
         $('.objects-slider').slick({
             nextArrow: $('.objects-slider__icon'),

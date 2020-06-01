@@ -20,6 +20,7 @@
         position: relative;
         grid-column: 2 / 12;
         align-items: center;
+        width: 100%;
         @media (max-width: 576px) {
             grid-column: 1 / 13;
         }

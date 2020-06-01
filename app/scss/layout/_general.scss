@@ -191,6 +191,13 @@ input {
     border-radius: 0;
 }
 
+input[type=submit] {
+    -webkit-border-radius: 0px !important;
+    border-radius: 0 !important;
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
 li {
     &::before,
     &::after {
