@@ -76,11 +76,11 @@
                 text-decoration: underline;
             }
             li {
-                margin: 0 30px 1rem 60px;
+                margin: 0 0 15px 30px;
                 position: relative;
                 list-style-type: none;
                 @media (min-width: 1025px) {
-                    margin: 0 30px 16px 70px;
+                    margin: 0 30px 1rem 70px;
                     //line-height: 32px;
                 }
                 &:before {
@@ -118,7 +118,7 @@
                 text-decoration: underline;
             }
             li {
-                margin: 0 30px 1rem 60px;
+                margin: 0 0 15px 30px;
                 position: relative;
                 list-style-type: none;
                 @media (min-width: 1025px) {
