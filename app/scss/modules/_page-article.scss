@@ -1,6 +1,6 @@
 .article-header {
     background: #F5F5F4;
-    padding-bottom: 40px;
+    padding-bottom: 0;
     .mobile-logo {
         top: 100px;
         @media (max-width: 576px) {
@@ -15,11 +15,14 @@
     }
     .title {
         font-size: 36px;
-        margin: 120px 0 20px;
+        margin: 150px 0 0;
         @media (min-width: 1200px) {
             font-size: 64px;
             line-height: 78px;
             margin: 60px 0 20px;
+        }
+        @media (min-width: 1024px) and (height: 768px) {
+            margin: 50px 0 0;
         }
     }
     .headline {
@@ -50,16 +53,19 @@
     }
     .container {
         margin-bottom: 0;
+        @media (min-width: 1024px) and (height: 768px) {
+            padding: 0;
+        }
     }
 }
 
 .article-content {
     background: #F5F5F4;
-    @media (min-width: 1025px) {
+    @media (min-width: 1023px) {
         padding-top: 0;
     }
     .container {
-        @media (min-width: 1025px) {
+        @media (min-width: 1023px) {
             padding-top: 60px;
             padding-bottom: 70px;
             padding-left: 70px;
@@ -71,25 +77,34 @@
     .date {
         font-size: 16px;
         line-height: 20px;
-        padding: 0 25px;
-        @media (min-width: 1025px) {
+        padding: 0 5px;
+        @media (min-width: 1023px) {
             font-size: 19px;
             line-height: 23px;
             margin-bottom: 35px;
             padding: 0;
         }
+        @media (min-width: 1024px) and (height: 768px) {
+            padding: 0;
+        }
     }
     .information {
         padding: 40px 0;
+        @media (min-width: 1024px) and (height: 768px) {
+            padding: 0;
+        }
         &__headline {
             font-weight: bold;
             font-size: 24px;
             line-height: 29px;
-            padding: 0 25px;
+            padding: 0 5px;
             @media (min-width: 1025px) {
                 font-size: 36px;
                 line-height: 44px;
                 margin-bottom: 60px;
+                padding: 0;
+            }
+            @media (min-width: 1024px) and (height: 768px) {
                 padding: 0;
             }
         }
@@ -116,7 +131,7 @@
         }
         p {
             padding: 0 5px;
-            @media (min-width: 1025px) {
+            @media (min-width: 1023px) {
                 padding: 0;
             }
         }
@@ -147,6 +162,9 @@
             padding: 0;
             margin-bottom: 45px;
         }
+        @media (min-width: 1024px) and (height: 768px) {
+            padding: 0;
+        }
     }
     table {
         font-size: 14px;
@@ -156,14 +174,18 @@
         overflow: hidden;
         width: calc(100% + 40px);
         margin: 0 -20px 20px;
-        @media (min-width: 1025px) {
+        @media (min-width: 1023px) {
             //margin: 0 25px;
             background: transparent;
             line-height: 32px;
             font-size: 18px;
             text-align: center;
             margin-bottom: 30px;
-            width: 50%;
+            width: 45%;
+        }
+        @media (min-width: 1024px) and (height: 768px) {
+            margin: 0 0 20px 0;
+            padding: 0;
         }
         tr {
             display: grid;
@@ -175,11 +197,19 @@
             font-weight: bold;
             background: #FFF3A6;
             padding: 0 0 0 5px;
+            @media (min-width: 1024px) and (height: 768px) {
+                line-height: 20px;
+                font-size: 14px;
+            }
         }
         td {
             margin: 0;
             padding: 0 0 0 5px;
             background: #FFF3A6;
+            @media (min-width: 1024px) and (height: 768px) {
+                line-height: 20px;
+                font-size: 14px;
+            }
         }
     }
     img {
@@ -187,23 +217,34 @@
         margin: 0 0 1rem;
         width: calc(100% + 40px);
         margin: 0 -20px 20px;
-        @media (min-width: 1025px) {
-            max-width: 500px;
+        @media (min-width: 1023px) {
+            max-width: 45%;
             height: auto;
             width: unset;
             margin: 0;
         }
+        @media (max-width: 900px) {
+            width: 100%;
+            margin: 0;
+            height: auto;
+        }
     }
     .float-left {
-        @media (min-width: 1025px) {
+        @media (min-width: 1023px) {
             float: left;
             margin: 40px 60px 40px 0;
         }
+        @media (min-width: 1024px) and (height: 768px) {
+            margin: 20px 20px 20px 0;
+        }
     }
     .float-right {
-        @media (min-width: 1025px) {
+        @media (min-width: 1023px) {
             float: right;
             margin: 40px 0 40px 60px;
+        }
+        @media (min-width: 1024px) and (height: 768px) {
+            margin: 20px 0 20px 20px;
         }
     }
     ol {

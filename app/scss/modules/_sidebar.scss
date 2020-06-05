@@ -185,6 +185,13 @@
                 padding: .6rem 0;
                 font-size: 1.4rem;
             }
+            @media (max-width: 360px) {
+                padding: .5rem 0;
+            }
+            @media (max-width: 640px) and (orientation: landscape) {}
+            @media (max-width: 640px) and (orientation: landscape) {
+                font-size: 1rem;
+            }
         }
         &-top {
             @include pos($t: 7.5rem, $l: 17rem);
@@ -253,7 +260,7 @@
             @media (max-width: 576px) {
                 display: flex;
                 width: 100%;
-                @include pos($b: 40px, $l: 0);
+                @include pos($b: 100px, $l: 0);
                 //transform: translateY(-50%);
             }
             @media (min-width: 768px) and (orientation: portrait) {
@@ -268,18 +275,39 @@
                 @include pos($b: 70px, $r: 55px);
                 //transform: translateY(-50%);
             }
+            @media (max-width: 768px) and (orientation: landscape) {
+                display: flex;
+                width: 50%;
+                @include pos($b: 100px, $r: 40px);
+                //transform: translateY(-50%);
+            }
+            @media (max-width: 640px) and (orientation: landscape) {
+                width: 51%;
+                right: 0px;
+                bottom: 75px;
+            }
             &__item {
                 display: flex;
                 //justify-content: space-around;
                 align-items: center;
                 color: #FFFFFF;
                 width: 77%;
-                font-size: 19px;
+                font-size: 1.25rem;
                 line-height: 23px;
                 text-transform: uppercase;
                 margin: 15px 0;
+                @media (max-width: 576px) {
+                    width: unset;
+                }
+                @media (max-width: 640px) and (orientation: landscape) {
+                    font-size: 1rem;
+                    margin: 5px 0
+                }
                 @media (max-width: 320px) {
                     font-size: 16px;
+                    margin: 5px 0;
+                }
+                @media (max-width: 912px) {
                     margin: 5px 0;
                 }
                 @media (min-width: 768px) and (orientation: portrait) {
@@ -292,8 +320,14 @@
                 @media (max-width: 320px) {
                     @include size(30px);
                 }
+                @media (max-width: 640px) and (orientation: landscape) {
+                    @include size(40px);
+                }
                 @media (min-width: 768px) and (orientation: portrait) {
                     @include size(60px);
+                }
+                @media (max-width: 912px) {
+                    @include size(45px);
                 }
             }
             .link--active {
@@ -317,6 +351,8 @@
         @include pos($t: 0, $l: -40rem);
     }
     
+    // .object-body,
+    // .object-opened-body,  
     .mobile-menu {
         display: none;
         position: absolute;
@@ -328,10 +364,10 @@
         width: 35px;
         height: 22px;
         padding: 10px 0 0 0;
-        filter: invert(1);
+        background: transparent;
+        mix-blend-mode: exclusion;
+        //mix-blend-mode: difference;
         &__icon {
-            //@include size(55px);
-            //fill: #FFFFFF;
             width: 25px;
             height: 2px;
             display: block;
@@ -386,7 +422,7 @@
     
     .mobile-menu__lang {
         display: none;
-        font-size: 22px;
+        font-size: 20px;
         padding: 15px 0;
         @include pos($t: 45px, $r: 30px);
         @media (max-width: 576px) {
@@ -400,6 +436,9 @@
         }
         .lang-item {
             padding: 0 7px;
+        }
+        .sidebar-lang {
+            height: unset;
         }
     }
     

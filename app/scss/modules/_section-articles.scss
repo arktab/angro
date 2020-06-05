@@ -65,6 +65,12 @@
             @media (min-width: 1367px) {
                 padding-top: 375px;
             }
+            @media (max-width: 736px) and (orientation: landscape) {
+                padding-top: 310px;
+            }
+            @media (max-width: 812px) and (orientation: landscape) {
+                padding-top: 310px;
+            }
         }
     }
     &-tile__title {
@@ -109,9 +115,9 @@
     }
     &-tile__img {
         position: absolute;
-        top: -15px;
-        left: -3px;
-        @include size(105%);
+        top: 0px;
+        left: 0px;
+        @include size(100%);
         z-index: -1;
     }
     .arrow-btn {

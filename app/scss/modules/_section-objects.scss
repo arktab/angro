@@ -102,11 +102,14 @@
         justify-content: space-between;
         grid-column: 7/13;
         grid-row: 1/6;
-        @media (max-width: 1023px) {
+        @media (max-width: 900px) {
             grid-column: 1/13;
             grid-row: 4/5;
             width: 95%;
             justify-self: center;
+        }
+        @media only screen and (width: 1024px) {
+            grid-row: 4/6;
         }
     }
     &-tile__img {
@@ -172,6 +175,9 @@
         }
         @media (max-width: 812px) and (orientation: landscape) {
             @include pos($t: 50%, $r: -20px);
+        }
+        @media (max-width: 1024px) and (orientation: landscape) {
+            top: 65%;
         }
     }
     .slick-arrow.slick-prev {}

@@ -4,6 +4,9 @@
         background: #F5F5F4;
         .container {
             margin-bottom: 0;
+            @media (min-width: 1024px) and (height: 768px) {
+                padding: 0;
+            }
         }
         .arrow-btn--left {
             color: #423C3A;
@@ -48,6 +51,10 @@
                 line-height: 78px;
                 margin: 50px 0 20px;
             }
+            @media (min-width: 1024px) and (height: 768px) {
+                width: 60%;
+                margin: 50px 0 0;
+            }
         }
         .headline {
             margin: 0 0 0 2px;
@@ -69,7 +76,7 @@
         margin: 20px;
         width: 40px !important;
         height: 40px !important;
-        @media (min-width: 1025px) {
+        @media (min-width: 1023px) {
             width: 75px !important;
             height: 75px !important;
         }
@@ -89,7 +96,7 @@
         }
         &:before,
         &:after {
-            @media (min-width: 1025px) {
+            @media (min-width: 1023px) {
                 @include pos($t: 14px, $r: 36px);
                 @include size(2px, 45px)
             }
@@ -104,7 +111,7 @@
         width: 40px !important;
         height: 40px !important;
         background: #FFF3A6 !important;
-        @media (min-width: 1025px) {
+        @media (min-width: 1023px) {
             width: 75px !important;
             height: 75px !important;
         }
@@ -118,7 +125,7 @@
             position: absolute;
             top: calc(38% - 1px);
             right: calc(55% - 1px);
-            @media (min-width: 1025px) {
+            @media (min-width: 1023px) {
                 width: 22.5px;
                 top: 38%;
                 right: 55%;
@@ -134,7 +141,7 @@
             position: absolute;
             top: 58%;
             right: calc(55% - 1px);
-            @media (min-width: 1025px) {
+            @media (min-width: 1023px) {
                 width: 22.5px;
                 top: 58%;
                 right: 55%;
@@ -145,7 +152,7 @@
         width: 40px !important;
         height: 40px !important;
         background: #FFF3A6 !important;
-        @media (min-width: 1025px) {
+        @media (min-width: 1023px) {
             width: 75px !important;
             height: 75px !important;
         }
@@ -159,12 +166,12 @@
             position: absolute;
             top: calc(38% - 1px);
             left: calc(55% - 1px);
-            @media (min-width: 1025px) {
+            @media (min-width: 1023px) {
                 width: 22.5px;
                 top: 38%;
                 left: 55%;
             }
-            // @media (min-width: 1025px) {
+            // @media (min-width: 1023px) {
             //     @include pos($b: 50%, $l: 50%);
             //     transform: translateX(-50%) translateY(50%);
             //     @include size(125%, auto);
@@ -180,12 +187,12 @@
             position: absolute;
             top: 58%;
             left: calc(55% - 1px);
-            @media (min-width: 1025px) {
+            @media (min-width: 1023px) {
                 width: 22.5px;
                 top: 58%;
                 left: 55%;
             }
-            // @media (min-width: 1025px) {
+            // @media (min-width: 1023px) {
             //     @include pos($b: 50%, $l: 50%);
             //     transform: translateX(-50%) translateY(50%);
             //     @include size(125%, auto);
@@ -206,7 +213,7 @@
 #lightgallery {
     display: grid;
     grid-gap: 30px;
-    @media (min-width: 1025px) {
+    @media (min-width: 1023px) {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(13, 1fr);
     }
@@ -216,7 +223,7 @@
     overflow: hidden;
     margin: 0 0 20px;
     position: relative;
-    @media (min-width: 1025px) {
+    @media (min-width: 1023px) {
         @include size(100%, auto);
         margin: 0;
     }
@@ -226,6 +233,10 @@
             @include pos($b: 50%, $l: 50%);
             transform: translateX(-50%) translateY(50%);
             @include size(125%, auto);
+        }
+        @media (min-width: 1024px) and (height: 768px) {
+            min-width: 100%;
+            height: 100%;
         }
     }
     &:nth-child(1),

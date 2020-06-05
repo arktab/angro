@@ -290,10 +290,10 @@ AOS.init({});
         // });
 
         $(".sidebar-menu__triger").click(function() {
-
             if (visible == false) {
                 visible = true;
                 $(".menu").toggleClass("menu--is-hide");
+
                 setTimeout(function() {
                     $(".menu").toggleClass("menu--opacity");
                 }, 300);
@@ -311,12 +311,14 @@ AOS.init({});
             if (visible == false) {
                 visible = true;
                 $(".menu").toggleClass("menu--is-hide");
+                $("body").toggleClass("is-menu-shown");
                 setTimeout(function() {
                     $(".menu").toggleClass("menu--opacity");
                 }, 300);
             } else {
                 visible = false;
                 $(".menu").addClass("menu--opacity");
+                $("body").toggleClass("is-menu-shown");
                 setTimeout(function() {
                     $(".menu").addClass("menu--is-hide");
                 }, 200);
@@ -334,7 +336,7 @@ AOS.init({});
             }
         }
         //OBJECT START
-        if (width <= 1024) {
+        if (width <= 1023) {
             $(".content-info__text").addClass("shown-height");
             $(".show-more").addClass("show-active");
 
@@ -411,25 +413,6 @@ AOS.init({});
             $(".apartments-content .arrow-btn").css("display", "flex");
             $(".apartments-content iframe").remove();
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         $('.object-opened-slider').lightGallery({
@@ -511,12 +494,20 @@ AOS.init({});
             arrows: true,
             speed: 500,
             slidesToShow: 3,
-            responsive: [{
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 1
+            responsive: [
+                // {
+                //     breakpoint: 1022,
+                //     settings: {
+                //         slidesToShow: 1
+                //     }
+                // },
+                {
+                    breakpoint: 1023,
+                    settings: {
+                        slidesToShow: 1
+                    }
                 }
-            }]
+            ]
         });
         $('.object-opened-slider').slick({
             nextArrow: $('.slider-icon__next'),

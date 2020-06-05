@@ -4,18 +4,25 @@
     align-items: center;
     background: rgba(14, 14, 14, .5);
     height: 47px;
-    @media (min-width: 1025px) {
+    @media (min-width: 1023px) {
         position: absolute;
         width: 475px;
         height: 120px;
         right: 0;
         top: 0;
     }
+    @media (min-width: 1024px) and (height: 768px) {
+        width: 375px;
+        height: 80px;
+    }
     &__icon {
         svg {
             @include size(35px);
-            @media (min-width: 1025px) {
+            @media (min-width: 1023px) {
                 @include size(66px);
+            }
+            @media (min-width: 1024px) and (height: 768px) {
+                @include size(40px);
             }
         }
     }
@@ -26,10 +33,14 @@
             font-size: 16px;
             line-height: 20px;
             color: #FFF3A6;
-            @media (min-width: 1025px) {
+            @media (min-width: 1023px) {
                 font-size: 24px;
                 line-height: 29px;
                 margin: 0 0 0 35px;
+            }
+            @media (min-width: 1024px) and (height: 768px) {
+                font-size: 16px;
+                line-height: 20px;
             }
         }
     }

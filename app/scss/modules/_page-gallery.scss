@@ -21,6 +21,9 @@
             line-height: 78px;
             margin: 60px 0 20px;
         }
+        @media (min-width: 1024px) and (height: 768px) {
+            margin: 50px 0 0;
+        }
     }
     .headline {
         margin: 0 0 0 2px;
@@ -29,13 +32,18 @@
             line-height: 23px;
         }
     }
+    @media (min-width: 1024px) and (height: 768px) {
+        .container {
+            padding: 0;
+        }
+    }
 }
 
 .gallery-list {
     display: flex;
     flex-direction: column;
     background: #f5f5f4;
-    @media (min-width: 1025px) {
+    @media (min-width: 1023px) {
         padding: 0;
     }
     .container {
@@ -48,7 +56,7 @@
         margin: 0 0 40px;
         grid-template-rows: 57.5% 42.5%;
         height: 730px;
-        @media (min-width: 1025px) {
+        @media (min-width: 1023px) {
             grid-template-rows: 1fr 1fr;
             margin: 0;
             min-height: 500px;
@@ -65,6 +73,9 @@
                     grid-row: 1/2;
                 }
             }
+        }
+        @media (min-width: 1024px) and (height: 768px) {
+            max-height: 540px;
         }
     }
     .logo {
@@ -90,14 +101,14 @@
         svg {
             fill: #FFFFFF;
         }
-        @media (min-width: 1025px) {
+        @media (min-width: 1023px) {
             padding: 0;
         }
         .link {
             font-size: 24px;
             line-height: 30px;
             font-family: Bellota Text;
-            @media (min-width: 1025px) {
+            @media (min-width: 1023px) {
                 margin: 75px 0 0 0;
                 //font-size: 36px;
                 font-size: 28px;
@@ -107,9 +118,9 @@
     }
     .picture {
         position: relative;
-        justify-content: center;
-        display: flex;
-        @include size(100%, auto);
+        // justify-content: center;
+        // display: flex;
+        // @include size(100%);
         overflow: hidden;
         &:hover {
             img {
@@ -122,10 +133,20 @@
         }
         img {
             @include size(100%, auto);
-            @media (min-width: 1025px) {
+            @media (min-width: 1023px) {
+                // min-width: 100%;
+                // min-height: 500px;
+                // max-height: 700px;
+                width: auto;
+                height: 100%;
+            }
+            @media (min-width: 1780px) {
                 width: 100%;
-                min-height: 500px;
-                max-height: 700px;
+                height: auto;
+            }
+            @media (min-width: 1024px) and (height: 768px) {
+                width: auto;
+                height: 100%;
             }
             transition: all 1s linear;
         }
@@ -137,7 +158,7 @@
             transition: all .3s;
             .icon {
                 @include size(40px);
-                @media (min-width: 1025px) {
+                @media (min-width: 1023px) {
                     @include size(70px);
                 }
             }
